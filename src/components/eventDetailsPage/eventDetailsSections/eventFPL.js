@@ -9,8 +9,11 @@ const EventFPL = () => {
     <div>
       <div class="grid gap-10 xl:grid-cols-3 grid-cols-1 sm:mb-24 mb-12">
         <EventFaculty
-          faculty1={eventDetailsData.faculty1}
-          faculty2={eventDetailsData.faculty2}
+          Student1={eventDetailsData.Student1}
+          Student2={eventDetailsData.Student2}
+          Student3={eventDetailsData.Student3}
+          Student4={eventDetailsData.Student4}
+          Student5={eventDetailsData.Student5}
         />
         <EventPrizes
           prize1={eventDetailsData.prize1}

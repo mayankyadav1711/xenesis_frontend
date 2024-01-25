@@ -2,8 +2,11 @@ export const eventDetailsData = {
   eventTitle: "X-Motion Game Mania",
   eventDescription:
     "This event is a unique combination of technology and entertainment. Participants will have the opportunity to play virtual reality (VR) games without the need of VR headset, using camera and motion detection technology instead. This event will challenge both the technical and entertainment skills of each participant, as they navigate a series of games that will test their logical thinking, memory, and teamwork abilities. Get ready for a high-tech twists on classic games and see if you have what it takes to emerge on the top at ",
-  faculty1: "Vishal Barot,",
-  faculty2: "Piyush Kapadiya",
+  Student1: "Jagrat Patel : 8200859950,",
+  Student2: "Jaivin Barot : 7801912684,",
+  Student3: "Parth Padhiyar : 9099333060,",
+  Student4: "Jagrat Patel : 8200859950,",
+  Student5: "Shubham Bhogayata : 9586697157,",
   prize1: "₹1,500",
   prize2: "₹1,000",
   floor: ": 1st floor",
@@ -56,25 +59,4 @@ export const roundData = [
   },
 ];
 
-export const organizersData = [
-  {
-    id: 1,
-    name: "Parth Padhiar",
-    imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
-  },
-  {
-    id: 2,
-    name: "Jagrat Patel",
-    imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
-  },
-  {
-    id: 3,
-    name: "Jaivin Barot",
-    imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
-  },
-  {
-    id: 4,
-    name: "Shubham Bhogayata",
-    imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
-  },
-];
+//

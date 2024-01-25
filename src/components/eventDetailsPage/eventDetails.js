@@ -2,7 +2,6 @@ import React from "react";
 import ImgSlider from "./eventDetailsComponents/imgSlider";
 import EventRules from "./eventDetailsSections/eventRules";
 import EventRounds from "./eventDetailsSections/eventRounds";
-import EventOrganizer from "./eventDetailsSections/eventOrganizer";
 import EventCart from "./eventDetailsComponents/eventCart";
 import ImgOverTitle from "./eventDetailsComponents/imgOverTitle";
 import EventIntro from "./eventDetailsSections/eventIntro";
@@ -20,7 +19,6 @@ const EventDetails = () => {
           <EventFPL />
           <EventRules />
           <EventRounds />
-          <EventOrganizer />
         </div>
 
         <EventCart />

@@ -1,13 +1,19 @@
 import React from "react";
 
-const EventFaculty = ({ faculty1, faculty2 }) => {
+const EventFaculty = ({ Student1, Student2, Student3, Student4, Student5 }) => {
   return (
     <div class="sm:text-center xl:mt-16 mt-10">
-      <p class="font-bold text-3xl mb-5 text-blue-400">Faculty Coordinators</p>
+      <p class="font-bold text-3xl mb-5 text-blue-400">Student Coordinators</p>
       <p class="text-gray-300 sm:text-lg">
-        {faculty1}
+        {Student1}
         <br />
-        {faculty2}
+        {Student2}
+        <br />
+        {Student3}
+        <br />
+        {Student4}
+        <br />
+        {Student5}
       </p>
     </div>
   );
