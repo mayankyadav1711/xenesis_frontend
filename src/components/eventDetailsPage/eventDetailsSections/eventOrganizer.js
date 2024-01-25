@@ -1,31 +1,8 @@
 import React from "react";
 import SectionTitle from "../eventDetailsComponents/sectionTitle";
+import { organizersData } from "../eventData";
 
 const EventOrganizer = () => {
-  // Organizers data array
-  const organizersData = [
-    {
-      id: 1,
-      name: "Parth Padhiar",
-      imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
-    },
-    {
-      id: 2,
-      name: "Jagrat Patel",
-      imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
-    },
-    {
-      id: 3,
-      name: "Jaivin Barot",
-      imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
-    },
-    {
-      id: 4,
-      name: "Shubham Bhogayata",
-      imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
-    },
-  ];
-
   return (
     <div>
       <SectionTitle title="Organizers" />
