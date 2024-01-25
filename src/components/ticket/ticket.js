@@ -44,7 +44,7 @@ function Ticket({ bgColor }) {
             </>
           </Price>
 
-          <div className="text-center bg-gradient-to-bl rounded-md py-2 hover:text-white w-full duration-300 hover:bg-[#0F242E] bg-[#CF8D42] text-xl">
+          <div className="text-center bg-gradient-to-bl rounded-md py-2 hover:text-white w-full duration-300 hover:bg-[#0F242E] bg-[#CF8D42] text-caption1">
             <p>Event Name</p>
           </div>
         </div>
