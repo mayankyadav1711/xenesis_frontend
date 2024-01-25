@@ -33,13 +33,13 @@ function Register() {
         <img
             src="https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/register-3.png?alt=media&token=84cf0c58-e62f-4247-ab30-2e46a8b3bec2"  // Replace with your background image path
             alt="Background"
-            className="h-full min-h-[calc((797/1463)*100vw)] w-full object-center block"
+            className="h-full min-h-[calc((797/1463)*100vw)] w-full object-cover block"
           />
         </div>
 
         {/* Link to Home Div */}
         <a href="/" className="absolute top-5 left-5 flex flex-col items-center cursor-pointer hover:scale-[1.15] z-30 transition-all duration-300">
-          <i className="bi bi-house-door text-xl text-white bg-[#240a34] px-3 py-2 rounded-full hover:shadow-white hover:shadow-2xl"></i>
+          {/* <i className="bi bi-house-door text-xl text-white bg-[#240a34] px-3 py-2 rounded-full hover:shadow-white hover:shadow-2xl"></i> */}
           <p className="mt-1 text-white bg-[#240a34] rounded-md px-2 hidden md:block">Home</p>
         </a>
 
@@ -78,13 +78,13 @@ function Register() {
                 Email
               </label>
             </div>
-
+            <div className='mt-5' />
             {/* Password input */}
             <div className='flex group relative w-full justify-center'>
               <input
                 type={showPassword ? "text" : "password"}
                 id='password'
-                name="password1"
+                name="password1" 
                 spellCheck='false'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -110,7 +110,7 @@ function Register() {
                 Password
               </label>
             </div>
-
+            <div className='mt-5' />
             {/* Re-enter Password input */}
             <div className='flex group relative w-full justify-center -mb-6'>
               <input
@@ -142,7 +142,7 @@ function Register() {
                 Re-enter Password
               </label>
             </div>
-
+            <div className='mt-9' />
             {/* Submit button */}
             <input
               type="submit"
@@ -150,11 +150,11 @@ function Register() {
               tabIndex="4"
               className='w-fit bg-gradient-to-tr from-orange-500 to-yellow-300 outline-none mt-5 xl:px-16 lg:px-12 sm:px-10 px-9 py-1.5 text-[#f0e2ea] xl:text-lg lg:text-md font-semibold cursor-pointer transition-all duration-200 focus:-translate-y-1 hover:ring hover:ring-yellow-100 rounded-md'
             />
-
+<div className="text-white ml-3 mt-2 md:mt-1 text-xs italic w-full text-right transition-all duration-200 hover:-translate-x-1">
             {/* Already have an account link */}
-            <a href="/login" className="text-white -mt-3 text-xs italic w-full text-right transition-all duration-200 hover:-translate-x-1">
+            <a href="/login">
               Already have an account ? Login
-            </a>
+            </a></div>
           </form>
         </div>
       </div>
