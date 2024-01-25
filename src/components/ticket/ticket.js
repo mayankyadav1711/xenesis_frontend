@@ -11,7 +11,7 @@ function Ticket({ bgColor }) {
 
   return (
     // <div className="flex-col relative justify-center  items-center p-4 bg-black bg-opacity-35   rounded-md">
-    <div className={`flex-col relative justify-center  items-center p-4 ${bgColor} bg-opacity-45   rounded-md`}>
+    <div className={`flex-col z-[-1] relative justify-center  items-center p-4 ${bgColor} bg-opacity-45   rounded-md`}>
       <div className="p-2 border-2 border-black rounded-lg">
 
 

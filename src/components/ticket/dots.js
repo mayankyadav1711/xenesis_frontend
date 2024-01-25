@@ -1,7 +1,7 @@
 function Dots() {
     return (
         <div className="flex flex-col">
-            <div className="h-[40px] bg-white  rounded-full aspect-square">
+            <div className="h-[40px] bg-white z-10  rounded-full aspect-square">
 
             </div>
 
