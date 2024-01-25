@@ -1,4 +1,5 @@
 import React from "react";
+import SectionTitle from "./sectionTitle";
 
 const EventRules = () => {
   const rules = [
@@ -14,7 +15,8 @@ const EventRules = () => {
     <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-2 sm:gap-10 gap-6 sm:my-32 my-20">
       {/* <!-- Rules --> */}
       <div>
-        <p class="font-bold text-3xl mb-5 text-blue-400">Rules of Event</p>
+        <SectionTitle title="Rules of Event" />
+
         <div className="pl-5 lg:pr-5 pr-0 text-gray-300 sm:text-lg sm:font-normal font-light">
           <ul>
             {rules.map((rule, index) => (

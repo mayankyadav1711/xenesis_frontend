@@ -12,19 +12,17 @@ import EventCart from "./eventDetailsSections/eventCart";
 
 const EventDetails = () => {
   // data
-  const eventDetailsData = [
-    {
-      eventTitle: "X-Motion Game Mania",
-      eventDescription:
-        "This event is a unique combination of technology and entertainment. Participants will have the opportunity to play virtual reality (VR) games without the need of VR headset, using camera and motion detection technology instead. This event will challenge both the technical and entertainment skills of each participants, as they navigate a series of games that will test their logical thinking, memory, and teamwork abilities. Get ready for a high-tech twists on classic games and see if you have what it takes to emerge on the top at ",
-      faculty1: "Vishal Barot,",
-      faculty2: "Piyush Kapadiya",
-      prize1: "₹1,500",
-      prize2: "₹1,000",
-      floor: ": 1st floor",
-      place: ": Lab A1, A2, B1",
-    },
-  ];
+  const eventDetailsData = {
+    eventTitle: "X-Motion Game Mania",
+    eventDescription:
+      "This event is a unique combination of technology and entertainment. Participants will have the opportunity to play virtual reality (VR) games without the need of VR headset, using camera and motion detection technology instead. This event will challenge both the technical and entertainment skills of each participant, as they navigate a series of games that will test their logical thinking, memory, and teamwork abilities. Get ready for a high-tech twists on classic games and see if you have what it takes to emerge on the top at ",
+    faculty1: "Vishal Barot,",
+    faculty2: "Piyush Kapadiya",
+    prize1: "₹1,500",
+    prize2: "₹1,000",
+    floor: ": 1st floor",
+    place: ": Lab A1, A2, B1",
+  };
 
   return (
     <div className="main">
@@ -55,7 +53,10 @@ const EventDetails = () => {
               prize1={eventDetailsData.prize1}
               prize2={eventDetailsData.prize2}
             />
-            <EventLocation floor={eventDetailsData.floor} place={eventDetailsData.place}/>
+            <EventLocation
+              floor={eventDetailsData.floor}
+              place={eventDetailsData.place}
+            />
           </div>
 
           <EventRules />

@@ -1,9 +1,11 @@
 import React from "react";
+import SectionTitle from "./sectionTitle";
 
 const EventOrganizer = () => {
   return (
     <div class="mb-6">
-      <p class="font-bold text-3xl mb-2 text-blue-400">Organizers</p>
+      <SectionTitle title="Organizers" />
+
       <div class="md:flex grid grid-cols-2 items-center lg:justify-start justify-center lg:gap-10 gap-5 sm:gap-y-8 mt-10 organizers-div">
         <div class="flex flex-col items-center justify-center">
           <img
