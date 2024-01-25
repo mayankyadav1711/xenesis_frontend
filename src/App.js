@@ -10,6 +10,7 @@ import OTP from "./components/OTP";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPassword from "./components/ForgotPassword";
 import Myticket from "./components/myticket";
+import FAQ from "./components/faqs";
 
 
 
@@ -29,6 +30,7 @@ const Routing = () => {
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/otp" element={<OTP />} />
         <Route path="/myTicket" element={<Myticket />} />
+        <Route path="/faqs" element={<FAQ />} />
       </Routes>
     </>
   );
