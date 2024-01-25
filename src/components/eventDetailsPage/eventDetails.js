@@ -17,6 +17,12 @@ const EventDetails = () => {
       eventTitle: "X-Motion Game Mania",
       eventDescription:
         "This event is a unique combination of technology and entertainment. Participants will have the opportunity to play virtual reality (VR) games without the need of VR headset, using camera and motion detection technology instead. This event will challenge both the technical and entertainment skills of each participants, as they navigate a series of games that will test their logical thinking, memory, and teamwork abilities. Get ready for a high-tech twists on classic games and see if you have what it takes to emerge on the top at ",
+      faculty1: "Vishal Barot,",
+      faculty2: "Piyush Kapadiya",
+      prize1: "₹1,500",
+      prize2: "₹1,000",
+      floor: ": 1st floor",
+      place: ": Lab A1, A2, B1",
     },
   ];
 
@@ -41,9 +47,15 @@ const EventDetails = () => {
 
           {/* <!-- Faculty | Prizes | Location --> */}
           <div class="grid gap-10 xl:grid-cols-3 grid-cols-1 sm:mb-24 mb-12">
-            <EventFaculty />
-            <EventPrizes />
-            <EventLocation />
+            <EventFaculty
+              faculty1={eventDetailsData.faculty1}
+              faculty2={eventDetailsData.faculty2}
+            />
+            <EventPrizes
+              prize1={eventDetailsData.prize1}
+              prize2={eventDetailsData.prize2}
+            />
+            <EventLocation floor={eventDetailsData.floor} place={eventDetailsData.place}/>
           </div>
 
           <EventRules />

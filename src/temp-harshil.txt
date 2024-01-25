@@ -1,4 +1,40 @@
+
+{
+  /* <div>
+          <ul class="pl-5 lg:pr-5 pr-0 text-gray-300 sm:text-lg sm:font-normal font-light">
+            <li class="list-decimal mb-4">
+              Participants are not allowed to use any of the props for
+              explanation during the event.
+            </li>
+            <li class="list-decimal mb-4">
+              The participants qualifying the preceding rounds shall be eligible
+              for the next round.
+            </li>
+            <li class="list-decimal mb-4">
+              Participants breaking the rules will be disqualified.
+            </li>
+            <li class="list-decimal mb-4">
+              Participants are not allowed to use any of the props for
+              explanation during the event
+            </li>
+            <li class="list-decimal mb-4">
+              Participants are not allowed to use any of the props for
+              explanation during the event
+            </li>
+            <li class="list-decimal">
+              Participants are not allowed to use any of the props for
+              explanation during the event
+            </li>
+          </ul>
+        </div> */
+}
+
+
+
+ 
+ 
  <section class="w-full h-full min-h-[100vh] relative flex flex-col items-center justify-center bg-gradient-to-b from-[#240a34] to-[#211e60]">
+
         {/* <!-- bg image over title --> */}
         <img
           src="./static/event-images/bg-2.png"
