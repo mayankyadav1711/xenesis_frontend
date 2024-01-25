@@ -1,5 +1,5 @@
 import React from "react";
-import SectionTitle from "./sectionTitle";
+import SectionTitle from "../eventDetailsComponents/sectionTitle";
 
 const EventRules = () => {
   const rules = [

@@ -1,6 +1,6 @@
 import React from "react";
-import RoundDetails from "./RoundDetails";
-import SectionTitle from "./sectionTitle";
+import RoundDetails from "../eventDetailsComponents/RoundDetails";
+import SectionTitle from "../eventDetailsComponents/sectionTitle";
 
 const EventRounds = () => {
   return (

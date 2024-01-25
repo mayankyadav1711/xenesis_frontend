@@ -11,13 +11,7 @@ import ResetPassword from "./components/ResetPassword";
 import ForgotPassword from "./components/ForgotPassword";
 import EventDetails from "./components/eventDetailsPage/eventDetails";
 
-
 const Routing = () => {
-
-
-
-
-
   return (
     <>
       <Routes>
@@ -35,9 +29,9 @@ const Routing = () => {
 function App() {
   return (
     <Router>
-        <ThemeProvider>
-      <Routing />
-        </ThemeProvider>
+      <ThemeProvider>
+        <Routing />
+      </ThemeProvider>
     </Router>
   );
 }
