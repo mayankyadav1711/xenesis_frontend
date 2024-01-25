@@ -2,6 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { ThemeProvider } from "./context/ThemeContext";
 import Home from "./components/homepage";
 import Login from "./components/login";
 import Register from "./components/register";
@@ -12,6 +13,11 @@ import EventDetails from "./components/eventDetailsPage/eventDetails";
 
 
 const Routing = () => {
+
+
+
+
+
   return (
     <>
       <Routes>
@@ -29,7 +35,9 @@ const Routing = () => {
 function App() {
   return (
     <Router>
+        <ThemeProvider>
       <Routing />
+        </ThemeProvider>
     </Router>
   );
 }
