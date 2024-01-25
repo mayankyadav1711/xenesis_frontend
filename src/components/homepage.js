@@ -1,6 +1,8 @@
 import React from "react";
-
+import { useTheme } from "../context/ThemeContext";
 const Home = () => {
+  const { theme } = useTheme();
+  
   const departments = [
     ["Department 1", "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/com.png?alt=media&token=de93b4dd-4592-4db2-9be5-76d52ae97d2c"],
     ["Department 2", "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/com.png?alt=media&token=de93b4dd-4592-4db2-9be5-76d52ae97d2c"],
@@ -72,7 +74,7 @@ const Home = () => {
     console.log(`Closing card overlay for ${eventId}`);
   };
   return (
-    <div class="bg-[#240a34] overflow-x-hidden">
+    <div className={`${theme.backgroundGradient} overflow-x-hidden`}>
 
 <nav class="flex items-center overflow-visible justify-between text-white fixed w-full top-0 pt-[calc(2vh)] pb-10 px-[calc(3vh)] z-50 transition-all duration-300" id="navbar">
        

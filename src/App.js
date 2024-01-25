@@ -2,6 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { ThemeProvider } from "./context/ThemeContext";
 import Home from "./components/homepage";
 import Login from "./components/login";
 import Register from "./components/register";
@@ -9,6 +10,7 @@ import OTP from "./components/OTP";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPassword from "./components/ForgotPassword";
 import Event from "./components/events";
+import Myticket from "./components/myticket";
 
 
 
@@ -28,17 +30,22 @@ const Routing = () => {
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/otp" element={<OTP />} />
         <Route path="/events" element={<Event/>} />
+        <Route path="/myTicket" element={<Myticket />} />
       </Routes>
     </>
   );
 };
 function App() {
   return (
+
    
       <Router>
+        <ThemeProvider>
         <Routing />
+        </ThemeProvider>
       </Router>
    
+
   );
 }
 
