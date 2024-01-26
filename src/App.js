@@ -24,7 +24,9 @@ const Routing = () => {
         <Route path="/resetpassword/:token" element={<ResetPassword />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/otp" element={<OTP />} />
+
         <Route path="/verifier" element={<Verifier />} />
+
         <Route path="/events" element={<Event />} />
         <Route path="/myTicket" element={<Myticket />} />
         <Route path="/faqs" element={<FAQ />} />
@@ -34,11 +36,13 @@ const Routing = () => {
 };
 function App() {
   return (
+
     <Router>
       <ThemeProvider>
         <Routing />
       </ThemeProvider>
     </Router>
+
   );
 }
 
