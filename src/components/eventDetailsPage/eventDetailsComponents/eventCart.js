@@ -24,18 +24,15 @@ const EventCart = () => {
       </button>
 
       <Modal
-  isOpen={modalIsOpen}
-  onRequestClose={closeModal}
-  contentLabel="Confirmation Modal"
-  overlayClassName="fixed inset-0 bg-slate-900/60 transition-opacity duration-300 flex items-center justify-center"
-  className="relative max-w-md rounded-lg bg-white pt-10 pb-4 text-center transition-all duration-300 dark:bg-navy-700 center"
-  style={{ overlay: { zIndex: 100 } }}
->
-  <PopCard closeModal={closeModal} />
-</Modal>
-
-
-
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Confirmation Modal"
+        overlayClassName="fixed inset-0 bg-slate-900/60 transition-opacity duration-300 flex items-center justify-center"
+        className="relative max-w-md rounded-lg bg-white pt-10 pb-4 text-center transition-all duration-300 dark:bg-navy-700 center"
+        style={{ overlay: { zIndex: 100 } }}
+      >
+        <PopCard closeModal={closeModal} />
+      </Modal>
     </div>
   );
 };
