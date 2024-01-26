@@ -4,6 +4,7 @@ import Qr from "./ticket/img/qr.png";
 import Price from "./ticket/price";
 import Dots from "./ticket/dots";
 import './ticket/newticket.css'
+import Texture from "./ticket/img/texture.jpg"
 // @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 // import Price from "./price";
 // import Dots from "./dots";
@@ -15,15 +16,15 @@ function Newticket({ bgColor }) {
 
     return (
         // <div className="flex-col relative justify-center  items-center p-4 bg-black bg-opacity-35   rounded-md">
-        <div className={`flex relative justify-between  items-center bg-white  bg-opacity-75  rounded-md`}>
+        <div className={`flex relative justify-between  items-center ${bgColor}   bg-opacity-75  rounded-md`}>
             <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-tl-md flex items-center rounded-bl-md h-full w-[40px] left-0">
                 <p className="-translate-x-[30%] -rotate-90 text-center font-extrabold">XENESIS'24</p>
             </div>
             <div className="  border-2 w-full rounded-tl-none border-l-0 m-4 ml-0 overflow-hidden border-black rounded-bl-none grid grid-cols-[25%_1fr]  items-center  rounded-lg">
-                <div className="p-2  border-white  max-w-[100px]">
+                <div className="p-2  border-white  ">
                     <img src={Qr} className="w-full h-full" alt="qr" />
                 </div>
-                <div className="flex border-l-8   border-dotted border-[#162238]  flex-col">
+                <div className="flex border-l-8   border-dotted border-darkBlue-50  flex-col">
 
 
                     <div className="grid py-4  grid-cols-[25%_1fr] items-center">
@@ -56,7 +57,7 @@ function Newticket({ bgColor }) {
                             </div>
                             <p className="date py-3 p-2 border-l-2 text-subtitle1 border-r-2 font-extrabold border-black" >23</p>
                             <div className="flex flex-col text-caption2">
-                                <p className="py-1 p-2  " >Ticket ID: </p>
+                                <p className="py-1 p-2   " >ID: 232 </p>
 
                                 <p className="py-1 p-2  border-t-[1px] border-black " >₹50 /-</p>
                             </div>
@@ -90,6 +91,9 @@ function Newticket({ bgColor }) {
             <div className=" absolute top-0 translate-x-1/2 -translate-y-[20px] left-[25%]">
                 <Dots />
             </div>
+            {/* <div>
+                <img src={Texture} cla alt="tetx" />
+            </div> */}
         </div>
     );
 }
