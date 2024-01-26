@@ -12,6 +12,7 @@ import ForgotPassword from "./components/ForgotPassword";
 import Verifier from "./components/Verifier/verifier";
 import Event from "./components/events";
 import Myticket from "./components/myticket";
+import EventDetails from "./components/eventDetailsPage/eventDetails";
 import FAQ from "./components/faqs";
 
 const Routing = () => {
@@ -20,12 +21,15 @@ const Routing = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/eventDetails" element={<EventDetails />} />
         <Route path="/register" element={<Register />} />
         <Route path="/resetpassword/:token" element={<ResetPassword />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/otp" element={<OTP />} />
 
+
         <Route path="/verifier" element={<Verifier />} />
+
 
         <Route path="/events" element={<Event />} />
         <Route path="/myTicket" element={<Myticket />} />
