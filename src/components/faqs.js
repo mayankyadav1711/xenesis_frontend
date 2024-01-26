@@ -15,7 +15,7 @@ const FAQ = () => {
   };
 
     return (
-<div className="mb-8 w-full rounded-lg bg-white p-4 backdrop-filter backdrop-blur-md bg-opacity-10 dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-8 lg:px-6 xl:px-8 lg:min-h-36 min-h-24 ">
+<div className="mb-8 w-full rounded-lg bg-white p-4 backdrop-filter backdrop-blur-md bg-opacity-10 dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-8 lg:px-6 xl:px-8 lg:min-h-32 min-h-24 ">
     <button
     className={`faq-btn flex w-full text-left`}
     onClick={(event) => handleToggle(event)}
@@ -61,21 +61,18 @@ const FAQ = () => {
   };
 
   return (
-    <section className={`relative z-20 overflow-hidden ${theme.backgroundGradient}  pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]`}>
-      <div className="container mx-auto">
+    <section
+      className={`relative z-20 overflow-hidden bg-cover bg-no-repeat bg-fixed nt}  pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]`}
+      style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/New%20India%2C%20Young%20India%20(6).png?alt=media&token=f0946d08-f7fd-480e-aca4-531175963a4c')", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+    >    <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
-              <span className="mb-2 block text-5xl font-semibold text-white">
-                FAQs
+              <span className="mb-2 block text-5xl font-semibold text-white ">
+                Frequently Asked Question
               </span>
-              <h2 className="mb-4 text-3xl font-bold text-white light:text-white sm:text-[40px]/[48px]">
-                Any Questions? Look Here
-              </h2>
-              <p className="text-base text-body-color text-white">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
-              </p>
+            
+             
             </div>
           </div>
         </div>

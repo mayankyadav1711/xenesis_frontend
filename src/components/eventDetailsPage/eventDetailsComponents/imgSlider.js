@@ -1,11 +1,10 @@
 import React from "react";
-
+import event1 from "../eventDetailsImages/1.jpg"
+import event2 from "../eventDetailsImages/2.jpg"
+import event3 from "../eventDetailsImages/4.jpg"
 const ImgSlider = () => {
   const ImgSliderData = [
-    "../eventDeatailsImgs/1.jpg",
-    "../eventDeatailsImgs/2.jpg",
-    "../eventDeatailsImgs/4.jpg",
-    "../eventDeatailsImgs/2.jpg",
+    event1,event2,event3
   ];
   return (
     <div className="w-full h-full relative flex items-center justify-center overflow-y-hidden">

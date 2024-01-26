@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
-
+import avatar from "../../ticket/avatars/0001.png"
 Modal.setAppElement("#root"); // Set the root element for accessibility
 
 const PopCard = ({ closeModal }) => {
@@ -17,7 +17,7 @@ const PopCard = ({ closeModal }) => {
         <div className="avatar h-20 w-20 mx-auto">
           <img
             className="rounded-full"
-            src="/static/avatars/{{profilePic}}.png"
+            src={avatar}
             alt="avatar"
           />
         </div>
