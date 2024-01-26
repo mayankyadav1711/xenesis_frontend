@@ -11,7 +11,7 @@ function PendingTicket({ bgColor }) {
   return (
     // <div className="flex-col relative justify-center  items-center p-4 bg-black bg-opacity-35   rounded-md">
     <div
-      className={`flex relative justify-between  items-center bg-white bg-opacity-80 rounded-md w-[16rem] md:w-[20rem] sm:w-[18rem] lg:w-[21rem] xl:w-[22rem]`}
+      className={`flex relative justify-between  items-center bg-white bg-opacity-80 rounded-md `}
     >
       <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-tl-md flex items-center rounded-bl-md h-full w-[50px] left-0">
         <p className="-translate-x-1/4 -rotate-90 text-center font-extrabold">
@@ -27,8 +27,8 @@ function PendingTicket({ bgColor }) {
             {/* <div className=" max-w-[80px]  aspect-square">
               <img src={Pfp} className="w-full h-full" alt="pfp" />
             </div> */}
-            <div className=" text-sm flex-col justify-center items-center text-black ">
-              <h1 class="text-black font-bold sm::text-4xl text-lg title-truncate">
+            <div className=" text-caption2 flex-col justify-center items-center text-black ">
+              <h1 class="text-black font-bold text-heading6 title-truncate border-b-2 border-black">
                 Skribble
               </h1>
               <hr />

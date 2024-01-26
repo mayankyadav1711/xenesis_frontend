@@ -5,13 +5,10 @@ import PendingTicket from "./pendingticket";
 const Verifier = () => {
   return (
     <div>
-      <section class="bg-[#162238] tails-selected-element outline-none w-full h-full p-7">
-        <div class=" mx-auto sm:px-10 lg:px-0 w-full">
-          <div class=" text-center py-5 relative  w-full">
-            <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Pending Tickets
-            </h2>
-            <div class="absolute right-0 top-4 h-8 rounded-lg bg-transparent border-gray-50 border-2 focus:outline-none overflow-hidden hidden md:block">
+      <section class="bg-[#162238] tails-selected-element outline-none w-full h-full p-3 overflow-hidden sm:p-7">
+        <div class=" mx-auto lg:px-0 w-full">
+          <div class=" text-center py-5 relative flex flex-col gap-5 w-full">
+            <div class="relative w-fit h-8 flex justify-center self-center md:self-end rounded-lg bg-transparent border-gray-50 border-2 focus:outline-none overflow-hidden ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -32,8 +29,11 @@ const Verifier = () => {
                 class="h-full w-full bg-transparent text-black pl-8 focus:outline-none overflow-hidden"
               />
             </div>
+            <h2 class="text-3xl font-semibold pb-5 tracking-tight text-white sm:text-4xl lg:text-5xl">
+              Pending Tickets
+            </h2>
           </div>
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3  lg:gap-10 justify-items-center xl:grid-cols-3">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3  lg:gap-5 xl:gap-10 justify-items-center xl:grid-cols-3">
             <PendingTicket />
             <PendingTicket />
             <PendingTicket />

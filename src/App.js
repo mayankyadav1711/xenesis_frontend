@@ -2,6 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { ThemeProvider } from "./context/ThemeContext";
 import Home from "./components/homepage";
 import Login from "./components/login";
 import Register from "./components/register";
@@ -9,6 +10,9 @@ import OTP from "./components/OTP";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPassword from "./components/ForgotPassword";
 import Verifier from "./components/Verifier/verifier";
+import Event from "./components/events";
+import Myticket from "./components/myticket";
+import FAQ from "./components/faqs";
 
 const Routing = () => {
   return (
@@ -21,6 +25,9 @@ const Routing = () => {
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/otp" element={<OTP />} />
         <Route path="/verifier" element={<Verifier />} />
+        <Route path="/events" element={<Event />} />
+        <Route path="/myTicket" element={<Myticket />} />
+        <Route path="/faqs" element={<FAQ />} />
       </Routes>
     </>
   );
@@ -28,7 +35,9 @@ const Routing = () => {
 function App() {
   return (
     <Router>
-      <Routing />
+      <ThemeProvider>
+        <Routing />
+      </ThemeProvider>
     </Router>
   );
 }
