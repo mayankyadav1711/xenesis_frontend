@@ -9,18 +9,12 @@ import Register from "./components/register";
 import OTP from "./components/OTP";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPassword from "./components/ForgotPassword";
+import Verifier from "./components/Verifier/verifier";
 import Event from "./components/events";
 import Myticket from "./components/myticket";
 import FAQ from "./components/faqs";
 
-
-
 const Routing = () => {
-
-
-
-
-
   return (
     <>
       <Routes>
@@ -30,6 +24,9 @@ const Routing = () => {
         <Route path="/resetpassword/:token" element={<ResetPassword />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/otp" element={<OTP />} />
+
+        <Route path="/verifier" element={<Verifier />} />
+
         <Route path="/events" element={<Event />} />
         <Route path="/myTicket" element={<Myticket />} />
         <Route path="/faqs" element={<FAQ />} />
@@ -40,13 +37,11 @@ const Routing = () => {
 function App() {
   return (
 
-
     <Router>
       <ThemeProvider>
         <Routing />
       </ThemeProvider>
     </Router>
-
 
   );
 }
