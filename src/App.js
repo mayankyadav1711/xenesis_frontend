@@ -10,12 +10,15 @@ import OTP from "./components/OTP";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPassword from "./components/ForgotPassword";
 import Events from "./components/Events";
-
+import "./globals.css"
 
 import Verifier from "./components/Verifier/verifier";
 import Myticket from "./components/myticket";
 import EventDetails from "./components/eventDetailsPage/eventDetails";
 import FAQ from "./components/faqs";
+import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
+import Aboutus from "./components/Aboutus";
 
 const Routing = () => {
   return (
@@ -29,6 +32,7 @@ const Routing = () => {
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/otp" element={<OTP />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/aboutus" element={<Aboutus />} />
 
 
         <Route path="/verifier" element={<Verifier />} />
@@ -43,7 +47,9 @@ function App() {
 
     <Router>
       <ThemeProvider>
+        <Navbar />
         <Routing />
+        <Footer />
       </ThemeProvider>
     </Router>
 

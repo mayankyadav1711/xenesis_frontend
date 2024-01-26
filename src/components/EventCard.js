@@ -13,8 +13,9 @@ const EventCard = ({ title, events }) => {
     <div className="overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[#070d15b6] backdrop-filter backdrop-blur-3xl" style={{
       backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
     }}>
-      <div className="absolute inset-0 bg-[#070d15d0] backdrop-filter backdrop-blur-3xl"></div>
-      <div className="w-full h-fit overflow-hidden customScrollbar relative mt-10 lg:ml-5 ml-0">
+
+      <div className="absolute inset-0 bg-darkBlue-50 backdrop-filter backdrop-blur-3xl"></div>
+      <div className="w-full h-fit overflow-hidden customScrollbar relative px-2">
 
         <Swiper
           spaceBetween={50}
