@@ -1,6 +1,12 @@
 import React from "react";
 
-const EventFaculty = ({ Student1, Student2, Student3, Student4, Student5 }) => {
+const EventStudents = ({
+  Student1,
+  Student2,
+  Student3,
+  Student4,
+  Student5,
+}) => {
   return (
     <div class="sm:text-center xl:mt-16 mt-10">
       <p class="font-bold text-3xl mb-5 text-blue-400">Student Coordinators</p>
@@ -19,4 +25,4 @@ const EventFaculty = ({ Student1, Student2, Student3, Student4, Student5 }) => {
   );
 };
 
-export default EventFaculty;
+export default EventStudents;

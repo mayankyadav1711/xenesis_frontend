@@ -5,7 +5,7 @@ import EventRounds from "./eventDetailsSections/eventRounds";
 import EventCart from "./eventDetailsComponents/eventCart";
 import ImgOverTitle from "./eventDetailsComponents/imgOverTitle";
 import EventIntro from "./eventDetailsSections/eventIntro";
-import EventFPL from "./eventDetailsSections/eventFPL";
+import EventSPL from "./eventDetailsSections/eventSPL";
 
 const EventDetails = () => {
   return (
@@ -16,7 +16,7 @@ const EventDetails = () => {
 
         <div class="w-full h-full xl:px-32 lg:px-20 md:px-16 sm:px-12 px-8 sm:py-20 py-0 sm:pt-0 text-white relative z-30">
           <EventIntro />
-          <EventFPL />
+          <EventSPL />
           <EventRules />
           <EventRounds />
         </div>

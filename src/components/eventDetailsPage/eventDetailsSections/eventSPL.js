@@ -1,14 +1,14 @@
 import React from "react";
-import EventFaculty from "../eventDetailsComponents/eventFaculty";
 import EventPrizes from "../eventDetailsComponents/eventPrizes";
 import EventLocation from "../eventDetailsComponents/eventLocation";
 import { eventDetailsData } from "../eventData";
+import EventStudents from "../eventDetailsComponents/eventStudents";
 
-const EventFPL = () => {
+const EventSPL = () => {
   return (
     <div>
       <div class="grid gap-10 xl:grid-cols-3 grid-cols-1 sm:mb-24 mb-12">
-        <EventFaculty
+        <EventStudents
           Student1={eventDetailsData.Student1}
           Student2={eventDetailsData.Student2}
           Student3={eventDetailsData.Student3}
@@ -28,4 +28,4 @@ const EventFPL = () => {
   );
 };
 
-export default EventFPL;
+export default EventSPL;
