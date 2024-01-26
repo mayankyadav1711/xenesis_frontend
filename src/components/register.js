@@ -27,13 +27,13 @@ function Register() {
 
   return (
     <>
- <div className="bg-[#240a34] overflow-x-hidden">
+ <div className="overflow-x-hidden">
       <div className="relative flex items-center justify-center w-screen h-full min-h-[100vh] py-20 overflow-hidden">
-        <div className="absolute top-0 left-0 w-screen h-full min-h-[100vh] scale-110">
+      <div className="fixed top-0 left-0 w-full h-full min-h-[100vh] scale-100">
         <img
-            src="https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/register-3.png?alt=media&token=84cf0c58-e62f-4247-ab30-2e46a8b3bec2"  // Replace with your background image path
+            src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg "  // Replace with your background image path
             alt="Background"
-            className="h-full min-h-[calc((797/1463)*100vw)] w-full object-center block"
+            className="h-full min-h-[calc((797/1463)*100vw)] w-full object-cover block"
           />
         </div>
 
@@ -78,13 +78,13 @@ function Register() {
                 Email
               </label>
             </div>
-
+            <div className='mt-5' />
             {/* Password input */}
             <div className='flex group relative w-full justify-center'>
               <input
                 type={showPassword ? "text" : "password"}
                 id='password'
-                name="password1"
+                name="password1" 
                 spellCheck='false'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -110,7 +110,7 @@ function Register() {
                 Password
               </label>
             </div>
-
+            <div className='mt-5' />
             {/* Re-enter Password input */}
             <div className='flex group relative w-full justify-center -mb-6'>
               <input
@@ -142,7 +142,7 @@ function Register() {
                 Re-enter Password
               </label>
             </div>
-
+            <div className='mt-9' />
             {/* Submit button */}
             <input
               type="submit"
@@ -150,11 +150,11 @@ function Register() {
               tabIndex="4"
               className='w-fit bg-gradient-to-tr from-orange-500 to-yellow-300 outline-none mt-5 xl:px-16 lg:px-12 sm:px-10 px-9 py-1.5 text-[#f0e2ea] xl:text-lg lg:text-md font-semibold cursor-pointer transition-all duration-200 focus:-translate-y-1 hover:ring hover:ring-yellow-100 rounded-md'
             />
-
+<div className="text-white ml-3 mt-2 md:mt-1 text-xs italic w-full text-right transition-all duration-200 hover:-translate-x-1">
             {/* Already have an account link */}
-            <a href="/login" className="text-white -mt-3 text-xs italic w-full text-right transition-all duration-200 hover:-translate-x-1">
+            <a href="/login">
               Already have an account ? Login
-            </a>
+            </a></div>
           </form>
         </div>
       </div>
