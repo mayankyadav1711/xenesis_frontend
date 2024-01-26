@@ -17,7 +17,7 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
   // Define the initial theme state
   const [theme, setTheme] = useState({
-    backgroundGradient: 'bg-[#240a34]',
+    backgroundGradient: 'bg-[#0e242f]',
     buttonColor: '#4CAF50',
     textColor: '#333',
   });
