@@ -24,7 +24,7 @@ function Newticket({ bgColor }) {
                 <div className="p-2  border-white  ">
                     <img src={Qr} className="w-full h-full" alt="qr" />
                 </div>
-                <div className="flex border-l-8   border-dotted border-darkBlue-50  flex-col">
+                <div className="flex border-l-8   border-dotted border-black  flex-col">
 
 
                     <div className="grid py-4  grid-cols-[25%_1fr] items-center">
@@ -73,23 +73,29 @@ function Newticket({ bgColor }) {
             <div>
 
             </div>
-            <div className=" absolute top-0 -translate-x-1/2 -translate-y-1/2  left-0">
+            <div className=" absolute top-0   left-0">
                 <Dots />
             </div>
-            <div className=" absolute bottom-0 -translate-x-1/2 translate-y-1/2  left-0">
+            <div className=" absolute bottom-0 -rotate-90  left-0">
                 <Dots />
             </div>
-            <div className=" absolute top-0 translate-x-1/2 -translate-y-1/2  right-0">
+            <div className=" absolute top-0 rotate-90  right-0">
                 <Dots />
             </div>
-            <div className=" absolute bottom-0 translate-x-1/2 translate-y-1/2 right-0">
+            <div className=" absolute rotate-180 bottom-0  right-0">
                 <Dots />
             </div>
-            <div className=" absolute bottom-0 translate-x-1/2 translate-y-[20px] left-[25%]">
+            {/* <div className=" absolute rotate-180 bottom-0 left-[25%]  ">
                 <Dots />
+            </div> */}
+
+            <div className=" absolute bottom-0 translate-x-1/2   left-[25%]">
+                <div className="h-[15px] w-[30px] bg-black  z-10  rounded-tl-full rounded-tr-full ">
+                </div>
             </div>
-            <div className=" absolute top-0 translate-x-1/2 -translate-y-[20px] left-[25%]">
-                <Dots />
+            <div className=" absolute top-0 translate-x-1/2  left-[25%]">
+                <div className="h-[15px] w-[30px] bg-black  z-10  rounded-bl-full rounded-br-full ">
+                </div>
             </div>
             {/* <div>
                 <img src={Texture} cla alt="tetx" />

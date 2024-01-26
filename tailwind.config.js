@@ -140,7 +140,9 @@ module.exports = {
         darkBlue: {
           50: "#162238"
         },
-
+        darkYellow: {
+          50: "#F4A424"
+        },
       },
 
     },
