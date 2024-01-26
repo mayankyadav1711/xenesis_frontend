@@ -2,10 +2,10 @@ import React from "react";
 
 const ImgSlider = () => {
   const ImgSliderData = [
-    "../../../../public/eventDeatailsImgs/1.jpg",
-    "../../../../public/eventDeatailsImgs/2.jpg",
-    "../../../../public/eventDeatailsImgs/3.jpg",
-    "../../../../public/eventDeatailsImgs/2.jpg",
+    "../eventDeatailsImgs/1.jpg",
+    "../eventDeatailsImgs/2.jpg",
+    "../eventDeatailsImgs/4.jpg",
+    "../eventDeatailsImgs/2.jpg",
   ];
   return (
     <div className="w-full h-full relative flex items-center justify-center overflow-y-hidden">

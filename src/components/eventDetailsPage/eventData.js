@@ -25,6 +25,7 @@ export const eventRules = [
 export const roundData = [
   {
     title: "Subway Surfer Challenge",
+    sideImg: "../eventDetailsPage/eventDeatailsImgs/login-back.png",
     description: [
       "In this round, participants will compete against each other in the classic Subway Surfer game using camera and motion detection technology.",
       "The objective of the game is to run as far as possible while avoiding obstacles and collecting coins.",
@@ -36,6 +37,7 @@ export const roundData = [
   },
   {
     title: "Balloon Popper Challenge",
+    sideImg: "../eventDetailsPage/eventDeatailsImgs/login-back.png",
     className: "order-last",
     description: [
       "In this round, participants will play the Balloon Popper game using camera and motion detection technology.",
@@ -48,6 +50,7 @@ export const roundData = [
   },
   {
     title: "Beat Saber Finale",
+    sideImg: "../eventDetailsPage/eventDeatailsImgs/login-back.png",
     description: [
       "The Beat Saber Finale is the final round of the X - Motion Game Mania event.",
       "In this round, participants will use camera and motion detection technology to play the popular rhythm-based Beat Saber game.",

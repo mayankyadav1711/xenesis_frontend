@@ -23,7 +23,7 @@ const RoundDetails = () => {
               </ul>
             </div>
             <img
-              src="../../../../public/eventDeatailsImgs/login-back.png"
+              src={round.sideImg}
               alt=""
               className="w-full h-full rounded-xl hidden lg:block"
             />

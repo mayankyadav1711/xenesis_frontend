@@ -7,7 +7,7 @@ const EventPrizes = ({ prize1, prize2 }) => {
       <div class="flex items-center justify-center gap-12 pt-4">
         <div>
           <img
-            src="../../../../public/eventDeatailsImgs/goldTrophy.png"
+            src="../eventDeatailsImgs/goldTrophy.png"
             alt=""
             class="w-[100px] mix-blend-screen mb-3"
           />
@@ -18,7 +18,7 @@ const EventPrizes = ({ prize1, prize2 }) => {
         </div>
         <div>
           <img
-            src="../../../../public/eventDeatailsImgs/silverTrophy.png"
+            src="../eventDeatailsImgs/silverTrophy.png"
             alt=""
             class="w-[100px] mix-blend-screen mb-3"
           />

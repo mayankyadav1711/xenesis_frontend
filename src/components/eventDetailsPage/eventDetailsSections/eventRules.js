@@ -20,7 +20,7 @@ const EventRules = () => {
         </div>
       </div>
       <img
-        src="../../../../public/eventDeatailsImgs/login-back.png"
+        src="../eventDeatailsImgs/login-back.png"
         alt=""
         class="w-full h-full rounded-xl"
       />
