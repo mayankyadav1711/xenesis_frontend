@@ -11,7 +11,7 @@ function Ticket({ bgColor }) {
 
   return (
     // <div className="flex-col relative justify-center  items-center p-4 bg-black bg-opacity-35   rounded-md">
-    <div className={`flex-col relative justify-center  items-center p-4 ${bgColor} bg-opacity-45   rounded-md`}>
+    <div className={`flex-col relative justify-center  items-center p-4 ${bgColor}    rounded-md`}>
       <div className="p-2 border-2 border-black rounded-lg">
 
 
@@ -36,15 +36,15 @@ function Ticket({ bgColor }) {
           <Dots />
         </div>
 
-        <div className="flex gap-2 pt-2 px-2 pr-4 ">
-          <Price bgColor={bgColor}>
+        <div className="flex gap-0 pt-2 px-2 pr-4 ">
+          <Price bgColor="bg-[#0F242E] ">
             <>
               {/* {data.price} */}
               50
             </>
           </Price>
 
-          <div className="text-center bg-gradient-to-bl rounded-md py-2 hover:text-white w-full duration-300 hover:bg-[#0F242E] bg-[#CF8D42] text-caption1">
+          <div className="text-center bg-gradient-to-bl rounded-md rounded-tl-none rounded-bl-none py-2 hover:text-white w-full duration-300 hover:bg-[#0F242E] bg-[#CF8D42] text-caption1">
             <p>Event Name</p>
           </div>
         </div>
