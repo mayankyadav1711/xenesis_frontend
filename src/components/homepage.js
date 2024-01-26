@@ -118,7 +118,7 @@ const Home = () => {
 
   
   return (
-    <div class=" overflow-x-hidden" >
+    <div class="overflow-x-hidden" >
 {/* Mavbar  */}
 
 <Navbar />

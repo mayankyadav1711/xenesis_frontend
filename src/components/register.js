@@ -27,11 +27,11 @@ function Register() {
 
   return (
     <>
- <div className="bg-[#240a34] overflow-x-hidden">
+ <div className="overflow-x-hidden">
       <div className="relative flex items-center justify-center w-screen h-full min-h-[100vh] py-20 overflow-hidden">
-        <div className="absolute top-0 left-0 w-screen h-full min-h-[100vh] scale-110">
+      <div className="fixed top-0 left-0 w-full h-full min-h-[100vh] scale-100">
         <img
-            src="https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/register-3.png?alt=media&token=84cf0c58-e62f-4247-ab30-2e46a8b3bec2"  // Replace with your background image path
+            src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg "  // Replace with your background image path
             alt="Background"
             className="h-full min-h-[calc((797/1463)*100vw)] w-full object-cover block"
           />
@@ -39,7 +39,7 @@ function Register() {
 
         {/* Link to Home Div */}
         <a href="/" className="absolute top-5 left-5 flex flex-col items-center cursor-pointer hover:scale-[1.15] z-30 transition-all duration-300">
-          {/* <i className="bi bi-house-door text-xl text-white bg-[#240a34] px-3 py-2 rounded-full hover:shadow-white hover:shadow-2xl"></i> */}
+          <i className="bi bi-house-door text-xl text-white bg-[#240a34] px-3 py-2 rounded-full hover:shadow-white hover:shadow-2xl"></i>
           <p className="mt-1 text-white bg-[#240a34] rounded-md px-2 hidden md:block">Home</p>
         </a>
 

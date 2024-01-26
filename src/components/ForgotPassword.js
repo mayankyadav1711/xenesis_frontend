@@ -7,7 +7,7 @@ const ForgotPassword = () => {
      
         <div className="absolute top-0 left-0 w-screen h-full min-h-[100vh] scale-100">
         <img
-            src="https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/register-3.png?alt=media&token=84cf0c58-e62f-4247-ab30-2e46a8b3bec2"  // Replace with your background image path
+            src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg"  // Replace with your background image path
             alt="Background"
             className="h-full min-h-[calc((797/1463)*100vw)] w-full object-cover block"
           />
