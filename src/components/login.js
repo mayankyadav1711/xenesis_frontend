@@ -19,7 +19,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-[#240a34] overflow-x-hidden">
+    <div className="bg-[#240a34] overflow-hidden">
       <div className="absolute top-0 left-0 w-screen h-full min-h-[100vh] scale-100">
         <img
             src="https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/register-3.png?alt=media&token=84cf0c58-e62f-4247-ab30-2e46a8b3bec2"  // Replace with your background image path

@@ -11,6 +11,7 @@ import ForgotPassword from "./components/ForgotPassword";
 
 
 
+
 const Routing = () => {
 
 
@@ -26,7 +27,7 @@ const Routing = () => {
         <Route path="/resetpassword/:token" element={<ResetPassword />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/otp" element={<OTP />} />
-      </Routes>
+     </Routes>
     </>
   );
 };
