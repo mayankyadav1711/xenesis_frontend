@@ -8,15 +8,9 @@ import Register from "./components/register";
 import OTP from "./components/OTP";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPassword from "./components/ForgotPassword";
-
-
+import Verifier from "./components/Verifier/verifier";
 
 const Routing = () => {
-
-
-
-
-
   return (
     <>
       <Routes>
@@ -26,17 +20,16 @@ const Routing = () => {
         <Route path="/resetpassword/:token" element={<ResetPassword />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/otp" element={<OTP />} />
+        <Route path="/verifier" element={<Verifier />} />
       </Routes>
     </>
   );
 };
 function App() {
   return (
-   
-      <Router>
-        <Routing />
-      </Router>
-   
+    <Router>
+      <Routing />
+    </Router>
   );
 }
 
