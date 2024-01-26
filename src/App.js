@@ -12,6 +12,9 @@ import ForgotPassword from "./components/ForgotPassword";
 import Event from "./components/events";
 import Myticket from "./components/myticket";
 import EventDetails from "./components/eventDetailsPage/eventDetails";
+import FAQ from "./components/faqs";
+
+
 
 const Routing = () => {
   return (
@@ -26,6 +29,7 @@ const Routing = () => {
         <Route path="/otp" element={<OTP />} />
         <Route path="/events" element={<Event />} />
         <Route path="/myTicket" element={<Myticket />} />
+        <Route path="/faqs" element={<FAQ />} />
       </Routes>
     </>
   );
