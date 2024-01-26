@@ -12,72 +12,544 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const Events = () => {
-    const CEEvents = [
-        {
-          title: "Event 5",
-          image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-          description: "Event description 1",
-          pricePerHead: "100",
-          individualAllowed: true,
-          eventId: "event1",
-          teamAllowed: true,
-          teamPrice: 1000,
-          likes: 9123,
-        },
-        {
-          title: "Event 2",
-          image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-          description: "Event description 2",
-          pricePerHead: "200",
-          individualAllowed: false,
-          eventId: "event2",
-          teamAllowed: false,
-          teamPrice: 750,
-          likes: 0, // You can initialize likes to 0
-        },
-        {
-          title: "Event 1",
-          image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-          description: "Event description 1",
-          pricePerHead: "100",
-          individualAllowed: true,
-          eventId: "event1",
-          teamAllowed: true,
-          teamPrice: 1000,
-          likes: 9123,
-        },
-        {
-          title: "Event 1",
-          image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-          description: "Event description 1",
-          pricePerHead: "100",
-          individualAllowed: true,
-          eventId: "event1",
-          teamAllowed: true,
-          teamPrice: 1000,
-          likes: 9123,
-        },
-        {
-          title: "Event 2",
-          image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-          description: "Event description 2",
-          pricePerHead: "200",
-          individualAllowed: false,
-          eventId: "event2",
-          teamAllowed: false,
-          teamPrice: 750,
-          likes: 0, // You can initialize likes to 0
-        },
-        // Add more events as needed
-      ];
-  
+    const departmentEvents = {
+        "Computer Engineering": [
+          {
+            title: "FreeFire",
+            image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+            description: "Event description 1",
+            pricePerHead: "100",
+            individualAllowed: true,
+            eventId: "event1",
+            teamAllowed: true,
+            teamPrice: 1000,
+            likes: 9123,
+          },
+          {
+            title: "X-Error",
+            image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+            description: "Event description 1",
+            pricePerHead: "100",
+            individualAllowed: true,
+            eventId: "event1",
+            teamAllowed: true,
+            teamPrice: 1000,
+            likes: 9123,
+          },
+          {
+            title: "Skribble",
+            image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+            description: "Event description 1",
+            pricePerHead: "100",
+            individualAllowed: true,
+            eventId: "event1",
+            teamAllowed: true,
+            teamPrice: 1000,
+            likes: 9123,
+          },
+          {
+            title: "Human Ludo",
+            image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+            description: "Event description 1",
+            pricePerHead: "100",
+            individualAllowed: true,
+            eventId: "event1",
+            teamAllowed: true,
+            teamPrice: 1000,
+            likes: 9123,
+          },
+          {
+            title: "Pictionary",
+            image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+            description: "Event description 1",
+            pricePerHead: "100",
+            individualAllowed: true,
+            eventId: "event1",
+            teamAllowed: true,
+            teamPrice: 1000,
+            likes: 9123,
+          },
+          // Add more events as needed
+        ],
+        "Information Technology": [
+          {
+            title: "Xbox One",
+            image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+            description: "Event description 2",
+            pricePerHead: "200",
+            individualAllowed: false,
+            eventId: "event2",
+            teamAllowed: false,
+            teamPrice: 750,
+            likes: 0,
+          },
+          {
+            title: "X-Clue Zone",
+            image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+            description: "Event description 2",
+            pricePerHead: "200",
+            individualAllowed: false,
+            eventId: "event2",
+            teamAllowed: false,
+            teamPrice: 750,
+            likes: 0,
+          },
+          {
+            title: "X-Bug Report",
+            image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+            description: "Event description 2",
+            pricePerHead: "200",
+            individualAllowed: false,
+            eventId: "event2",
+            teamAllowed: false,
+            teamPrice: 750,
+            likes: 0,
+          },
+          {
+            title: "Valorant",
+            image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+            description: "Event description 2",
+            pricePerHead: "200",
+            individualAllowed: false,
+            eventId: "event2",
+            teamAllowed: false,
+            teamPrice: 750,
+            likes: 0,
+          },
+          {
+            title: "Event 2",
+            image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+            description: "Event description 2",
+            pricePerHead: "200",
+            individualAllowed: false,
+            eventId: "event2",
+            teamAllowed: false,
+            teamPrice: 750,
+            likes: 0,
+          },
+          // Add more events as needed
+        ],
+        "Mechanical Engineering": [
+            {
+              title: "Xbox One",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Clue Zone",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Bug Report",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Valorant",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Event 2",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            // Add more events as needed
+          ],
+          "Electrical Engineering": [
+            {
+              title: "Xbox One",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Clue Zone",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Bug Report",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Valorant",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Event 2",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            // Add more events as needed
+          ],
+          "Electronics Communication": [
+            {
+              title: "Xbox One",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Clue Zone",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Bug Report",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Valorant",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Event 2",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            // Add more events as needed
+          ],
+          
+          "Civil Engineering": [
+            {
+              title: "Xbox One",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Clue Zone",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Bug Report",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Valorant",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Event 2",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            // Add more events as needed
+          ],
+          "MBA Department": [
+            {
+              title: "Xbox One",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Clue Zone",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Bug Report",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Valorant",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Event 2",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            // Add more events as needed
+          ],
+          "MCA Department": [
+            {
+              title: "Xbox One",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Clue Zone",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Bug Report",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Valorant",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Event 2",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            // Add more events as needed
+          ],
+          "Science and Humanity": [
+            {
+              title: "Xbox One",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Clue Zone",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "X-Bug Report",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Valorant",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            {
+              title: "Event 2",
+              image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+              description: "Event description 2",
+              pricePerHead: "200",
+              individualAllowed: false,
+              eventId: "event2",
+              teamAllowed: false,
+              teamPrice: 750,
+              likes: 0,
+            },
+            // Add more events as needed
+          ],
+        // Add more departments as needed
+      };
+  const [openDepartment, setOpenDepartment] = useState(null);
+
+  const handleAccordionToggle = (department) => {
+    setOpenDepartment(openDepartment === department ? null : department);
+  };
   return (
    <>
     	<div class="w-full h-screen overflow-hidden customScrollbar relative" style={{ backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706213665/eventHerolandingPage2_zd9rni.png')" }}>
         <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(to bottom, rgba(7, 13, 21, 0.5) 0%, rgba(7, 13, 21, 0.7) 100%)" }}></div>
         <canvas id="canvas" class="w-screen h-[calc((1024/1536)*100vw)] absolute top-0 z-0"></canvas>
 				<div class="absolute w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 px-[calc(3vh)] text-center z-20">
-					<h1 class="text-[calc(12vh)] text-white uppercase font-bold z-20">Events</h1>
+					<h1 class="lg:text-[calc(12vh)] text-[calc(6vh)] text-white uppercase font-bold z-20">Events</h1>
 					<div class="w-[60vw] h-[65px] p-2 px-2 mx-auto md:px-4">
 						<div class="w-full">
 							<div class="flex items-center">
@@ -91,42 +563,18 @@ const Events = () => {
 				</div>
 				<div class="w-full h-full bg-[rgba(0,0,0,0.4)] absolute top-0 left-0 z-10"></div>
 			</div>
-            <div className="bg-[#070d15]">
+            
+            <div className="bg-[#162238]]">
+  {Object.entries(departmentEvents).map(([department, events]) => (
+    <div key={department} className={`bg-[#070d15]`}>
       <div className="w-full text-center">
-          <h3 className="uppercase text-white text-5xl font-serif font-semibold mb-4">Computer Engineering</h3>
-         
-        </div><hr /></div>
-            <EventCard events={CEEvents} />
-            <div className="bg-[#070d15]">
-      <div className="w-full text-center">
-          <h3 className="uppercase text-white text-5xl font-serif font-semibold mb-4">Information Technology</h3>
-         
-        </div><hr /></div>
-            <EventCard />
-            <div className="bg-[#070d15]">
-      <div className="w-full text-center">
-          <h3 className="uppercase text-white text-5xl font-serif font-semibold mb-4">Mechanical Engineering</h3>
-         
-        </div><hr /></div>
-            <EventCard events={CEEvents} />
-            <div className="bg-[#070d15]">
-      <div className="w-full text-center">
-          <h3 className="uppercase text-white text-5xl font-serif font-semibold mb-4">Electrical Engineering</h3>
-         
-        </div><hr /></div>
-            <EventCard events={CEEvents} />
-            <div className="bg-[#070d15]">
-      <div className="w-full text-center">
-          <h3 className="uppercase text-white text-5xl font-serif font-semibold mb-4">Civil Engineering</h3>
-         
-        </div><hr /></div>
-            <EventCard events={CEEvents} />
-            <div className="bg-[#070d15]">
-      <div className="w-full text-center">
-          <h3 className="uppercase text-white text-5xl font-serif font-semibold mb-4">MBA</h3>
-         
-        </div><hr /></div>
-            <EventCard events={CEEvents} />
+        <h3 className="uppercase text-white lg:text-[calc(12vh)] text-[calc(3vh)] pt-5 font-serif font-semibold mb-4">{department}</h3>
+      </div>
+      <hr />
+      <EventCard title={department} events={events} />
+    </div>
+  ))}
+</div>
    </>
   
   );

@@ -12,64 +12,68 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const Home = () => {
-  const eventArr = [
-    {
-      title: "Event 1",
-      image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-      description: "Event description 1",
-      pricePerHead: "100",
-      individualAllowed: true,
-      eventId: "event1",
-      teamAllowed: true,
-      teamPrice: 1000,
-      likes: 9123,
-    },
-    {
-      title: "Event 2",
-      image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-      description: "Event description 2",
-      pricePerHead: "200",
-      individualAllowed: false,
-      eventId: "event2",
-      teamAllowed: false,
-      teamPrice: 750,
-      likes: 0, // You can initialize likes to 0
-    },
-    {
-      title: "Event 1",
-      image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-      description: "Event description 1",
-      pricePerHead: "100",
-      individualAllowed: true,
-      eventId: "event1",
-      teamAllowed: true,
-      teamPrice: 1000,
-      likes: 9123,
-    },
-    {
-      title: "Event 1",
-      image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-      description: "Event description 1",
-      pricePerHead: "100",
-      individualAllowed: true,
-      eventId: "event1",
-      teamAllowed: true,
-      teamPrice: 1000,
-      likes: 9123,
-    },
-    {
-      title: "Event 2",
-      image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-      description: "Event description 2",
-      pricePerHead: "200",
-      individualAllowed: false,
-      eventId: "event2",
-      teamAllowed: false,
-      teamPrice: 750,
-      likes: 0, // You can initialize likes to 0
-    },
-    // Add more events as needed
-  ];
+  const departmentEvents = {
+    "Events": [
+      {
+        title: "FreeFire",
+        image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+        description: "Event description 1",
+        pricePerHead: "100",
+        individualAllowed: true,
+        eventId: "event1",
+        teamAllowed: true,
+        teamPrice: 1000,
+        likes: 9123,
+      },
+      {
+        title: "X-Error",
+        image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+        description: "Event description 1",
+        pricePerHead: "100",
+        individualAllowed: true,
+        eventId: "event1",
+        teamAllowed: true,
+        teamPrice: 1000,
+        likes: 9123,
+      },
+      {
+        title: "Skribble",
+        image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+        description: "Event description 1",
+        pricePerHead: "100",
+        individualAllowed: true,
+        eventId: "event1",
+        teamAllowed: true,
+        teamPrice: 1000,
+        likes: 9123,
+      },
+      {
+        title: "Human Ludo",
+        image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+        description: "Event description 1",
+        pricePerHead: "100",
+        individualAllowed: true,
+        eventId: "event1",
+        teamAllowed: true,
+        teamPrice: 1000,
+        likes: 9123,
+      },
+      {
+        title: "Pictionary",
+        image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+        description: "Event description 1",
+        pricePerHead: "100",
+        individualAllowed: true,
+        eventId: "event1",
+        teamAllowed: true,
+        teamPrice: 1000,
+        likes: 9123,
+      },
+      // Add more events as needed
+    ],
+   
+      // Add more events as needed
+    }
   
   const galleryImages = [
     "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
@@ -139,7 +143,7 @@ const Home = () => {
        <section className="w-full h-screen p-6 text-white flex items-center justify-center relative" style={{ backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
       <div className="absolute left-0 top-0 w-full h-screen bg-[rgba(0,0,0,0.5)] z-20"></div>
       <div className="z-30 absolute top-1/2 -translate-y-1/2 px-[calc(3vh)] w-1/2 left-5">
-      <h1 className="text-[calc(12vh)] text-transparent bg-gradient-to-r from-blue-600 via-white to-green-600 uppercase font-bold w-fit bg-clip-text text-transparent font-mono">
+      <h1 className="text-[calc(8vh)] text-transparent bg-gradient-to-r from-blue-600 via-white to-green-600 uppercase font-bold w-fit bg-clip-text text-transparent font-mono">
   <span className="text-blue-500">X</span>enesis
 </h1>
 
@@ -156,59 +160,64 @@ const Home = () => {
       {/* Departments */}
       <div className="bg-[#070d15]">
       <div className="w-full text-center">
-          <h3 className="uppercase text-white text-5xl font-serif font-semibold mb-4">Departments</h3>
+          <h3 className="uppercase text-white lg:text-[calc(8vh)] text-[calc(3vh)] font-serif font-semibold pb-4 pt-4">Departments</h3>
          
-        </div><hr /></div>
+        </div></div>
       <Departments />
 
       {/*Hello Events */}
-      <div className="bg-[#070d15]">
+      <div className="bg-[#162238]]">
+  {Object.entries(departmentEvents).map(([department, events]) => (
+    <div key={department} className={`bg-[#070d15]`}>
       <div className="w-full text-center">
-          <h3 className="uppercase text-white text-5xl font-serif font-semibold mb-4">Events</h3>
-         
-        </div><hr /></div>
-      <EventCard />
+        <h3 className="uppercase text-white lg:text-[calc(8vh)] text-[calc(3vh)] font-serif font-semibold mb-4  pt-4">{department}</h3>
+      </div>
+      
+      <EventCard title={department} events={events} />
+    </div>
+  ))}
+</div>
 
 
       <div className="bg-[#070d15]">
       <div className="w-full text-center">
-          <h3 className="uppercase text-white text-5xl font-serif font-semibold mb-4">Gallery</h3>
+          <h3 className="uppercase text-white lg:text-[calc(8vh)] text-[calc(3vh)] font-serif font-semibold pt-4 py-4">Gallery</h3>
          
-        </div><hr /></div>
+        </div></div>
       {/* Gallery */}
       <div className="overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[#070d15b6] backdrop-filter backdrop-blur-3xl" style={{
         backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210889/chandrayaan-3-soft-landing-moon-with-indian-flag_816702-1971_psmstb.jpg",
       }}>
-       <div className="absolute inset-0 bg-[#070d15d0] backdrop-filter backdrop-blur-3xl"></div>
+       <div className="absolute inset-0 bg-[#070d15b5] backdrop-filter backdrop-blur-3xl"></div>
        
       
       <Swiper
-      className='mt-8'
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-        breakpoints={{
-          320: {
-      slidesPerView: 1.1,
-      spaceBetween: 20,
-      centeredSlides: true, // Center the active slide at 320 pixels
-      initialSlide: 0, // Adjust this value based on which slide you want to be initially centered
-    },
-          640: {
-            slidesPerView: 2,
-          },
-          768: {
-            slidesPerView: 3,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        }}
+       className="ml-8 swiper-container-glass mt-8 mb-8"
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={50}
+          slidesPerView={3}
+          pagination={{ clickable: true }}
+          navigation={{
+            nextEl: '.custom-next-button',
+            prevEl: '.custom-prev-button',
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: 1.3,
+              spaceBetween: 20,
+              centeredSlides: true,
+              initialSlide: 0,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
     >
       {galleryImages.map((image, index) => (
         <SwiperSlide key={index}>

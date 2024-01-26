@@ -8,17 +8,19 @@ import 'swiper/css/scrollbar';
 
 const Departments = () => {
   const departments = [
-    ["Computer Engineering", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706189139/CE_zc9vnu.png"],
-    ["Information Technology", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706194686/New_India_Young_India_3_n5mknp.png"],
-    ["Mechanical Engineering", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706194884/New_India_Young_India_4_ipnvxe.png"],
-    ["Electrical Engineering", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706195264/New_India_Young_India_5_ya2btn.png"],
-    ["Department 1", "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/com.png?alt=media&token=de93b4dd-4592-4db2-9be5-76d52ae97d2c"],
-    ["Department 2", "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/com.png?alt=media&token=de93b4dd-4592-4db2-9be5-76d52ae97d2c"],
+    ["Computer Engineering", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706252582/com_poggy8.png"],
+    ["Information Technology", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706252583/IT_fxhzmv.png"],
+    ["Mechanical Engineering", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706252585/Mech_yysew0.png"],
+    ["Electrical Engineering", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706252582/Elec_t062k6.png"],
+    ["Electronics Communication", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706252582/EC_hgsynt.png"],
+    ["MBA Department", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706252583/MBA_y1dusl.png"],
+    ["MCA Department", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706252584/MCA_skulpx.png"],
+    ["Science and Humanity", "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706252586/SH_jeidwy.png"],
   ];
 
   return (
     <div className="overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[#070d1590] backdrop-filter backdrop-blur-3xl" style={{
-        backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210889/chandrayaan-3-soft-landing-moon-with-indian-flag_816702-1971_psmstb.jpg')",
+        backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
       }}>
        <div className="absolute inset-0 bg-[#070d15c7] backdrop-filter backdrop-blur-3xl"></div>
        
