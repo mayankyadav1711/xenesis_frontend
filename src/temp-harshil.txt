@@ -1,0 +1,455 @@
+
+student org":
+import React from "react";
+import SectionTitle from "../eventDetailsComponents/sectionTitle";
+import { organizersData } from "../eventData";
+
+const EventOrganizer = () => {
+  return (
+    <div>
+      <SectionTitle title="Organizers" />
+
+      <div className="md:flex grid grid-cols-2 items-center lg:justify-start justify-center lg:gap-10 gap-5 sm:gap-y-8 mt-10 organizers-div">
+        {organizersData.map((organizer) => (
+          <div
+            key={organizer.id}
+            className="flex flex-col items-center justify-center"
+          >
+            <img
+              src={organizer.imageSrc}
+              alt=""
+              className="xl:w-[200px] lg:w-[160px] md:w-[140px] w-[160px] xl:h-[200px] lg:h-[160px] md:h-[140px] h-[160px] object-cover object-right rounded-full org-images"
+            />
+            <p className="mt-3 text-center lg:text-2xl sm:text-xl text-lg lg:font-bold font-semibold org-name">
+              {organizer.name}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default EventOrganizer;
+
+export const organizersData = [
+//   {
+//     id: 1,
+//     name: "Parth Padhiar",
+//     imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
+//   },
+//   {
+//     id: 2,
+//     name: "Jagrat Patel",
+//     imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
+//   },
+//   {
+//     id: 3,
+//     name: "Jaivin Barot",
+//     imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
+//   },
+//   {
+//     id: 4,
+//     name: "Shubham Bhogayata",
+//     imageSrc: "../../../../public/eventDeatailsImgs/1.jpg",
+//   },
+// ];
+
+
+
+
+{
+  /* <div>
+          <ul class="pl-5 lg:pr-5 pr-0 text-gray-300 sm:text-lg sm:font-normal font-light">
+            <li class="list-decimal mb-4">
+              Participants are not allowed to use any of the props for
+              explanation during the event.
+            </li>
+            <li class="list-decimal mb-4">
+              The participants qualifying the preceding rounds shall be eligible
+              for the next round.
+            </li>
+            <li class="list-decimal mb-4">
+              Participants breaking the rules will be disqualified.
+            </li>
+            <li class="list-decimal mb-4">
+              Participants are not allowed to use any of the props for
+              explanation during the event
+            </li>
+            <li class="list-decimal mb-4">
+              Participants are not allowed to use any of the props for
+              explanation during the event
+            </li>
+            <li class="list-decimal">
+              Participants are not allowed to use any of the props for
+              explanation during the event
+            </li>
+          </ul>
+        </div> */
+}
+
+
+
+ 
+ 
+ <section class="w-full h-full min-h-[100vh] relative flex flex-col items-center justify-center bg-gradient-to-b from-[#240a34] to-[#211e60]">
+
+        {/* <!-- bg image over title --> */}
+        <img
+          src="./static/event-images/bg-2.png"
+          class="w-screen h-[calc(100vw * (1024/1096))] mix-blend-darken opacity-40 absolute bg-cover xl:-top-10 lg:top-[10vh] md:top-[30vh] sm:top-[40vh] left-0 z-20"
+          alt=""
+        />
+
+        {/* <!-- Image Slider --> */}
+        <div class="w-full h-full relative flex items-center justify-center overflow-y-hidden">
+          <div class="absolute w-full h-full bg-gradient-to-t from-[#240a34] via-transparent to-transparent z-10"></div>
+          <div class="flex relative overflow-hidden">
+            <img
+              src="./static/event-images/3.jpg"
+              alt=""
+              class="w-screen md:h-screen h-full object-cover object-right mySlides fade"
+            />
+            <img
+              src="./static/event-images/1.jpg"
+              alt=""
+              class="w-screen md:h-screen h-full object-cover object-center mySlides fade"
+            />
+            <img
+              src="./static/event-images/2.jpg"
+              alt=""
+              class="w-screen md:h-screen h-full object-cover object-center mySlides fade"
+            />
+            <img
+              src="./static/event-images/4.jpg"
+              alt=""
+              class="w-screen md:h-screen h-full object-cover object-center mySlides fade"
+            />
+          </div>
+        </div>
+
+        {/* <!-- Main Content --> */}
+        <div class="w-full h-full xl:px-32 lg:px-20 md:px-16 sm:px-12 px-8 sm:py-20 py-0 sm:pt-0 text-white relative z-30">
+          {/* <!-- <h1 class="event-title text-[6vw] font-bold text-transparent">X-Motion Game Mania</h1> --> */}
+          <h1 class="lg:text-[5vw] sm:text-[7vw] text-[2.3rem] sm:leading-loose leading-10 z-30 font-extrabold sm:-mt-36 text-white text-center">
+            X-Motion Game Mania
+          </h1>
+
+          {/* <!-- Description --> */}
+          <div class="sm:mb-24 my-10 text-center">
+            <p class="font-bold text-3xl mb-5 text-blue-400 z-30">
+              Description
+            </p>
+            <p class="text-gray-300 sm:text-lg leading-7 text-justify sm:font-normal font-light">
+              This event is a unique combination of technology and
+              entertainment. Participants will have the opportunity to play
+              virtual reality (VR) games without the need of VR headset, using
+              camera and motion detection technology instead. This event will
+              challenge both the technical and entertainment skills of each
+              participants, as they navigate a series of games that will test
+              their logical thinking, memory, and teamwork abilities. Get ready
+              for a high-tech twists on classic games and see if you have what
+              it takes to emerge on the top at{" "}
+              <span class="font-semibold">X-Motion Game Mania</span>!
+            </p>
+          </div>
+
+          {/* <!-- Faculty | Prizes | Location --> */}
+          <div class="grid gap-10 xl:grid-cols-3 grid-cols-1 sm:mb-24 mb-12">
+            {/* <!-- Faculty Co-ordinators --> */}
+            <div class="sm:text-center xl:mt-16 mt-10">
+              <p class="font-bold text-3xl mb-5 text-blue-400">
+                Faculty Coordinators
+              </p>
+              <p class="text-gray-300 sm:text-lg">
+                Vishal Barot,
+                <br />
+                Piyush Kapadiya
+              </p>
+            </div>
+            {/* <!-- Prizes --> */}
+            <div class="sm:text-center xl:mt-0 mt-10">
+              <p class="font-bold text-3xl mb-2 text-blue-400">Prizes</p>
+              <div class="flex items-center justify-center gap-12 pt-4">
+                <div>
+                  <img
+                    src="./static/trophy/1.png"
+                    alt=""
+                    class="w-[100px] mix-blend-screen mb-3"
+                  />
+                  <p class="sm:!text-lg text-sm flex flex-col items-center">
+                    <span class="font-semibold text-base text-gray-300">
+                      1st
+                    </span>
+                    ₹ 1,500
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src="./static/trophy/2.png"
+                    alt=""
+                    class="w-[100px] mix-blend-screen mb-3"
+                  />
+                  <p class="sm:!text-lg text-sm flex flex-col items-center">
+                    <span class="font-semibold text-base text-gray-300">
+                      2nd
+                    </span>
+                    ₹ 1,000
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* <!-- Location --> */}
+            <div class="sm:text-center xl:mt-16 mt-10">
+              <p class="font-bold text-3xl mb-5 text-blue-400">
+                Location of Event
+              </p>
+              <p>
+                <span class="font-semibold text-gray-300 sm:text-lg">
+                  Floor
+                </span>
+                : 1st floor
+              </p>
+              <p>
+                <span class="font-semibold text-gray-300 sm:text-lg">
+                  Lab / Hall / Class
+                </span>
+                : Lab A1, A2, B1
+              </p>
+            </div>
+          </div>
+
+          {/* <!-- Rules --> */}
+          <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-2 sm:gap-10 gap-6 sm:my-32 my-20">
+            {/* <!-- Rules --> */}
+            <div>
+              <p class="font-bold text-3xl mb-5 text-blue-400">
+                Rules of Event
+              </p>
+              <ul class="pl-5 lg:pr-5 pr-0 text-gray-300 sm:text-lg sm:font-normal font-light">
+                <li class="list-decimal mb-4">
+                  Participants are not allowed to use any of the props for
+                  explanation during the event.
+                </li>
+                <li class="list-decimal mb-4">
+                  The participants qualifying the preceding rounds shall be
+                  eligible for the next round.
+                </li>
+                <li class="list-decimal mb-4">
+                  Participants breaking the rules will be disqualified.
+                </li>
+                <li class="list-decimal mb-4">
+                  Participants are not allowed to use any of the props for
+                  explanation during the event
+                </li>
+                <li class="list-decimal mb-4">
+                  Participants are not allowed to use any of the props for
+                  explanation during the event
+                </li>
+                <li class="list-decimal">
+                  Participants are not allowed to use any of the props for
+                  explanation during the event
+                </li>
+              </ul>
+            </div>
+            <img
+              src="./static/login/login-back.png"
+              alt=""
+              class="w-full h-full rounded-xl"
+            />
+          </div>
+
+          {/* <!-- Rounds --> */}
+          <div class="flex mb-12">
+            <div class="">
+              <p class="font-bold text-3xl lg:mb-8 sm:mb-4 text-blue-400">
+                Rounds
+              </p>
+              <ul class="pl-8 text-gray-300 sm:text-lg flex flex-col lg:gap-14 gap-6">
+                <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-12 gap-0">
+                  <img
+                    src="./static/login/login-back.png"
+                    alt=""
+                    class="w-full h-full rounded-xl hidden lg:block"
+                  />
+                  <div class="lg:pl-4 pl-0">
+                    <li class="list-decimal font-semibold my-2 text-white text-lg">
+                      Balloon Popper
+                    </li>
+                    <ul class="pl-4">
+                      <li class="font-light list-disc mb-3">
+                        In this round, participants will play the Balloon Popper
+                        game using camera and motion detection technology.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        The objective of the game is to pop as many balloons on
+                        the screen as possible by using a real ball.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        Participants will be tasked with hitting all the
+                        balloons on the screen before they fly out.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        The game is fast-paced and requires quick reflexes and
+                        precise movements.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        Participants will compete against each other for the
+                        highest score, and the top performers will move on to
+                        the next round.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        The Balloon Popper round is designed to test the
+                        participants' hand-eye coordination and reaction time,
+                        making it a fun and exciting challenge for all players.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-12 gap-0">
+                  <div>
+                    <li class="list-decimal font-semibold my-2 text-white text-lg">
+                      Subway Surfer Challenge
+                    </li>
+                    <ul class="pl-4">
+                      <li class="font-light list-disc mb-3">
+                        In this round, participants will compete against each
+                        other in the classic Subway Surfer game using camera and
+                        motion detection technology.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        The objective of the game is to run as far as possible
+                        while avoiding obstacles and collecting coins.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        Participants will be able to see their opponent's
+                        progress on the screen, adding a competitive edge to the
+                        game.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        The player with the highest score at the end of the
+                        round will be declared the winner.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        The Subway Surfer Challenge requires participants to use
+                        quick thinking, strategic planning, and precise
+                        movements.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        This round will test the participants' agility,
+                        coordination, and problem-solving skills, making it a
+                        thrilling and exciting challenge for all players.
+                      </li>
+                    </ul>
+                  </div>
+                  <img
+                    src="./static/login/login-back.png"
+                    alt=""
+                    class="w-full h-full rounded-xl hidden lg:block"
+                  />
+                </div>
+                <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-12 gap-0">
+                  <img
+                    src="./static/login/login-back.png"
+                    alt=""
+                    class="w-full h-full rounded-xl hidden lg:block"
+                  />
+                  <div class="lg:pl-4 pl-0">
+                    <li class="list-decimal font-semibold my-2 text-white text-lg">
+                      Beat Saber Finale
+                    </li>
+                    <ul class="pl-4">
+                      <li class="font-light list-disc mb-3">
+                        The Beat Saber Finale is the final round of the X -
+                        Motion Game Mania event.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        In this round, participants will use camera and motion
+                        detection technology to play the popular rhythm-based
+                        Beat Saber game.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        The objective of the game is to slash the virtual beats
+                        with a pair of laser swords, in time with the music.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        Participants will be competing against each other for
+                        the highest score, with the winner being declared the
+                        champion of the X - Motion Game Mania event.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        The Beat Saber Finale requires participants to combine
+                        quick reflexes, coordination, and musical rhythm to
+                        succeed.
+                      </li>
+                      <li class="font-light list-disc mb-3">
+                        This exciting and challenging round will test the skills
+                        of all participants and provide a thrilling conclusion
+                        to the X- Motion Game Mania event. Get ready to rock out
+                        and show your skills!
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+
+          {/* <!-- Organizers --> */}
+          <div class="mb-6">
+            <p class="font-bold text-3xl mb-2 text-blue-400">Organizers</p>
+            <div class="md:flex grid grid-cols-2 items-center lg:justify-start justify-center lg:gap-10 gap-5 sm:gap-y-8 mt-10 organizers-div">
+              <div class="flex flex-col items-center justify-center">
+                <img
+                  src="./static/event-images/3.jpg"
+                  alt=""
+                  class="xl:w-[200px] lg:w-[160px] md:w-[140px] w-[160px] xl:h-[200px] lg:h-[160px] md:h-[140px] h-[160px] object-cover object-right rounded-full org-images"
+                />
+                <p class="mt-3 text-center lg:text-2xl sm:text-xl text-lg lg:font-bold font-semibold org-name">
+                  Parth Padhiar
+                </p>
+              </div>
+              <div class="flex flex-col items-center justify-center">
+                <img
+                  src="./static/event-images/1.jpg"
+                  alt=""
+                  class="xl:w-[200px] lg:w-[160px] md:w-[140px] w-[160px] xl:h-[200px] lg:h-[160px] md:h-[140px] h-[160px] object-cover object-center rounded-full org-images"
+                />
+                <p class="mt-3 text-center lg:text-2xl sm:text-xl text-lg lg:font-bold font-semibold org-name">
+                  Jagrat Patel
+                </p>
+              </div>
+              <div class="flex flex-col items-center justify-center">
+                <img
+                  src="./static/event-images/2.jpg"
+                  alt=""
+                  class="xl:w-[200px] lg:w-[160px] md:w-[140px] w-[160px] xl:h-[200px] lg:h-[160px] md:h-[140px] h-[160px] object-cover object-center rounded-full org-images"
+                />
+                <p class="mt-3 text-center lg:text-2xl sm:text-xl text-lg lg:font-bold font-semibold org-name">
+                  Jaivin Barot
+                </p>
+              </div>
+              <div class="flex flex-col items-center justify-center">
+                <img
+                  src="./static/event-images/4.jpg"
+                  alt=""
+                  class="xl:w-[200px] lg:w-[160px] md:w-[140px] w-[160px] xl:h-[200px] lg:h-[160px] md:h-[140px] h-[160px] object-cover object-center rounded-full org-images"
+                />
+                <p class="mt-3 text-center lg:text-2xl sm:text-xl text-lg lg:font-bold font-semibold org-name">
+                  Shubham Bhogayata
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <!-- Add Event to Cart Div --> */}
+        <div class="w-full h-full relative z-50">
+          <button class="fixed bottom-5 right-5 group !outline-none z-50 px-10 py-3 border rounded-lg bg-[#221144] text-white text-lg add-to-cart-btn animate-bounce">
+            <span class="flex items-center gap-1">
+              Add Event to
+              <i class="bi bi-cart2 mx-1 group-hover:drop-shadow-2xl group-hover:text-2xl transition-all duration-300"></i>
+            </span>
+          </button>
+        </div>
+      </section>
