@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import "./navbar.css"
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
@@ -31,9 +31,8 @@ const Navbar = () => {
     <div className={`bg-[#240a34] overflow-x-hidden`}>
       {/* Navbar */}
       <nav
-        className={`flex items-center justify-between text-white fixed w-full top-0 py-[calc(3vh)] px-[calc(3vh)] z-50 transition-all duration-300 ${
-          isGlassy ? 'backdrop-filter backdrop-blur-md' : ''
-        }`}
+        className={`flex items-center justify-between text-white fixed w-full top-0 py-[calc(3vh)] px-[calc(3vh)] z-50 transition-all duration-300 ${isGlassy ? 'backdrop-filter backdrop-blur-md bg-opacity-50 bg-black' : ''
+          }`}
         id="navbar"
       >
         <div className="lg:hidden relative flex items-center justify-center gap-4">
@@ -46,9 +45,8 @@ const Navbar = () => {
           />
           {/* Profile Dropdown */}
           <div
-            className={`absolute bg-slate-600 bg-opacity-50 top-12 right-0 w-full min-w-[200px] rounded-md border-slate-400 z-50 h-0 overflow-hidden transition-all duration-300 ${
-              isProfileDropdownOpen ? 'h-auto' : ''
-            }`}
+            className={`absolute bg-slate-600 bg-opacity-50 top-12 right-0 w-full min-w-[200px] rounded-md border-slate-400 z-50 h-0 overflow-hidden transition-all duration-300 ${isProfileDropdownOpen ? 'h-auto' : ''
+              }`}
             id="profile-dropdown-mobile"
           >
             <a href="#">
@@ -74,9 +72,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden absolute top-0 right-0 flex flex-col gap-5 items-center justify-center w-screen h-screen z-50 bg-slate-900 bg-opacity-95 ${
-            isMobileMenuOpen ? 'flex' : 'hidden'
-          }`}
+          className={`lg:hidden absolute top-0 right-0 flex flex-col gap-5 items-center justify-center w-screen h-screen z-50 bg-slate-900 bg-opacity-95 ${isMobileMenuOpen ? 'flex' : 'hidden'
+            }`}
           id="mobile-menu"
         >
           <button className="absolute top-5 right-5 !outline-none" onClick={toggleMobileMenu}>
@@ -107,43 +104,43 @@ const Navbar = () => {
         <ul className="hidden lg:flex items-center justify-end space-x-10 float-right ml-auto mr-20 mt-2">
           <a
             href="/"
-            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} hover:text-gray-300 transition-all duration-300`}
+            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} link hover:text-darkYellow-50  transition-all duration-300`}
           >
             Home
           </a>
           <a
             href="/events"
-            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} hover:text-gray-300 transition-all duration-300`}
+            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} link hover:text-darkYellow-50  transition-all duration-300`}
           >
             Events
           </a>
           <a
             href="#"
-            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} hover:text-gray-300 transition-all duration-300`}
+            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} link hover:text-darkYellow-50  transition-all duration-300`}
           >
             Event Confirm
           </a>
           <a
             href="/aboutus"
-            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} hover:text-gray-300 transition-all duration-300`}
+            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} link hover:text-darkYellow-50  transition-all duration-300`}
           >
             About Us
           </a>
           <a
             href="/login"
-            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} hover:text-gray-300 transition-all duration-300`}
+            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} link hover:text-darkYellow-50  transition-all duration-300`}
           >
             Login
           </a>
           <a
             href="/register"
-            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} hover:text-gray-300 transition-all duration-300`}
+            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} link hover:text-darkYellow-50  transition-all duration-300`}
           >
             Register
           </a>
           <a
             href="/login"
-            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} hover:text-gray-300 transition-all duration-300`}
+            className={`text-xl ${isGlassy ? 'font-montserrat' : ''} link hover:text-darkYellow-50  transition-all duration-300`}
           ></a>
         </ul>
       </nav>

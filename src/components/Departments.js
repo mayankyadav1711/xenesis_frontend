@@ -129,6 +129,7 @@ const Departments = () => {
       </section>
     </div>
   );
+
 };
 
 export default Departments;

@@ -13,129 +13,117 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Home = () => {
-  const departmentEvents = {
-    Events: [
-      {
-        title: "FreeFire",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-        description: "Event description 1",
-        pricePerHead: "100",
-        individualAllowed: true,
-        eventId: "event1",
-        teamAllowed: true,
-        teamPrice: 1000,
-        likes: 9123,
-      },
-      {
-        title: "X-Error",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-        description: "Event description 1",
-        pricePerHead: "100",
-        individualAllowed: true,
-        eventId: "event1",
-        teamAllowed: true,
-        teamPrice: 1000,
-        likes: 9123,
-      },
-      {
-        title: "Skribble",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-        description: "Event description 1",
-        pricePerHead: "100",
-        individualAllowed: true,
-        eventId: "event1",
-        teamAllowed: true,
-        teamPrice: 1000,
-        likes: 9123,
-      },
-      {
-        title: "Human Ludo",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-        description: "Event description 1",
-        pricePerHead: "100",
-        individualAllowed: true,
-        eventId: "event1",
-        teamAllowed: true,
-        teamPrice: 1000,
-        likes: 9123,
-      },
-      {
-        title: "Pictionary",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-        description: "Event description 1",
-        pricePerHead: "100",
-        individualAllowed: true,
-        eventId: "event1",
-        teamAllowed: true,
-        teamPrice: 1000,
-        likes: 9123,
-      },
-      // Add more events as needed
-    ],
 
-    // Add more events as needed
-  };
+    const departmentEvents = {
+        Events: [
+            {
+                title: "FreeFire",
+                image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+                description: "Event description 1",
+                pricePerHead: "100",
+                individualAllowed: true,
+                eventId: "event1",
+                teamAllowed: true,
+                teamPrice: 1000,
+                likes: 9123,
+            },
+            {
+                title: "X-Error",
+                image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+                description: "Event description 1",
+                pricePerHead: "100",
+                individualAllowed: true,
+                eventId: "event1",
+                teamAllowed: true,
+                teamPrice: 1000,
+                likes: 9123,
+            },
+            {
+                title: "Skribble",
+                image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+                description: "Event description 1",
+                pricePerHead: "100",
+                individualAllowed: true,
+                eventId: "event1",
+                teamAllowed: true,
+                teamPrice: 1000,
+                likes: 9123,
+            },
+            {
+                title: "Human Ludo",
+                image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+                description: "Event description 1",
+                pricePerHead: "100",
+                individualAllowed: true,
+                eventId: "event1",
+                teamAllowed: true,
+                teamPrice: 1000,
+                likes: 9123,
+            },
 
-  const galleryImages = [
-    "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-    "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-    "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-    "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-    "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-    "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-    // Add more gallery images as needed
-  ];
+            {
+                title: "Pictionary",
+                image: "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+                description: "Event description 1",
+                pricePerHead: "100",
+                individualAllowed: true,
+                eventId: "event1",
+                teamAllowed: true,
+                teamPrice: 1000,
+                likes: 9123,
+            },
+            // Add more events as needed
+        ],
 
-  function cardOverlayHandle(id) {
-    document.getElementById("cardOverlay" + id).classList.remove("top-full");
-    document.getElementById("cardOverlay" + id).classList.add("top-0");
-    document.getElementById("blurOverlay" + id).classList.add("blur-lg");
-    document
-      .getElementById("cardOverlay" + id + "2")
-      .classList.remove("top-full");
-    document.getElementById("cardOverlay" + id + "2").classList.add("top-0");
-    document.getElementById("blurOverlay" + id + "2").classList.add("blur-lg");
-  }
-  function cardOverlayHandleClose(id) {
-    document.getElementById("cardOverlay" + id).classList.add("top-full");
-    document.getElementById("cardOverlay" + id).classList.remove("top-0");
-    document.getElementById("blurOverlay" + id).classList.remove("blur-lg");
-    document.getElementById("cardOverlay" + id + "2").classList.add("top-full");
-    document.getElementById("cardOverlay" + id + "2").classList.remove("top-0");
-    document
-      .getElementById("blurOverlay" + id + "2")
-      .classList.remove("blur-lg");
-  }
-  function handleLike(id) {
-    document.getElementById("likeSVG" + id).classList.toggle("hidden");
-    document.getElementById("likeSVG" + id).classList.toggle("opacity-0");
-    document.getElementById("likeFillSVG" + id).classList.toggle("hidden");
-    document.getElementById("likeFillSVG" + id).classList.toggle("opacity-0");
-    document.getElementById("likeSVG" + id + "2").classList.toggle("hidden");
-    document.getElementById("likeSVG" + id + "2").classList.toggle("opacity-0");
-    document
-      .getElementById("likeFillSVG" + id + "2")
-      .classList.toggle("hidden");
-    document
-      .getElementById("likeFillSVG" + id + "2")
-      .classList.toggle("opacity-0");
-  }
+        // Add more events as needed
+    };
 
-  const handleCardOverlayClose = (eventId) => {
-    // Add logic to handle closing the card overlay
-    console.log(`Closing card overlay for ${eventId}`);
-  };
+    const galleryImages = [
+        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
+        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
+        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
+        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
+        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
+        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
+        // Add more gallery images as needed
+    ];
 
-  return (
-    <div class=" overflow-x-hidden">
+    function cardOverlayHandle(id) {
+        document.getElementById("cardOverlay" + id).classList.remove("top-full");
+        document.getElementById("cardOverlay" + id).classList.add("top-0");
+        document.getElementById("blurOverlay" + id).classList.add("blur-lg");
+        document.getElementById("cardOverlay" + id + "2").classList.remove("top-full");
+        document.getElementById("cardOverlay" + id + "2").classList.add("top-0");
+        document.getElementById("blurOverlay" + id + "2").classList.add("blur-lg");
+    }
+    function cardOverlayHandleClose(id) {
+        document.getElementById("cardOverlay" + id).classList.add("top-full");
+        document.getElementById("cardOverlay" + id).classList.remove("top-0");
+        document.getElementById("blurOverlay" + id).classList.remove("blur-lg");
+        document.getElementById("cardOverlay" + id + "2").classList.add("top-full");
+        document.getElementById("cardOverlay" + id + "2").classList.remove("top-0");
+        document.getElementById("blurOverlay" + id + "2").classList.remove("blur-lg");
+    }
+    function handleLike(id) {
+        document.getElementById("likeSVG" + id).classList.toggle("hidden");
+        document.getElementById("likeSVG" + id).classList.toggle("opacity-0");
+        document.getElementById("likeFillSVG" + id).classList.toggle("hidden");
+        document.getElementById("likeFillSVG" + id).classList.toggle("opacity-0");
+        document.getElementById("likeSVG" + id + "2").classList.toggle("hidden");
+        document.getElementById("likeSVG" + id + "2").classList.toggle("opacity-0");
+        document.getElementById("likeFillSVG" + id + "2").classList.toggle("hidden");
+        document.getElementById("likeFillSVG" + id + "2").classList.toggle("opacity-0");
+    }
+
+    const handleCardOverlayClose = (eventId) => {
+        // Add logic to handle closing the card overlay
+        console.log(`Closing card overlay for ${eventId}`);
+    };
+
+    return (
+       <div class=" overflow-x-hidden">
       {/* Mavbar  */}
 
-      <Navbar />
 
       {/* Title  */}
       <div class="fixed right-10 top-6 z-[999] flex items-center justify-center gap-4 px-[calc(2vh)]">
@@ -255,28 +243,27 @@ const Home = () => {
               spaceBetween: 20,
               centeredSlides: true,
               initialSlide: 0,
-            },
-            640: {
-              slidesPerView: 2,
-            },
-            768: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {galleryImages.map((image, index) => (
-            <SwiperSlide key={index}>
-              <img src={image} alt={`Gallery Image ${index + 1}`} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      <Footer />
-    </div>
-  );
+                        },
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                        },
+                    }}
+                >
+                    {galleryImages.map((image, index) => (
+                        <SwiperSlide key={index}>
+                            <img src={image} alt={`Gallery Image ${index + 1}`} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+        </div>
+    );
 };
 
 export default Home;

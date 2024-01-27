@@ -4,7 +4,7 @@ import Qr from "./ticket/img/qr.png";
 import Price from "./ticket/price";
 import Dots from "./ticket/dots";
 import './ticket/newticket.css'
-import Texture from "./ticket/img/texture.jpg"
+import Texture from "./ticket/img/paper.png"
 // @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 // import Price from "./price";
 // import Dots from "./dots";
@@ -16,7 +16,9 @@ function Newticket({ bgColor }) {
 
     return (
         // <div className="flex-col relative justify-center  items-center p-4 bg-black bg-opacity-35   rounded-md">
-        <div className={`flex relative justify-between  items-center ${bgColor}   bg-opacity-75  rounded-md`}>
+        // <div className={`flex overflow-hidden relative justify-between bg-opacity-20 z-0 items-center ${bgColor}   bg-opacity-75 `}>
+        <div className={`flex relative justify-between items-center ${bgColor}  bg-opacity-75 `}>
+
             <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-tl-md flex items-center rounded-bl-md h-full w-[40px] left-0">
                 <p className="-translate-x-[30%] -rotate-90 text-center font-extrabold">XENESIS'24</p>
             </div>
@@ -24,6 +26,7 @@ function Newticket({ bgColor }) {
                 <div className="p-2  border-white  ">
                     <img src={Qr} className="w-full h-full" alt="qr" />
                 </div>
+                {/* <div className="flex border-l-8   border-dotted border-black  flex-col"> */}
                 <div className="flex border-l-8   border-dotted border-darkBlue-50  flex-col">
 
 
@@ -73,26 +76,32 @@ function Newticket({ bgColor }) {
             <div>
 
             </div>
-            <div className=" absolute top-0 -translate-x-1/2 -translate-y-1/2  left-0">
+            <div className=" absolute top-0   left-0">
                 <Dots />
             </div>
-            <div className=" absolute bottom-0 -translate-x-1/2 translate-y-1/2  left-0">
+            <div className=" absolute bottom-0 -rotate-90  left-0">
                 <Dots />
             </div>
-            <div className=" absolute top-0 translate-x-1/2 -translate-y-1/2  right-0">
+            <div className=" absolute top-0 rotate-90  right-0">
                 <Dots />
             </div>
-            <div className=" absolute bottom-0 translate-x-1/2 translate-y-1/2 right-0">
+            <div className=" absolute rotate-180 bottom-0  right-0">
                 <Dots />
             </div>
-            <div className=" absolute bottom-0 translate-x-1/2 translate-y-[20px] left-[25%]">
+            {/* <div className=" absolute rotate-180 bottom-0 left-[25%]  ">
                 <Dots />
+            </div> */}
+
+            <div className=" absolute bottom-0 translate-x-1/2   left-[25%]">
+                <div className="h-[15px] w-[30px] bg-darkBlue-50  z-10  rounded-tl-full rounded-tr-full ">
+                </div>
             </div>
-            <div className=" absolute top-0 translate-x-1/2 -translate-y-[20px] left-[25%]">
-                <Dots />
+            <div className=" absolute top-0 translate-x-1/2  left-[25%]">
+                <div className="h-[15px] w-[30px] bg-darkBlue-50  z-10  rounded-bl-full rounded-br-full ">
+                </div>
             </div>
-            {/* <div>
-                <img src={Texture} cla alt="tetx" />
+            {/* <div className="absolute scale-150 opacity-50  filter saturate-0 rotate-180 z-[-1]">
+                <img src={Texture} className="object-cover h-[200px] w-[400px]" alt="tetx" />
             </div> */}
         </div>
     );
