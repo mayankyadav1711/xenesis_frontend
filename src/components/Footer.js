@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const Footer = () => {
     return (
-        <div class=" overflow-x-hidden">
+        <div class=" overflow-x-hidden z-50">
             {/* Mavbar  */}
 
             <footer className="bg-[#13103e] pt-20">
