@@ -656,6 +656,7 @@ const Events = () => {
         {Object.entries(departmentEvents).map(([department, events]) => (
           <div key={department} className={`bg-[#070d15]`}>
             <div className="w-full text-center">
+
               <h3 className="uppercase text-white lg:text-[calc(12vh)] text-[calc(3vh)] pt-5 font-serif font-semibold mb-4">
                 {department}
               </h3>
