@@ -7,7 +7,7 @@ const Footer = () => {
 
 
   return (
-    <div class=" overflow-x-hidden" >
+    <div class=" overflow-x-hidden z-50" >
       {/* Mavbar  */}
 
       <footer className="bg-black pt-20">
