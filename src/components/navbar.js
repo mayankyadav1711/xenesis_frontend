@@ -31,7 +31,7 @@ const Navbar = () => {
     <div className={`bg-[#240a34] overflow-x-hidden`}>
       {/* Navbar */}
       <nav
-        className={`flex items-center justify-between text-white fixed w-full top-0 py-[calc(3vh)] px-[calc(3vh)] z-50 transition-all duration-300 ${isGlassy ? 'backdrop-filter backdrop-blur-md' : ''
+        className={`flex items-center justify-between text-white fixed w-full top-0 py-[calc(3vh)] px-[calc(3vh)] z-50 transition-all duration-300 ${isGlassy ? 'backdrop-filter backdrop-blur-md bg-opacity-50 bg-black' : ''
           }`}
         id="navbar"
       >
