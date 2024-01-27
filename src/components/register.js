@@ -44,7 +44,7 @@ function Register() {
         </a>
 
         <div className="flex items-center lg:justify-end md:pt-0 pt-5 justify-center w-[80%] h-full">
-          <form onSubmit={handleSubmit} className="form max-w-[500px] w-full lg:w-[90%] h-full md:px-12 sm:px-10 px-8 lg:py-12 sm:py-11 py-10 backdrop-blur z-10 rounded-xl">
+          <form onSubmit={handleSubmit} className="form max-w-[500px] w-full lg:w-[90%] h-full md:px-12 sm:px-10 px-8 lg:py-12 sm:py-11 py-10 backdrop-blur z-10 rounded-xl backdrop-filter backdrop-blur-10 border-2 border-solid border-white border-opacity-10 shadow-2xl">
 
             {/* CSRF Token */}
             {/* Add your logic to include CSRF token */}
@@ -94,9 +94,9 @@ function Register() {
                 maxLength="16"
                 tabIndex="2"
               />
-              <span className="eye-icon" onClick={togglePasswordVisibility}>
+              <span className="eye-icon text-white" onClick={togglePasswordVisibility}>
                 {showPassword ? (
-                  <i className="bi bi-eye-slash"></i>
+                  <i className="bi bi-eye-slash text-white"></i>
                 ) : (
                   <i className="bi bi-eye"></i>
                 )}
@@ -126,7 +126,7 @@ function Register() {
                 maxLength="16"
                 tabIndex="3"
               />
-              <span className="eye-icon" onClick={toggleRePasswordVisibility}>
+              <span className="eye-icon text-white" onClick={toggleRePasswordVisibility}>
                 {showRePassword ? (
                   <i className="bi bi-eye-slash"></i>
                 ) : (
