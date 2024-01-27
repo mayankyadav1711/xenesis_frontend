@@ -8,7 +8,7 @@ import Register from "./components/register";
 import OTP from "./components/OTP";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPassword from "./components/ForgotPassword";
-import Events from "./components/Events";
+import Events from "./components/events";
 
 import Verifier from "./components/Verifier/verifier";
 import Myticket from "./components/myticket";
