@@ -555,7 +555,7 @@ const Events = () => {
     };
     return (
         <>
-            <div class="w-full h-screen overflow-hidden customScrollbar relative" style={{ backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706213665/eventHerolandingPage2_zd9rni.png')" }}>
+            <div class="w-full h-screen overflow-hidden object-center customScrollbar relative" style={{ backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706213665/eventHerolandingPage2_zd9rni.png')" }}>
                 <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(to bottom, rgba(7, 13, 21, 0.5) 0%, rgba(7, 13, 21, 0.7) 100%)" }}></div>
                 <canvas id="canvas" class="w-screen h-[calc((1024/1536)*100vw)] absolute top-0 z-0"></canvas>
                 <div class="absolute w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 px-[calc(3vh)] text-center z-20">
@@ -583,7 +583,7 @@ const Events = () => {
                 {departmentEvents.map((department, index) => (
                     <div key={index} className={`bg-darkBlue-50 py-2 pt-10`}>
                         <div className="w-full text-center">
-                            <h3 className="uppercase text-white text-heading4 pt-5 font-sans font-semibold mb-4">{department.departmentName}</h3>
+                            <h3 className="uppercase text-white text-heading4 pt-5  font-bold  w-fit mx-auto underline-offset-8 underline mb-4">{department.departmentName}</h3>
                         </div>
                         {/* <hr /> */}
                         <EventCard events={department.events} />

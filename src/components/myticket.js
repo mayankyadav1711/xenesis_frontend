@@ -28,7 +28,7 @@ function Myticket(Props) {
                     <Newticket key={ticketId} bgColor="bg-rose-600" />
                 ))}
                 {GrayTicketsData.map((ticketId) => (
-                    <Newticket key={ticketId} bgColor="bg-[#CAB795]" />
+                    <Newticket key={ticketId} bgColor="bg-[#0BDBB9]" />
                 ))}
                 {GreenTicketsData.map((ticketId) => (
                     <Newticket key={ticketId} bgColor="bg-green-400" />

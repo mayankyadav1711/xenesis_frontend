@@ -17,7 +17,7 @@ import FAQ from "./components/faqs";
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
 import Aboutus from "./components/Aboutus";
-
+// import "./globalcss"
 const Routing = () => {
     return (
         <>

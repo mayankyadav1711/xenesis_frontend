@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    ::selection {
+        color: #181931;
+        background-color: #0BDBB9;
+        text-decoration-color: #181931;
+        -webkit-text-decoration-color: #181931;
+
+    }
+
+    font-family: "Jost",
+    sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
