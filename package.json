@@ -2,7 +2,7 @@
 	"name": "xenesis_frontend",
 	"version": "0.1.0",
 	"private": true,
-	"proxy": "http://127.0.0.1:8000",
+	"proxy": "http://thejagstudio-xenesis.hf.space",
 	"dependencies": {
 		"@react-spring/core": "^9.7.3",
 		"@testing-library/jest-dom": "^5.17.0",
