@@ -9,9 +9,8 @@ import Register from "./components/register";
 import OTP from "./components/OTP";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPassword from "./components/ForgotPassword";
-import Events from "./components/Events";
+import Events from "./components/events";
 import "./globals.css"
-
 import Verifier from "./components/Verifier/verifier";
 import Myticket from "./components/myticket";
 import EventDetails from "./components/eventDetailsPage/eventDetails";
@@ -19,6 +18,8 @@ import FAQ from "./components/faqs";
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
 import Aboutus from "./components/Aboutus";
+import Account_setup from "./components/Account_setup";
+
 
 
 const Routing = () => {
@@ -34,8 +35,7 @@ const Routing = () => {
         <Route path="/otp" element={<OTP />} />
         <Route path="/events" element={<Events />} />
         <Route path="/aboutus" element={<Aboutus />} />
-
-
+        <Route path="/accountsetup" element={<Account_setup />} />
         <Route path="/verifier" element={<Verifier />} />
         <Route path="/myTicket" element={<Myticket />} />
         <Route path="/faqs" element={<FAQ />} />
@@ -48,9 +48,9 @@ function App() {
 
     <Router>
       <ThemeProvider>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routing />
-        <Footer />
+        {/* <Footer /> */}
       </ThemeProvider>
     </Router>
 

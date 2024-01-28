@@ -1,18 +1,53 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import Navbar from './navbar';
 import EventCard from './EventCard';
 import Departments from './Departments';
 import Footer from './Footer'
+import Lenis from '@studio-freight/lenis'
 // Import Swiper styles
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
+  const lenis = useRef(null);
+  const section1Ref = useRef(null);
+  // const colLeftRef = useRef(null);
+
+  useEffect(() => {
+    lenis.current = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    function raf(time) {
+      lenis.current.raf(time);
+      ScrollTrigger.update();
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    const timeln = gsap.timeline({ paused: true });
+    // timeln.fromTo(colLeftRef.current, { y: 0 }, { y: '170vh', duration: 1, ease: 'none' }, 0);
+
+    ScrollTrigger.create({
+      animation: timeln,
+      trigger: section1Ref.current,
+      start: 'top top',
+      end: 'bottom center',
+      scrub: true,
+    });
+  }, []);
+
+  
   const departmentEvents = {
     "Events": [
       {
@@ -123,7 +158,7 @@ const Home = () => {
 
 
   return (
-    <div class=" overflow-x-hidden" >
+    <div class=" overflow-x-hidden " ref={section1Ref} >
 {/* Mavbar  */}
 
 
@@ -159,7 +194,7 @@ const Home = () => {
       </section>
 
       {/* Departments */}
-      <div className="bg-[#070d15]">
+      <div className="bg-[#070d15]" data-aos="fade-up">
         <div className="w-full text-center">
           <h3 className="uppercase text-white lg:text-[calc(8vh)] text-[calc(3vh)] font-serif font-semibold pb-4 pt-4">Departments</h3>
 
