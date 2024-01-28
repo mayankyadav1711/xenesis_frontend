@@ -2,7 +2,7 @@
     padding-bottom: 0.5%;
 
     transition: all 0.5s ease;
-    color: #F4A424;
+    /* color: #F4A424;   */
     /* font-size: 14px; */
     align-items: center;
     letter-spacing: 2px;
@@ -15,7 +15,7 @@
 
     /* Ensure the li itself is positioned relative */
     &:hover {
-        color: #F4A424;
+        color: #0BDBB9;
         /* cursor: none; */
         scale: 1.10;
     }
@@ -35,7 +35,7 @@
     }
 
     &::before {
-        border-bottom: 0.2em solid #F4A424;
+        border-bottom: 0.2em solid #0BDBB9;
         /* Replace with your desired border color */
         transform: scale3d(0, 1, 1);
         transition: transform 650ms ease-in-out;

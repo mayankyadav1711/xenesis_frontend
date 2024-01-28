@@ -20,20 +20,23 @@ const Departments = () => {
 
     return (
         <div
-            className="overflow-x-hidden bg-cover bg-no-repeat bg-center  backdrop-filter backdrop-blur-3xl"
-            style={{
-                backgroundImage: `url("/icons/background.svg")`,
-            }}
+            className="overflow-x-hidden bg-transparent relative "
+
         // style={{
         //     backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
         // }}
         >
+            <div className="z-[-1] fixed top-0 h-full bg-scroll w-screen" style={{
+                backgroundImage: `url("/icons/background.svg")`,
+            }}>
+
+            </div>
             {/* <div className="absolute inset-0 bg-[#070d15c7] backdrop-filter backdrop-blur-3xl"></div> */}
 
             {/* Departments */}
             <div className="">
 
-                <h3 className="uppercase text-white text-center text-heading2  font-semibold pb-4 pt-4">
+                <h3 className="uppercase text-white text-center text-heading2  font-semibold py-10 pt-20">
                     Departments
                 </h3>
             </div>
@@ -72,7 +75,7 @@ const Departments = () => {
                                 <div
                                     onClick={() => (window.location.href = `/events#${department[0]}`)}
                                     data-aos="zoom-in"
-                                    className="w-full rounded-lg bg-white/10 backdrop-blur-md md:md:mx-2 transition-all duration-300 transform hover:scale-105 shadow-md overflow-hidden card-3d mt-4 mb-6"
+                                    className="w-full rounded-lg bg-white/10 backdrop-blur-md md:md:mx-2  transition-all duration-300 transform hover:scale-105 shadow-md overflow-hidden card-3d mt-4 mb-10"
                                     style={{
                                         background: "rgba(255, 255, 255, 0.1)",
                                         boxShadow: "6px 6px 6px 6px rgba(0, 0, 0, 0.25)", // Outset box shadow

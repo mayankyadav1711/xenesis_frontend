@@ -23,7 +23,7 @@ function Myticket(Props) {
 
 
             </div> */}
-            <div className=" px-8 grid gap-6 grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3">
+            <div className=" px-8 grid gap-6 grid-cols-1 mt-10 md:grid-cols-2 pb-20 lg:grid-cols-3">
                 {RedTicketsData.map((ticketId) => (
                     <Newticket key={ticketId} bgColor="bg-rose-600" />
                 ))}

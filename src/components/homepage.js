@@ -14,73 +14,87 @@ import "swiper/css/scrollbar";
 import Earth from "./earth";
 
 const Home = () => {
-  const departmentEvents = {
-    Events: [
-      {
-        title: "FreeFire",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-        description: "Event description 1",
-        pricePerHead: "100",
-        individualAllowed: true,
-        eventId: "event1",
-        teamAllowed: true,
-        teamPrice: 1000,
-        likes: 9123,
-      },
-      {
-        title: "X-Error",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-        description: "Event description 1",
-        pricePerHead: "100",
-        individualAllowed: true,
-        eventId: "event1",
-        teamAllowed: true,
-        teamPrice: 1000,
-        likes: 9123,
-      },
-      {
-        title: "Skribble",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-        description: "Event description 1",
-        pricePerHead: "100",
-        individualAllowed: true,
-        eventId: "event1",
-        teamAllowed: true,
-        teamPrice: 1000,
-        likes: 9123,
-      },
-      {
-        title: "Human Ludo",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-        description: "Event description 1",
-        pricePerHead: "100",
-        individualAllowed: true,
-        eventId: "event1",
-        teamAllowed: true,
-        teamPrice: 1000,
-        likes: 9123,
-      },
-      {
-        title: "Pictionary",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-        description: "Event description 1",
-        pricePerHead: "100",
-        individualAllowed: true,
-        eventId: "event1",
-        teamAllowed: true,
-        teamPrice: 1000,
-        likes: 9123,
-      },
-      // Add more events as needed
-    ],
+    // const departmentEvents = {
+    //     Events: [
+    //         {
+    //             title: "FreeFire",
+    //             image:
+    //                 "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+    //             description: "Event description 1",
+    //             pricePerHead: "100",
+    //             individualAllowed: true,
+    //             eventId: "event1",
+    //             teamAllowed: true,
+    //             teamPrice: 1000,
+    //             likes: 9123,
+    //         },
+    //         {
+    //             title: "X-Error",
+    //             image:
+    //                 "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+    //             description: "Event description 1",
+    //             pricePerHead: "100",
+    //             individualAllowed: true,
+    //             eventId: "event1",
+    //             teamAllowed: true,
+    //             teamPrice: 1000,
+    //             likes: 9123,
+    //         },
+    //         {
+    //             title: "Skribble",
+    //             image:
+    //                 "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+    //             description: "Event description 1",
+    //             pricePerHead: "100",
+    //             individualAllowed: true,
+    //             eventId: "event1",
+    //             teamAllowed: true,
+    //             teamPrice: 1000,
+    //             likes: 9123,
+    //         },
+    //         {
+    //             title: "Human Ludo",
+    //             image:
+    //                 "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+    //             description: "Event description 1",
+    //             pricePerHead: "100",
+    //             individualAllowed: true,
+    //             eventId: "event1",
+    //             teamAllowed: true,
+    //             teamPrice: 1000,
+    //             likes: 9123,
+    //         },
+    //         {
+    //             title: "Pictionary",
+    //             image:
+    //                 "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
+    //             description: "Event description 1",
+    //             pricePerHead: "100",
+    //             individualAllowed: true,
+    //             eventId: "event1",
+    //             teamAllowed: true,
+    //             teamPrice: 1000,
+    //             likes: 9123,
+    //         },
+    //         // Add more events as needed
+    //     ],
 
-    // Add more events as needed
-  };
+    //     // Add more events as needed
+    // };
+
+
+    const [departmentEvents, setDepartmentEvents] = useState([]);
+
+    useEffect(() => {
+        fetch("/api/events/")
+            .then((res) => res.json())
+            .then((data) => {
+                setDepartmentEvents(data.departmentArr);
+            })
+            .catch((err) => console.log(err));
+    }, []);
+
+
 
   const galleryImages = [
     "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
@@ -177,6 +191,7 @@ const Home = () => {
         </div>
       </div>
 
+
       <section
         className="w-full h-screen text-white flex items-center justify-center relative"
         style={{
@@ -244,16 +259,23 @@ const Home = () => {
                     Departments
                 </h3>
             </div> */}
-      <Departments />
+            <Departments />
 
-      {/*Hello Events */}
-      <div className="bg-[#070d15b6]">
-        {Object.entries(departmentEvents).map(([department, events]) => (
-          <div key={department} className={`bg-[#070d15b6]`}>
-            <div className="w-full text-center">
-              <h3 className="uppercase text-white text-heading2 font-semibold mb-4  pt-4">
-                {department}
-              </h3>
+            {/*Hello Events */}
+            <div className="bg-darkBlue-50 bg-opacity-0 " >
+                {departmentEvents.slice(0, 1).map((department, index) => (
+                    <div key={index} className={``}>
+                        <div className="w-full text-center">
+                            <h3 className="uppercase text-white text-heading2 font-semibold mb-4 pt-20 py-10">
+                                {/* {department.departmentName} */}
+                                Events
+                            </h3>
+                        </div>
+
+                        <EventCard title={department} events={department.events} />
+                    </div>
+                ))}
+
             </div>
 
             <EventCard title={department} events={events} />
@@ -261,20 +283,23 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="bg-[#070d15]"></div>
-      {/* Gallery */}
-      <div
-        className="overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[#070d15b6] backdrop-filter backdrop-blur-3xl py-5 pb-10"
-        style={{
-          backgroundImage: `url("/icons/background.svg")`,
-        }}
-      >
-        {/* <div className="absolute inset-0 bg-[#070d15b5] backdrop-filter backdrop-blur-3xl"></div> */}
-        <div className="w-full text-center">
-          <h3 className="uppercase text-white text-heading3 font-semibold  py-10 z-50">
-            Gallery
-          </h3>
-        </div>
+            <div className="bg-transparents"></div>
+            {/* Gallery */}
+            <div
+                className="overflow-x-hidden bg-cover bg-no-repeat bg-center py-5 pb-10"
+            // style={{
+            //   backgroundImage: `url("/icons/background.svg")`,
+            // }}
+            >
+                {/* <div className="absolute inset-0 bg-[#070d15b5] backdrop-filter backdrop-blur-3xl"></div> */}
+                <div className="w-full text-center">
+                    <h3 className="uppercase text-white text-heading3 font-semibold  py-10 z-50">
+                        Gallery
+                    </h3>
+                </div>
+               
+    
+
         <Swiper
           className="ml-8 swiper-container-glass mt-8 mb-8"
           modules={[Navigation, Pagination, A11y]}
