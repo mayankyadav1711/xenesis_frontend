@@ -20,14 +20,23 @@ const Departments = () => {
 
     return (
         <div
-            className="overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[#070d1590] backdrop-filter backdrop-blur-3xl"
+            className="overflow-x-hidden bg-cover bg-no-repeat bg-center  backdrop-filter backdrop-blur-3xl"
             style={{
-                backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
+                backgroundImage: `url("/icons/background.svg")`,
             }}
+        // style={{
+        //     backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
+        // }}
         >
-            <div className="absolute inset-0 bg-[#070d15c7] backdrop-filter backdrop-blur-3xl"></div>
+            {/* <div className="absolute inset-0 bg-[#070d15c7] backdrop-filter backdrop-blur-3xl"></div> */}
 
             {/* Departments */}
+            <div className="">
+
+                <h3 className="uppercase text-white text-center text-heading2  font-semibold pb-4 pt-4">
+                    Departments
+                </h3>
+            </div>
             <section className="radial-gradient-container w-full py-[calc(3vh)] relative overflow-hidden">
                 <Swiper
                     className="ml-8 swiper-container-glass"
