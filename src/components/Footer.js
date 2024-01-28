@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
 // import ScrollTop from "/icons/scroll-top.svg"
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Use smooth scrolling behavior
+    });
+  };
 
+  return (
+    <div class="  z-50 relative bg-[#1A1F2C]">
+      {/* Mavbar  */}
+      <img
+        src={"/icons/footermoon.svg"}
+        width={350}
+        height={350}
+        className="z-50 -top-40 -left-44  absolute transition-transform animate-spin md:block hidden"
+        style={{ animationDuration: "30s" }}
+      ></img>
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth', // Use smooth scrolling behavior
-        });
-    };
-
-    return (
-        <div class=" overflow-x-hidden z-50">
-            {/* Mavbar  */}
-
-            <footer className="bg-[#1A1F2C] pt-20">
+     <footer className="bg-[#1A1F2C] pt-20">
                 <div className="md:flex sm:grid sm:grid-cols-2 flex flex-col md:flex-row lg:justify-around justify-center md:gap-10 gap-3 xl:px-32 lg:px-20 md:px-12 px-8 mb-8">
                     {/* Logo and Description */}
                     <div className="flex flex-col md:items-center items-start gap-3">
