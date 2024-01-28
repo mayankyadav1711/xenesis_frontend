@@ -7,16 +7,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "./swiper.css"
 
 const EventCard = ({ events }) => {
     return (
         <div
-            className="overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[#070d15b6] backdrop-filter backdrop-blur-3xl"
-            style={{
-                backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
-            }}
+            className="overflow-x-hidden bg-cover bg-no-repeat bg-center  "
+        // style={{
+        //     backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
+        // }}
         >
-            <div className="absolute inset-0 bg-darkBlue-50 backdrop-filter backdrop-blur-3xl"></div>
+            {/* <div className="absolute inset-0 bg-darkBlue-50 backdrop-filter backdrop-blur-3xl"></div> */}
             <div className="w-full h-fit overflow-hidden customScrollbar relative px-2">
                 <Swiper
                     spaceBetween={50}
@@ -31,52 +32,56 @@ const EventCard = ({ events }) => {
                     loop={true}
                 >
                     {events.map((event, index) => (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide className="swiper-slide  px-2 mr-0" key={index}>
                             <div
-                                className="bg-[rgba(255,255,255,0.1)] rounded-lg group w-full  mt-5 mb-5 ml-2"
+                                className="bg-[#2B3247] z-10  hover:bg-opacity-100 hover:scale-[102%] hover:bg-deepBlue-100 border-2  border-deepBlue-100 overflow-hidden bg-opacity-95 rounded-md p-4 pb-0 flex flex-col   justify-between group w-full min-h-[500px] md:min-h-[540px] my-5 mx-2"
                                 style={{
-                                    border: "1px solid rgba(255,255,255,0.2)",
+                                    // border: "1px solid rgba(255,255,255,0.2)",
                                     transition: "all 0.3s",
                                     boxShadow: "6px 6px 6px 6px rgba(0, 0, 0, 0.25)",
                                     height: "fit-content",
                                 }}
                             >
-                                <img src={event.eventPosterImage !== "-" ? event.eventPosterImage : "/static/images/logoCus.png"} alt={index} className="group-hover:scale-110 rounded-t-lg origin-bottom object-cover object-center w-[calc(100%-2.5rem)] h-auto max-h-32 transition-all duration-300 ml-5 mt-5" />
+                                <div className="overflow-hidden h-fit  rounded-md   w-full">
 
-                                <div className="my-3 px-4 glassy-effect rounded-lg shadow-outset-black">
-                                    <h1 className="text-white text-center text-2xl capitalize eventName font-serif truncate">{event.eventName}</h1>
+
+                                    <img src={event.eventPosterImage !== "-" ? event.eventPosterImage : "/static/images/logoCus.png"} alt={index} className="group-hover:scale-105  origin-bottom object-cover  w-[calc(100%)] h-56 transition-all duration-300 " />
+                                </div>
+                                <div className="my-3 px-4 glassy-effect  rounded-lg shadow-outset-black">
+                                    <h1 className="text-white text-center text-heading6 capitalize eventName  truncate">{event.eventName}</h1>
                                     <p className="text-[#c0c0c0] text-center text-sm line-clamp-1">{event.eventDescription}</p>
                                     <div className="flex flex-col items-center justify-center my-2">
-                                        <p className="text-gray-300 text-lg font-semibold rounded-lg capitalize w-[50%] whitespace-nowrap">
+                                        <p className="text-gray-300 text-lg  font-semibold rounded-lg capitalize  whitespace-nowrap">
                                             {event.eventPrice !== "-" ? (
                                                 <>
                                                     <FaBan className="inline text-gray-600 mr-1" />
                                                     Team Not Allowed
                                                     <br />
-                                                    <FaUser className="inline text-gray-600 mr-1" />₹{event.eventPrice} per head
+                                                    <FaUser className="inline text-neon-100 mr-1" />₹{event.eventPrice} per head
                                                 </>
                                             ) : (
                                                 <></>
                                             )}
                                         </p>
                                         {event.isTeamEvent && (
-                                            <p className="text-gray-300 text-lg font-semibold rounded-lg capitalize w-[50%] whitespace-nowrap">
-                                                <FaUsers className="inline text-gray-600 mr-1" />₹{event.teamPrice} per Team
+                                            <p className="text-gray-300 text-lg font-semibold rounded-lg capitalize  whitespace-nowrap">
+                                                <FaUsers className="inline text-neon-100 mr-1" />₹{event.teamPrice} per Team
                                             </p>
                                         )}
                                     </div>
-                                    <a href={`/eventDetails/${event.eventLink}`} className="block w-full text-center bg-gradient-to-r from-[#0b1628] to-[#344150] text-white font-semibold px-4 py-2 rounded-lg 3d-button shadow-lg hover:scale-105">
-                                        View More
-                                    </a>
+
                                 </div>
+                                <a href={`/eventDetails/${event.eventLink}`} className="block w-full text-center  mb-4 duration-150  bg-neon-100 text-deepBlue-100 font-semibold px-4 py-2 rounded-lg 3d-button hover:shadow-2xl  border-2 border-transparent hover:-translate-y-2 hover:border-neon-100  hover:saturate-200">
+                                    View More
+                                </a>
                                 {event.winnerPrice1 !== 0 && event.winnerPrice2 !== 0 && (
-                                    <div className="flex items-center justify-center  h-14 px-2 -pt-10 pb-0 rounded-b-lg relative">
+                                    <div className="flex items-center justify-center  h-14 px-2   bottom-0 rounded-b-lg relative">
                                         <div className="flex flex-col items-center absolute bottom-0 z-20 -translate-x-[50%]">
-                                            <p className="text-[#FEE715] font-semibold bg-white rounded-full h-5 w-5 flex items-center justify-center mb-1">1</p>
+                                            <p className="text-white     font-semibold bg-[#f0a500] rounded-full h-5 w-5 flex items-center justify-center mb-1">1</p>
                                             <p className="bg-[#f0a500] px-4 py-2 text-white font-semibold transition-all duration-300 hover:py-4">₹ {event.winnerPrice1}</p>
                                         </div>
-                                        <div className="flex flex-col items-center absolute bottom-0 translate-x-[50%] z-10">
-                                            <p className="text-[#FEE715] font-semibold bg-white rounded-full h-5 w-5 flex items-center justify-center mb-1">2</p>
+                                        <div className="flex flex-col delay-100 items-center absolute bottom-0 translate-x-[50%] z-10">
+                                            <p className="text-white     font-semibold bg-darkBlue-50 rounded-full h-5 w-5 flex items-center justify-center mb-1">2</p>
                                             <p className="bg-gray-400 px-4 py-[3px] text-gray-800 font-semibold transition-all duration-300 hover:py-4">₹ {event.winnerPrice2}</p>
                                         </div>
                                     </div>
