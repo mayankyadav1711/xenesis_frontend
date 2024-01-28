@@ -31,10 +31,10 @@ const Verifier = () => {
               <input
                 onkeyup="ticketUpdater(this)"
                 placeholder="Enter Ticket Id"
-                class="h-full w-full bg-transparent text-black pl-8 focus:outline-none overflow-hidden"
+                class="h-full w-full bg-transparent text-white pl-8 focus:outline-none overflow-hidden"
               />
             </div>
-            <h2 class="text-3xl font-semibold pb-[45dvh] pt-[20dvh] tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 class="text-3xl font-semibold pb-[55dvh] pt-[20dvh] tracking-tight text-white sm:text-4xl lg:text-5xl">
               Pending Tickets
             </h2>
           </div>
