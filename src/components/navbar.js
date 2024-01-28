@@ -111,60 +111,61 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu - Float Right */}
-        <ul className="hidden lg:flex items-center justify-end space-x-10 float-right ml-auto mr-20 mt-2">
+        <ul className="hidden text-body2 lg:flex items-center justify-end space-x-10 float-right ml-auto mr-20 mt-2">
           <a
             href="/"
-            className={`text-xl ${
-              isGlassy ? "font-montserrat" : ""
-            } link hover:text-neon-100  transition-all duration-300`}
+
+            className={` ${isGlassy ? "font-montserrat" : ""
+              } link hover:text-neon-100  transition-all duration-300`}
           >
             Home
           </a>
           <a
             href="/events"
-            className={`text-xl ${
-              isGlassy ? "font-montserrat" : ""
-            } link hover:text-neon-100  transition-all duration-300`}
+
+            className={` ${isGlassy ? "font-montserrat" : ""
+              } link hover:text-neon-100  transition-all duration-300`}
+
           >
             Events
           </a>
           <a
             href="#"
-            className={`text-xl ${
-              isGlassy ? "font-montserrat" : ""
-            } link hover:text-neon-100  transition-all duration-300`}
+
+            className={` ${isGlassy ? "font-montserrat" : ""
+              } link hover:text-neon-100  transition-all duration-300`}
           >
             Event Confirm
           </a>
           <a
             href="/aboutus"
-            className={`text-xl ${
-              isGlassy ? "font-montserrat" : ""
-            } link hover:text-neon-100  transition-all duration-300`}
+
+            className={` ${isGlassy ? "font-montserrat" : ""
+              } link hover:text-neon-100  transition-all duration-300`}
           >
             About Us
           </a>
           <a
             href="/login"
-            className={`text-xl ${
-              isGlassy ? "font-montserrat" : ""
-            } link hover:text-neon-100  transition-all duration-300`}
+
+            className={` ${isGlassy ? "font-montserrat" : ""
+              } link hover:text-neon-100  transition-all duration-300`}
           >
             Login
           </a>
           <a
             href="/register"
-            className={`text-xl ${
-              isGlassy ? "font-montserrat" : ""
-            } link hover:text-neon-100  transition-all duration-300`}
+
+            className={` ${isGlassy ? "font-montserrat" : ""
+              } link hover:text-neon-100  transition-all duration-300`}
           >
             Register
           </a>
           <a
             href="/login"
-            className={`text-xl ${
-              isGlassy ? "font-montserrat" : ""
-            } link hover:text-neon-100  transition-all duration-300`}
+
+            className={` ${isGlassy ? "font-montserrat" : ""
+              } link hover:text-neon-100  transition-all duration-300`}
           ></a>
         </ul>
       </nav>

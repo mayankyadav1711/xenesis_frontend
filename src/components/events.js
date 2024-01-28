@@ -550,67 +550,36 @@ const Events = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  const handleAccordionToggle = (department) => {
-    setOpenDepartment(openDepartment === department ? null : department);
-  };
-  return (
-    <>
-      <div className="bg-darkBlue-50 pb-40">
-        <div
-          class="w-full h-screen overflow-hidden object-center customScrollbar  relative"
-          style={{
-            backgroundImage:
-              "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706213665/eventHerolandingPage2_zd9rni.png')",
-          }}
-        >
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "linear-gradient(to bottom, rgba(7, 13, 21, 0.5) 0%, rgba(7, 13, 21, 0.7) 100%)",
-            }}
-          ></div>
-          <canvas
-            id="canvas"
-            class="w-screen h-[calc((1024/1536)*100vw)] absolute top-0 z-0"
-          ></canvas>
-          <div class="absolute w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 px-[calc(3vh)] text-center z-20">
-            <h1 class="lg:text-[calc(12vh)] text-[calc(6vh)] text-white uppercase font-bold z-20">
-              Events
-            </h1>
-            <div class="w-[60vw] h-[65px] p-2 px-2 mx-auto md:px-4">
-              <div class="w-full">
-                <div class="flex items-center">
-                  <div class="relative w-full">
-                    <input
-                      onkeyup="Search()"
-                      id="search"
-                      placeholder="Search for an Event ..."
-                      class="bg-transparent w-full border border-brand-500 focus:outline-none p-3 pl-10 rounded-md text-sm text-white focus:backdrop-blur"
-                    />{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      class="w-4 h-4 text-gray-200 absolute inset-4"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      ></path>
-                    </svg>
-                    <button
-                      onclick="Search()"
-                      aria-label="Primary Button"
-                      type="button"
-                      class="flex content-center items-center justify-center text-center px-4 py-2 text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-[#240A35] absolute right-1.5 top-1.5"
-                    >
-                      Search
-                    </button>
-                  </div>
+
+    const handleAccordionToggle = (department) => {
+        setOpenDepartment(openDepartment === department ? null : department);
+    };
+    return (
+        <>
+            <div class="w-full h-screen overflow-hidden object-center customScrollbar relative" style={{ backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706213665/eventHerolandingPage2_zd9rni.png')" }}>
+                <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(to bottom, rgba(7, 13, 21, 0.5) 0%, rgba(7, 13, 21, 0.7) 100%)" }}></div>
+                <div
+                    className="absolute w-full h-full top-0 bg-gradient-to-b from-transparent via-transparent to-darkBlue-50 "
+                    style={{ backdropFilter: "blur(1px)" }} // Adjust the blur value as needed
+                ></div>
+                <canvas id="canvas" class="w-screen h-[calc((1024/1536)*100vw)] absolute top-0 z-0"></canvas>
+                <div class="absolute w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 px-[calc(3vh)] text-center z-20">
+                    <h1 class="lg:text-[calc(12vh)] text-[calc(6vh)] text-white uppercase font-bold z-20">Events</h1>
+                    <div class="w-[60vw] h-[65px] p-2 px-2 mx-auto md:px-4">
+                        <div class="w-full">
+                            <div class="flex items-center">
+                                <div class="relative w-full">
+                                    <input onkeyup="Search()" id="search" placeholder="Search for an Event ..." class="bg-transparent w-full border border-brand-500 focus:outline-none p-3 pl-10 rounded-md text-sm text-white focus:backdrop-blur" />{" "}
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-4 h-4 text-gray-200 absolute inset-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                    <button onclick="Search()" aria-label="Primary Button" type="button" class="flex content-center items-center justify-center text-center px-4 py-2 text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-[#240A35] absolute right-1.5 top-1.5">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
