@@ -5,7 +5,7 @@ import Dots from "./dots";
 function VerifierTicket({ children }) {
   return (
     <div
-      className={`flex relative justify-between  items-center bg-white bg-opacity-80 rounded-md `}
+      className={`flex relative justify-between z-10  items-center bg-white bg-opacity-80 rounded-md `}
     >
       <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-tl-md flex items-center rounded-bl-md h-full w-[50px] left-0">
         <p className="-translate-x-1/4 -rotate-90 text-center font-extrabold">
