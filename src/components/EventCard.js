@@ -8,6 +8,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./swiper.css"
+import First from "./images/1st.svg"
+import Second from "./images/2nd.svg"
 
 const EventCard = ({ events }) => {
     return (
@@ -34,7 +36,7 @@ const EventCard = ({ events }) => {
                     {events.map((event, index) => (
                         <SwiperSlide className="swiper-slide  px-2 mr-0" key={index}>
                             <div
-                                className="bg-[#2B3247] z-10  hover:bg-opacity-100 hover:scale-[102%] hover:bg-deepBlue-100 border-2  border-deepBlue-100 overflow-hidden bg-opacity-95 rounded-md p-4 pb-0 flex flex-col   justify-between group w-full min-h-[500px] md:min-h-[540px] my-5 mx-2"
+                                className="bg-[#2B3247] z-10  hover:bg-opacity-100   border-2  border-deepBlue-100 overflow-hidden bg-opacity-95 rounded-md p-4 pb-0 flex flex-col  justify-between group w-full min-h-[500px] md:min-h-[580px] my-5 mx-2"
                                 style={{
                                     // border: "1px solid rgba(255,255,255,0.2)",
                                     transition: "all 0.3s",
@@ -75,14 +77,28 @@ const EventCard = ({ events }) => {
                                     View More
                                 </a>
                                 {event.winnerPrice1 !== 0 && event.winnerPrice2 !== 0 && (
-                                    <div className="flex items-center justify-center  h-14 px-2   bottom-0 rounded-b-lg relative">
-                                        <div className="flex flex-col items-center absolute bottom-0 z-20 -translate-x-[50%]">
-                                            <p className="text-white     font-semibold bg-[#f0a500] rounded-full h-5 w-5 flex items-center justify-center mb-1">1</p>
-                                            <p className="bg-[#f0a500] px-4 py-2 text-white font-semibold transition-all duration-300 hover:py-4">₹ {event.winnerPrice1}</p>
+                                    <div className="flex items-center justify-center   h-14 px-2   bottom-0 rounded-b-lg relative"
+
+                                    >
+                                        <div className="flex hover:pb-2.5 duration-300 flex-col bg-[#f0a500] rounded-t-md items-center absolute bottom-0 z-20 -translate-x-[50%]"
+                                            style={{
+                                                boxShadow: "6px 6px 6px 6px rgba(0, 0, 0, 0.25)",
+                                            }}>
+                                            {/* <p className="text-white     font-semibold bg-[#f0a500] rounded-full h-5 w-5 flex items-center justify-center mb-1">1</p> */}
+                                            <img src={First} height={30} width={30} alt="" />
+                                            <p style={{
+                                                // boxShadow: "6px 6px 6px 6px rgba(0, 0, 0, 0.25)",
+                                            }} className=" rounded-t-md px-4 py-2 text-darkBlue-50 font-semibold  ">₹ {event.winnerPrice1}</p>
                                         </div>
-                                        <div className="flex flex-col delay-100 items-center absolute bottom-0 translate-x-[50%] z-10">
-                                            <p className="text-white     font-semibold bg-darkBlue-50 rounded-full h-5 w-5 flex items-center justify-center mb-1">2</p>
-                                            <p className="bg-gray-400 px-4 py-[3px] text-gray-800 font-semibold transition-all duration-300 hover:py-4">₹ {event.winnerPrice2}</p>
+                                        <div className="flex hover:pb-2 duration-300 justify-between  bg-gray-400 rounded-t-md flex-col delay-100 items-center absolute bottom-0 translate-x-[50%] z-10"
+                                            style={{
+                                                boxShadow: "6px 6px 6px 6px rgba(0, 0, 0, 0.25)",
+                                            }}>
+                                            {/* <p className="text-white     font-semibold bg-darkBlue-50 rounded-full h-5 w-5 flex items-center justify-center mb-1">2</p> */}
+                                            <img src={Second} height={30} width={30} alt="" />
+                                            <p style={{
+                                                // boxShadow: "6px 6px 6px 6px rgba(0, 0, 0, 0.25)",
+                                            }} className=" rounded-t-md px-4 py-[2px] text-gray-800 font-semibold  ">₹ {event.winnerPrice2}</p>
                                         </div>
                                     </div>
                                 )}

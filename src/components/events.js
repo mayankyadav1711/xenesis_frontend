@@ -557,6 +557,10 @@ const Events = () => {
         <>
             <div class="w-full h-screen overflow-hidden object-center customScrollbar relative" style={{ backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706213665/eventHerolandingPage2_zd9rni.png')" }}>
                 <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(to bottom, rgba(7, 13, 21, 0.5) 0%, rgba(7, 13, 21, 0.7) 100%)" }}></div>
+                <div
+                    className="absolute w-full h-full top-0 bg-gradient-to-b from-transparent via-transparent to-darkBlue-50 "
+                    style={{ backdropFilter: "blur(1px)" }} // Adjust the blur value as needed
+                ></div>
                 <canvas id="canvas" class="w-screen h-[calc((1024/1536)*100vw)] absolute top-0 z-0"></canvas>
                 <div class="absolute w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 px-[calc(3vh)] text-center z-20">
                     <h1 class="lg:text-[calc(12vh)] text-[calc(6vh)] text-white uppercase font-bold z-20">Events</h1>
