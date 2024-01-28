@@ -216,9 +216,9 @@ const Home = () => {
             <Departments />
 
             {/*Hello Events */}
-            <div className="bg-[#070d15b6]" >
+            <div className="bg-darkBlue-50 bg-opacity-90 " >
                 {Object.entries(departmentEvents).map(([department, events]) => (
-                    <div key={department} className={`bg-[#070d15b6]`}>
+                    <div key={department} className={``}>
                         <div className="w-full text-center">
                             <h3 className="uppercase text-white text-heading2 font-semibold mb-4  pt-4">
                                 {department}

@@ -20,20 +20,23 @@ const Departments = () => {
 
     return (
         <div
-            className="overflow-x-hidden bg-cover bg-no-repeat bg-center  backdrop-filter backdrop-blur-3xl"
-            style={{
-                backgroundImage: `url("/icons/background.svg")`,
-            }}
+            className="overflow-x-hidden bg-transparent relative "
+
         // style={{
         //     backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
         // }}
         >
+            <div className="z-[-1] fixed top-0 h-full bg-scroll w-screen" style={{
+                backgroundImage: `url("/icons/background.svg")`,
+            }}>
+
+            </div>
             {/* <div className="absolute inset-0 bg-[#070d15c7] backdrop-filter backdrop-blur-3xl"></div> */}
 
             {/* Departments */}
             <div className="">
 
-                <h3 className="uppercase text-white text-center text-heading2  font-semibold pb-4 pt-4">
+                <h3 className="uppercase text-white text-center text-heading2  font-semibold py-10 pt-20">
                     Departments
                 </h3>
             </div>
