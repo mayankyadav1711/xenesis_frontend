@@ -160,21 +160,24 @@ const Home = () => {
                 </div>
             </div>
 
-            <section
-                className="w-full h-screen p-6 text-white flex items-center justify-center relative"
-                style={{
-                    backgroundImage:
-                        "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                }}
-            >
-                <div className="absolute left-0 top-0 w-full h-screen bg-[rgba(0,0,0,0.5)] z-20"></div>
-                <div className="z-30 absolute top-1/2 -translate-y-1/2 px-[calc(3vh)] w-1/2 left-5">
-                    <h1 className="text-[calc(8vh)] text-transparent bg-gradient-to-r from-blue-600 via-white to-green-600 uppercase font-bold w-fit bg-clip-text text-transparent font-mono">
-                        <span className="text-blue-500">X</span>enesis
-                    </h1>
+
+      <section
+        className="w-full h-screen text-white flex items-center justify-center relative"
+        style={{
+          backgroundImage: `url("/icons/homebannerbg.svg")`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+        }}
+      >
+        <div
+          className="absolute w-full h-full top-0 bg-gradient-to-t from-[#070d15] via-transparent to-transparent lg:z-10 z-30"
+          style={{ backdropFilter: "blur(0px)" }} // Adjust the blur value as needed
+        ></div>
+        <div className="z-30 absolute top-1/2 -translate-y-1/2 px-[calc(3vh)] w-1/2 left-5">
+          <h1 className="text-[calc(8vh)] bg-gradient-to-r from-blue-600 via-white to-green-600 uppercase font-bold w-fit bg-clip-text text-transparent font-mono">
+            <span className="text-blue-500">X</span>enesis
+          </h1>
 
                     <p
                         className="text-[calc(3vh)]  uppercase font-bold bg-gradient-to-r from-orange-500 via-white to-green-500 w-fit bg-clip-text text-transparent font-['Tiro_Devanagari_Hindi','serif']"
@@ -227,68 +230,70 @@ const Home = () => {
                 ))}
             </div>
 
-            <div className="bg-[#070d15]"></div>
-            {/* Gallery */}
-            <div
-                className="overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[#070d15b6] backdrop-filter backdrop-blur-3xl"
-                style={{
-                    backgroundImage: `url("/icons/background.svg")`,
-                }}
-            >
-                {/* <div className="absolute inset-0 bg-[#070d15b5] backdrop-filter backdrop-blur-3xl"></div> */}
-                <div className="w-full text-center">
-                    <h3 className="uppercase text-white lg:text-[calc(8vh)] text-[calc(3vh)] font-serif font-semibold pt-4 py-4 z-50">
-                        Gallery
-                    </h3>
-                </div>
-                <Swiper
-                    className="ml-8 swiper-container-glass mt-8 mb-8"
-                    modules={[Navigation, Pagination, A11y]}
-                    spaceBetween={50}
-                    slidesPerView={3}
-                    pagination={{ clickable: true }}
-                    navigation={{
-                        nextEl: ".custom-next-button",
-                        prevEl: ".custom-prev-button",
-                    }}
-                    coverflowEffect={{
-                        rotate: 30,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 1,
-                        slideShadows: false,
-                    }}
-                    breakpoints={{
-                        320: {
-                            slidesPerView: 1.3,
-                            spaceBetween: 20,
-                            centeredSlides: true,
-                            initialSlide: 0,
-                        },
-                        640: {
-                            slidesPerView: 2,
-                        },
-                        768: {
-                            slidesPerView: 3,
-                        },
-                        1024: {
-                            slidesPerView: 4,
-                        },
-                    }}
-                >
-                    {galleryImages.map((image, index) => (
-                        <SwiperSlide key={index}>
-                            <img
-                                src={image}
-                                alt={`Gallery Image ${index + 1}`}
-                                className="rounded-xl"
-                            />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+
+      <div className="bg-[#070d15]"></div>
+      {/* Gallery */}
+      <div
+        className="overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[#070d15b6] backdrop-filter backdrop-blur-3xl py-5 pb-10"
+        style={{
+          backgroundImage: `url("/icons/background.svg")`,
+        }}
+      >
+        {/* <div className="absolute inset-0 bg-[#070d15b5] backdrop-filter backdrop-blur-3xl"></div> */}
+        <div className="w-full text-center">
+          <h3 className="uppercase text-white text-heading3 font-semibold  py-10 z-50">
+            Gallery
+          </h3>
         </div>
-    );
+        <Swiper
+          className="ml-8 swiper-container-glass mt-8 mb-8"
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={50}
+          slidesPerView={3}
+          pagination={{ clickable: true }}
+          navigation={{
+            nextEl: ".custom-next-button",
+            prevEl: ".custom-prev-button",
+          }}
+          coverflowEffect={{
+            rotate: 30,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: 1.3,
+              spaceBetween: 20,
+              centeredSlides: true,
+              initialSlide: 0,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+        >
+          {galleryImages.map((image, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={image}
+                alt={`Gallery Image ${index + 1}`}
+                className="rounded-xl mb-10"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
+  );
+
 };
 
 export default Home;
