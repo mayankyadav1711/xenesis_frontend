@@ -1,4 +1,3 @@
-
 import React,{ useState } from "react";
 
 
@@ -44,7 +43,7 @@ function Register() {
         </a>
 
         <div className="flex items-center lg:justify-end md:pt-0 pt-5 justify-center w-[80%] h-full">
-          <form onSubmit={handleSubmit} className="form max-w-[500px] w-full lg:w-[90%] h-full md:px-12 sm:px-10 px-8 lg:py-12 sm:py-11 py-10  backdrop-blur-md shadow-inner border-solid border-x-4  border-neon-100 z-10 rounded-xl">
+          <form onSubmit={handleSubmit} className="form max-w-[500px] w-full lg:w-[90%] h-full md:px-12 sm:px-10 px-8 lg:py-12 sm:py-11 py-10  backdrop-blur-md bg-neon-100 bg-opacity-15 shadow-inner border-solid border-x-4  border-neon-100 z-10 rounded-xl">
 
             {/* CSRF Token */}
             {/* Add your logic to include CSRF token */}
@@ -52,11 +51,10 @@ function Register() {
             {/* Display error message */}
             {/* Add your logic to display error message */}
             
-            <h1 className="text-white form-header-text text-center md:text-4xl sm:text-3xl text-2xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-yellow-300 mb-10 flex justify-center items-center gap-4 underline decoration-wavy decoration-2 	text-decoration-color: #020617;
-decoration-neon-100 underline-offset-4">
+            <h1 className="text-white form-header-text text-center md:text-3xl sm:text-3xl text-2xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-yellow-300 mb-10 flex justify-center items-center gap-4"> 
               <img src="https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/logoCus.png?alt=media&token=235dd869-9cdb-4150-b917-315651f74159" alt="" className="sm:w-[70px] sm:h-[70px] w-[55px] h-[55px]"/> Be a part of Xenesis
             </h1>
-
+            {/* hover:underline hover:decoration-wavy hover:decoration-2 hover:text-decoration-color: #020617 hover:decoration-neon-100 hover:underline-offset-4 */}
             {/* Email input */}
             <div className='flex group relative w-full justify-center font-semibold'>
               <input
