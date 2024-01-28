@@ -36,25 +36,25 @@ const Footer = () => {
                         <div className="flex flex-col text-left text-gray-400 gap-1 lg:text-base text-sm">
                             <a
                                 href="/"
-                                className="hover:translate-x-2 hover:text-[#bc85ff] transition-all duration-300"
+                                className="hover:translate-x-2 hover:text-neon-100 transition-all duration-300"
                             >
                                 Home
                             </a>
                             <a
                                 href="/event"
-                                className="hover:translate-x-2 hover:text-[#bc85ff] transition-all duration-300"
+                                className="hover:translate-x-2 hover:text-neon-100 transition-all duration-300"
                             >
                                 Events
                             </a>
                             <a
                                 href="/aboutus"
-                                className="hover:translate-x-2 hover:text-[#bc85ff] transition-all duration-300"
+                                className="hover:translate-x-2 hover:text-neon-100 transition-all duration-300"
                             >
                                 About Us
                             </a>
                             <a
                                 href="/faqs"
-                                className="hover:translate-x-2 hover:text-[#bc85ff] transition-all duration-300"
+                                className="hover:translate-x-2 hover:text-neon-100 transition-all duration-300"
                             >
                                 FAQs
                             </a>

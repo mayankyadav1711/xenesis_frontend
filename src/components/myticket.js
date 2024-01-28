@@ -9,7 +9,7 @@ function Myticket(Props) {
     const GreenTicketsData = [1, 2, 3];
     return (
         <section className=" relative      ">
-            <h4 className="text-center text-heading1 py-[50dvh]  text-white font-extrabold ">Ticket</h4>
+            <h4 className="text-center lg:text-[calc(12vh)] text-[calc(6vh)] py-[50dvh]  text-white font-extrabold ">Ticket</h4>
 
             {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
 
