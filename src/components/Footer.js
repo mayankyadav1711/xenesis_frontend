@@ -128,7 +128,7 @@ const Footer = () => {
                 {/* Copyrights */}<div className=" relative bg-[#13103e] bg-opacity-20 flex w-full">
 
 
-                    <div className=" w-full place-self-center   text-center  clip-copyrights text-gray-300 font-semibold py-8 md:text-xl text-md">
+                    <div className=" w-full place-self-center   text-center  clip-copyrights text-gray-300 font-semibold py-8 text-caption2 md:text-body1">
                         &copy; 2023 Xenesis All Rights Registered
                     </div>
 
