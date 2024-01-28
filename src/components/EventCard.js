@@ -34,7 +34,7 @@ const EventCard = ({ events }) => {
                     {events.map((event, index) => (
                         <SwiperSlide className="swiper-slide px-2 mr-0" key={index}>
                             <div
-                                className="bg-[#2B3247] hover:bg-opacity-100 hover:bg-deepBlue-100 border-2  border-deepBlue-100 overflow-hidden bg-opacity-90 rounded-md p-4 pb-0 flex flex-col   justify-between group w-full min-h-[500px] md:min-h-[540px] my-5 mx-2"
+                                className="bg-[#2B3247] hover:bg-opacity-100 hover:scale-[102%] hover:bg-deepBlue-100 border-2  border-deepBlue-100 overflow-hidden bg-opacity-95 rounded-md p-4 pb-0 flex flex-col   justify-between group w-full min-h-[500px] md:min-h-[540px] my-5 mx-2"
                                 style={{
                                     // border: "1px solid rgba(255,255,255,0.2)",
                                     transition: "all 0.3s",
