@@ -576,14 +576,14 @@ const Events = () => {
                         </div>
                     </div>
                 </div>
-                <div class="w-full h-full bg-[rgba(0,0,0,0.4)] absolute top-0 left-0 z-10"></div>
+                {/* <div class="w-full h-full bg-[rgba(0,0,0,0.4)] absolute top-0 left-0 z-10"></div> */}
             </div>
 
             <div className="bg-[#162238]]">
                 {departmentEvents.map((department, index) => (
-                    <div key={index} className={`bg-darkBlue-50 py-2 pt-10`}>
-                        <div className="w-full text-center">
-                            <h3 className="uppercase text-white text-heading4 pt-5  font-bold  w-fit mx-auto underline-offset-8 underline mb-4">{department.departmentName}</h3>
+                    <div key={index} className={`bg-darkBlue-50  py-2 pt-10`}>
+                        <div className="w-full  text-center">
+                            <h3 className="uppercase z-10 text-white text-heading4 pt-5  font-bold  w-fit mx-auto underline-offset-8 underline mb-4">{department.departmentName}</h3>
                         </div>
                         {/* <hr /> */}
                         <EventCard events={department.events} />

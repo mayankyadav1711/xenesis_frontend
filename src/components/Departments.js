@@ -26,7 +26,7 @@ const Departments = () => {
         //     backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
         // }}
         >
-            <div className="z-[-1] fixed top-0 h-full bg-scroll w-screen" style={{
+            <div className="z-[-1] fixed top-0 h-full  w-screen" style={{
                 backgroundImage: `url("/icons/background.svg")`,
             }}>
 
@@ -40,7 +40,7 @@ const Departments = () => {
                     Departments
                 </h3>
             </div>
-            <section className="radial-gradient-container w-full py-[calc(3vh)] relative overflow-hidden">
+            <section className="radial-gradient-container  w-full py-[calc(3vh)] relative overflow-hidden">
                 <Swiper
                     className="ml-8 swiper-container-glass"
                     modules={[Navigation, Pagination, A11y]}
@@ -69,13 +69,13 @@ const Departments = () => {
                         },
                     }}
                 >
-                    <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-5 sm:px-[calc(3vh)] px-10 mt-5 mb-5">
+                    <div className="grid md:grid-cols-5  sm:grid-cols-3 grid-cols-1 gap-5 sm:px-[calc(3vh)] px-10 mt-5 mb-5">
                         {departments.map((department, index) => (
                             <SwiperSlide key={index}>
                                 <div
                                     onClick={() => (window.location.href = `/events#${department[0]}`)}
                                     data-aos="zoom-in"
-                                    className="w-full rounded-lg bg-white/10 backdrop-blur-md md:md:mx-2  transition-all duration-300 transform hover:scale-105 shadow-md overflow-hidden card-3d mt-4 mb-10"
+                                    className="w-full z-0 rounded-lg bg-white/10 backdrop-blur-md md:md:mx-2  transition-all duration-300 transform hover:scale-105 shadow-md overflow-hidden card-3d mt-4 mb-10"
                                     style={{
                                         background: "rgba(255, 255, 255, 0.1)",
                                         boxShadow: "6px 6px 6px 6px rgba(0, 0, 0, 0.25)", // Outset box shadow
