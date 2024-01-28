@@ -27,6 +27,27 @@ const Navbar = () => {
     };
   }, []);
 
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight =
+        document.documentElement.scrollHeight - windowHeight;
+      const currentScroll = window.scrollY;
+      const scrollPercentage = (currentScroll / documentHeight) * 100;
+      setScrollPercentage(scrollPercentage);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const translationValue = -(scrollPercentage * 11);
+
   return (
     <div className={`bg-[#240a34] overflow-x-hidden`}>
       {/* Navbar */}
@@ -157,6 +178,16 @@ const Navbar = () => {
               } link hover:text-neon-100  transition-all duration-300`}
           ></a>
         </ul>
+        <img
+          src={"/icons/satellite.svg"}
+          width={80}
+          height={80}
+          className="z-[-1] -bottom-20 right-7 absolute"
+          style={{
+            transform: `translateX(${translationValue}px)`,
+            transition: "transform 0s ease-in",
+          }}
+        ></img>
       </nav>
     </div>
   );
