@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Navbar from "./navbar";
 import EventCard from "./EventCard";
 import Departments from "./Departments";
-import Footer from "./Footer";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
