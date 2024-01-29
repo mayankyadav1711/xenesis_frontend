@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
+import SolarSystem from "./SolarSystem"
 
 const FAQ = () => {
     const { theme } = useTheme();
@@ -15,10 +16,11 @@ const FAQ = () => {
   };
 
     return (
-<div className=" w-auto m-4 rounded-lg bg-[#2D364D] backdrop-filter dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-0 lg:px-6 xl:px-0 lg:min-h-24 min-h-20" style={{ boxShadow: '6px 6px 8px 4px rgba(0, 0, 0, 0.5)' }}>
+<div className=" w-auto m-4 rounded-lg bg-[#2d364d48] backdrop-filter backdrop-blur-lg dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-0 lg:px-0 xl:px-0 lg:min-h-24 min-h-20" style={{ boxShadow: '6px 6px 8px 4px rgba(0, 0, 0, 0.5)' }}>
     <button
     className={`faq-btn flex w-full text-left pl-6 lg:pt-6 pt-4 mr-2 `}
     onClick={(event) => handleToggle(event)}
+    style={{ outline: 'none' }}
   >
     <div className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg hover:bg-gray-300 text-primary dark:bg-gray-300">
       <svg
@@ -46,10 +48,10 @@ const FAQ = () => {
   </button>
   
   <div
-    className={`lg:pl-[62px] pl-[32px] duration-200 ease-in-out bg-[#414E6F] rounded-sm mt-2 ${
-      active ? "block" : "hidden"
-    }`}
-  >
+  className={`lg:pl-[62px] pl-[32px] duration-200 ease-in-out bg-[#414e6f69] backdrop-filter backdrop-blur-md rounded-sm mt-2 ${
+    active ? "block" : "hidden"
+  }`}
+>
     <p className="py-3 text-base leading-relaxed text-body-color text-white">
       {text}
     </p>
@@ -61,17 +63,17 @@ const FAQ = () => {
   };
 
   return (
-    <section
-      className={`relative z-20 overflow-hidden bg-cover bg-no-repeat bg-fixed nt}  pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]`}
-      style={{ backgroundColor:"#1a1f2c" }}
-    >    <div className="container mx-auto">
+    <section className="relative overflow-hidden bg-cover bg-no-repeat bg-fixed pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
+    <div className="absolute inset-0 z-0">
+      <SolarSystem/>
+    </div>    <div className="container mx-auto relative z-10">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-0">
             <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
               <span className="mb-2 block lg:text-5xl text-2xl font-semibold text-white" style={{textShadow: "4px 4px 8px rgba(0, 0, 0, 0.9)"}}>
                 Frequently Asked Question
               </span>
-              <div className="absolute inset-0 bg-[#1a1f2c] z-[-1]"></div>
+              {/* <div className="absolute inset-0 bg-[#1a1f2c] z-[-1]"></div> */}
              
             </div>
           </div>
@@ -154,7 +156,7 @@ const FAQ = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 right-0 z-[-1]">
+      {/* <div className="absolute bottom-0 right-0 z-[-1]">
         <svg
           width="1440"
           height="886"
@@ -182,7 +184,7 @@ const FAQ = () => {
             </linearGradient>
           </defs>
         </svg>
-      </div>
+      </div> */}
     </section>
   );
 };

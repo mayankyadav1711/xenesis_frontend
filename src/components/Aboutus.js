@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import SolarSystem from "./SolarSystem";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -64,14 +65,19 @@ const lenis = useRef(null);
   }, []);
   return (
     <>
+    <div className="absolute inset-0 z-0 ml-1 overflow-hidden lg:mb-[-20rem] md:mb-[-7rem] mb-[-65rem]">
+      <SolarSystem/>
+    </div>
     {/* ref={section1Ref} */}
       <div ref={section1Ref}
           className={`relative z-20 overflow-hidden bg-cover bg-no-repeat bg-fixed nt pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]`}
-  style={{
-    backgroundColor: "#2a3246", // Background color
-  }}
+  // style={{
+  //   backgroundColor: "#2a3246", // Background color
+  // }}
       
     >
+
+ 
       {/* <div className="absolute inset-0 bg-opacity-40 backdrop-filter backdrop-blur-md z-[-1]"></div> */}
        <h1
           className={` pt-24 left-1/2  text-white bg-clip-text text-shadow-md lg:text-6xl md:text-4xl sm:text-2xl text-4xl font-bold text-center z-100` } style={{textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)"}}
@@ -90,9 +96,8 @@ const lenis = useRef(null);
         With a plethora of events, workshops, and technical talks, Xenesis aims to create an atmosphere that fosters learning, creativity, and innovation. The festival provides an opportunity for students to engage in hands-on technical activities, gain practical experience, and enhance their problem-solving abilities.
                     At Xenesis, we strive to inspire and encourage the next generation of engineers and technologists. We believe that the festival is not just about competition but also about creating a sense of community and sparking a passion for technology.
 <br /><br />
-                    Our team comprises enthusiastic students who work tirelessly to organize and execute the festival. We aim to create a memorable experience for all participants and ensure that everyone has an enjoyable and rewarding time.
-                  Xenesis has been a resounding success over the years, attracting participants from far and wide. We are committed to making each edition of the festival better than the last, by incorporating feedback and improving the overall experience.
-                   Come be a part of the Xenesis family and join us in celebrating technology and innovation!
+                  
+          
                
                   </p>
 
@@ -206,13 +211,13 @@ const lenis = useRef(null);
      
         </div>
       </div>
-      <div data-aos="fade-left" className="overflow-x-hidden bg-cover bg-no-repeat bg-center bg-[#2a3246] backdrop-filter backdrop-blur-3xl" 
+      <div data-aos="fade-left" className="overflow-x-hidden bg-cover bg-no-repeat bg-center opacity-0 bg-[#2a324600] backdrop-filter backdrop-blur-3xl" 
        >
         {/* <div className="absolute inset-0 bg-[#070d15b5] backdrop-filter backdrop-blur-3xl"></div> */}
 
 
         <Swiper
-          className="ml-8 swiper-container-glass mt-8 mb-8 "
+          className="ml-8 swiper-container-glass mt-8 mb-32"
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={50}
           slidesPerView={3}
@@ -244,8 +249,8 @@ const lenis = useRef(null);
               <img src={image} alt={`Gallery Image ${index + 1}`} />
             </SwiperSlide>
           ))}
-          <div className="swiper-button-next custom-next-button "></div>
-        <div className="swiper-button-prev custom-prev-button"></div>
+          <div className="swiper-button-next custom-next-button" style={{color:"black"}}></div>
+        <div className="swiper-button-prev custom-prev-button" style={{color:"black"}}></div>
         </Swiper>
       </div>
     </>

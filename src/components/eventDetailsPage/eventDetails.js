@@ -279,71 +279,49 @@ const EventDetails = () => {
         </div>
 
         <div className="container mx-auto w-full ">
-          <div className="wrap p-10 relative">
-            {/* vertical line  */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 border-2 absolute border-opacity-20 border-white h-full border"></div>
+        <div className="wrap p-10 relative">
 
-            {eventData?.rounds?.length > 0 &&
-              eventData.rounds.map((round, index) => (
-                <div
-                  key={index}
-                  className={`mb-8 flex justify-between items-center w-full ${
-                    index % 2 === 0 ? "right-timeline" : "left-timeline"
-                  }`}
-                >
-                  {/* Add image container */}
-                  <div className=" w-4/12 flex items-center justify-end ${index % 2 === 0 ? 'order-2' : 'order-1'}`">
-                    <div
-                      className="flex items-center justify-center lg:w-52 lg:h-52 w-24 h-24 rounded-full ${index % 2 === 0 ? 'lg:mr-8 bg-gray-100 text-white' : 'lg:ml-8 bg-white '}`"
-                      style={{ backgroundColor: "rgba(100, 240, 220, 0.05)" }}
-                    >
-                      <div
-                        className="flex items-center justify-center lg:w-40 lg:h-40 w-24 h-24 rounded-full ${index % 2 === 0 ? 'lg:mr-8 bg-gray-800 text-white' : 'lg:ml-8 bg-white text-gray-800'}`"
-                        style={{ backgroundColor: "#2d364d" }}
-                      >
-                        <h1 className="text-[#0adab9] font-bold text-5xl">
-                          R {index + 1}
-                        </h1>
-                      </div>
-                    </div>
-                  </div>
+          {/* vertical line  */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 border-2 absolute border-opacity-20 border-white h-full border"
 
-                  <div
-                    className="z-20 flex items-center order-1 bg-gray-800 border-cyan-400 border-2 lg:p-4 shadow-xl lg:w-12 lg:h-12 w-16 h-16 rounded-full ${index % 2 === 0 ? 'lg:ml-8 order-1' : 'lg:mr-8 order-2'}`"
-                    style={{ boxShadow: "6px 6px 8px 4px rgba(0, 0, 0, 0.2)" }}
-                  >
-                    <Link
-                      to={`/round/${round.id}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <h1 className="mx-auto font-semibold text-lg text-white">
-                        {/* Display the round title or any relevant information */}
-                        {index + 1}
-                      </h1>
-                    </Link>{" "}
-                  </div>
+              style={{ left: "30%" }}
+            ></div>
+ {eventData?.rounds?.length > 0 && eventData.rounds.map((round, index) => (
+    <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'right-timeline' : 'left-timeline'}`}>
+  {/* Add image container */}
+  <div className=" w-2/12 flex items-center justify-end ${index % 2 === 0 ? 'order-2' : 'order-1'}`">
+  <div className="flex items-center justify-center lg:w-52 lg:h-52 w-16 h-16 rounded-full ${index % 2 === 0 ? 'lg:mr-8 bg-gray-100 text-white' : 'lg:ml-8 bg-white '}`" style={{backgroundColor: "rgba(100, 240, 220, 0.05)"}}>
+  <div className="flex items-center justify-center lg:w-40 lg:h-40 w-16 h-16 rounded-full ${index % 2 === 0 ? 'lg:mr-8 bg-gray-800 text-white' : 'lg:ml-8 bg-white text-gray-800'}`" style={{backgroundColor: "#2d364d"}}>
+  <h1 className="text-[#0adab9] font-bold lg:text-5xl text-xl font-family" style={{fontFamily:"Jost"}}>R{index + 1}</h1></div>
+</div>
 
-                  <div
-                    data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-                    className="order-1 bg-gray-800 border-cyan-400 border-2 rounded-lg shadow-xl w-4/12 lg:px-8 lg:py-8 p-2 "
-                  >
-                    <h3 className="mb-3 font-bold text-cyan-500 lg:text-xl text-[10px]">
-                      Round {index + 1}
-                    </h3>
-                    <ul className="pl-4">
-                      {round?.description?.map((desc, descIndex) => (
-                        <li
-                          key={descIndex}
-                          className="font-medium list-disc mb-3 text-gray-100"
-                        >
-                          {desc}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
+  </div>
+  
+ 
+  <div className="z-20 flex items-center order-1 bg-white border-20 shadow-xl lg:ml-[-10px] md:ml-[10px] ml-[3px] lg:w-6 lg:h-6 w-6 h-6 mr-7 lg:mr-0 rounded-full ${index % 2 === 0 ? 'lg:ml-8 order-1' : 'lg:mr-8 order-2'}" style={{ boxShadow: '6px 6px 8px 4px rgba(0, 0, 0, 0.2)', borderColor: "gray", borderWidth:"5px" }}>
+</div>
+
+  
+  <div data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'} className="order-1 bg-gray-800 border-cyan-400 border-2 rounded-lg shadow-xl w-7/12 lg:px-8 lg:py-8 p-2 ">
+    <h3 className="mb-3 font-bold text-cyan-500 lg:text-xl text-[10px]">
+      Round  {index + 1}
+    </h3>
+    <ul className="pl-4">
+                                                        {round?.description?.map((desc, descIndex) => (
+                                                            <li key={descIndex} className="font-medium lg:text-sm text-[10px] list-disc mb-3 text-gray-100">
+                                                                {desc}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+  </div>
+</div>
+))}
+
+
+
+
+
+
           </div>
         </div>
 
