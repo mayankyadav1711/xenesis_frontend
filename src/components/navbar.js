@@ -27,33 +27,13 @@ const Navbar = () => {
     };
   }, []);
 
-  const [scrollPercentage, setScrollPercentage] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const windowHeight = window.innerHeight;
-      const documentHeight =
-        document.documentElement.scrollHeight - windowHeight;
-      const currentScroll = window.scrollY;
-      const scrollPercentage = (currentScroll / documentHeight) * 100;
-      setScrollPercentage(scrollPercentage);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const translationValue = -(scrollPercentage * 11);
-
   return (
     <div className={`bg-[#240a34] overflow-x-hidden`}>
       {/* Navbar */}
       <nav
-        className={`flex items-center justify-between text-white fixed w-full top-0 py-[calc(3vh)] px-[calc(3vh)] z-50 transition-all duration-300 ${isGlassy ? "backdrop-filter backdrop-blur-md" : ""
-          }`}
+        className={`flex items-center justify-between text-white fixed w-full top-0 py-[calc(3vh)] px-[calc(3vh)] z-50 transition-all duration-300 ${
+          isGlassy ? "backdrop-filter backdrop-blur-md" : ""
+        }`}
         id="navbar"
       >
         <div className="lg:hidden relative flex items-center justify-center gap-4">
@@ -66,8 +46,9 @@ const Navbar = () => {
           />
           {/* Profile Dropdown */}
           <div
-            className={`absolute bg-slate-600 bg-opacity-50 top-12 right-0 w-full min-w-[200px] rounded-md border-slate-400 z-50 h-0 overflow-hidden transition-all duration-300 ${isProfileDropdownOpen ? "h-auto" : ""
-              }`}
+            className={`absolute bg-slate-600 bg-opacity-50 top-12 right-0 w-full min-w-[200px] rounded-md border-slate-400 z-50 h-0 overflow-hidden transition-all duration-300 ${
+              isProfileDropdownOpen ? "h-auto" : ""
+            }`}
             id="profile-dropdown-mobile"
           >
             <a href="#">
@@ -97,8 +78,9 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden absolute top-0 right-0 flex flex-col gap-5 items-center justify-center w-screen h-screen z-50 bg-slate-900 bg-opacity-95 ${isMobileMenuOpen ? "flex" : "hidden"
-            }`}
+          className={`lg:hidden absolute top-0 right-0 flex flex-col gap-5 items-center justify-center w-screen h-screen z-50 bg-slate-900 bg-opacity-95 ${
+            isMobileMenuOpen ? "flex" : "hidden"
+          }`}
           id="mobile-menu"
         >
           <button
@@ -132,6 +114,7 @@ const Navbar = () => {
         <ul className="hidden text-body2 lg:flex items-center justify-end space-x-10 float-right ml-auto mr-20 mt-2">
           <a
             href="/"
+
             className={` ${isGlassy ? "font-montserrat" : ""
               } link hover:text-neon-100  transition-all duration-300`}
           >
@@ -139,13 +122,16 @@ const Navbar = () => {
           </a>
           <a
             href="/events"
+
             className={` ${isGlassy ? "font-montserrat" : ""
               } link hover:text-neon-100  transition-all duration-300`}
+
           >
             Events
           </a>
           <a
             href="#"
+
             className={` ${isGlassy ? "font-montserrat" : ""
               } link hover:text-neon-100  transition-all duration-300`}
           >
@@ -153,6 +139,7 @@ const Navbar = () => {
           </a>
           <a
             href="/aboutus"
+
             className={` ${isGlassy ? "font-montserrat" : ""
               } link hover:text-neon-100  transition-all duration-300`}
           >
@@ -160,6 +147,7 @@ const Navbar = () => {
           </a>
           <a
             href="/login"
+
             className={` ${isGlassy ? "font-montserrat" : ""
               } link hover:text-neon-100  transition-all duration-300`}
           >
@@ -167,6 +155,7 @@ const Navbar = () => {
           </a>
           <a
             href="/register"
+
             className={` ${isGlassy ? "font-montserrat" : ""
               } link hover:text-neon-100  transition-all duration-300`}
           >
@@ -174,20 +163,11 @@ const Navbar = () => {
           </a>
           <a
             href="/login"
+
             className={` ${isGlassy ? "font-montserrat" : ""
               } link hover:text-neon-100  transition-all duration-300`}
           ></a>
         </ul>
-        {/* <img
-          src={"/icons/satellite.svg"}
-          width={80}
-          height={80}
-          className="z-[-1] -bottom-20 right-7 absolute"
-          style={{
-            transform: `translateX(${translationValue}px)`,
-            transition: "transform 0s ease-in",
-          }}
-        ></img> */}
       </nav>
     </div>
   );

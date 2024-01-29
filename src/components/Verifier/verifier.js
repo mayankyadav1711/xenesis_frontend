@@ -1,14 +1,19 @@
 import React from "react";
 import VerifierTicket from "./verifierticket";
+import Spacebg from "../ticket/img/space-bg.jpg"
+
 const Verifier = () => {
   const pendingTicketsData = [1, 2, 3, 4, 5, 6, 7, 8];
   const verifiedTicketsData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <div>
-      <section class="bg-[#162238] tails-selected-element outline-none w-full h-full p-3 overflow-hidden sm:p-7">
+      <img className="fixed object-cover h-screen w-screen top-0 z-[-1]" src={Spacebg} alt="" />
+
+      <section class=" tails-selected-element outline-none w-full h-full p-3 overflow-hidden sm:p-7">
         <div class=" mx-auto lg:px-0 w-full">
-          <div class=" text-center py-5 relative flex flex-col gap-5 w-full">
-            <div class="relative w-fit h-8 flex justify-center self-center md:self-end rounded-lg bg-transparent border-gray-50 border-2 focus:outline-none overflow-hidden ">
+
+          <div class=" text-center py-5 pt-20 relative flex flex-col gap-5 w-full">
+            <div class="relative w-fit h-8 flex justify-center self-center z-10 md:self-end rounded-lg bg-transparent border-gray-50 border-2 focus:outline-none overflow-hidden ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -26,10 +31,10 @@ const Verifier = () => {
               <input
                 onkeyup="ticketUpdater(this)"
                 placeholder="Enter Ticket Id"
-                class="h-full w-full bg-transparent text-black pl-8 focus:outline-none overflow-hidden"
+                class="h-full w-full bg-transparent text-white pl-8 focus:outline-none overflow-hidden"
               />
             </div>
-            <h2 class="text-3xl font-semibold pb-5 tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 class="text-3xl font-semibold pb-[55dvh] pt-[20dvh] tracking-tight text-white sm:text-4xl lg:text-5xl">
               Pending Tickets
             </h2>
           </div>
