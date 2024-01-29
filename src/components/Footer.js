@@ -138,14 +138,12 @@ const Footer = () => {
                     </div>
 
                     {/* <img src="/icons/scroll-top.svg" alt="" /> */}
-                    <div className="relative bottom-2 right-2 md:right-5 cursor-pointer  z-50">
-                        <div className="h-24 w-24 md:h-32 md:w-32 bg-cover bg-no-repeat aspect-square rounded-full transition-transform transform-gpu hover:scale-110 animate-bounce z-50"
-                            style={{
-                                backgroundImage: `url("https://mayank-dev.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frocket.d7fc238f.png&w=3840&q=75"),
-                                animationDuration: 1.7s,`
-                            }}
-                            onClick={scrollToTop}
-                        ></div>
+                    <div className="md:h-16 h-12 bottom-2 right-2 md:right-5 absolute bg-cover text-neon-100 md:bottom-0 cursor-pointer filter rounded-full animate-bounce bg-no-repeat aspect-square" style={{
+                        backgroundImage: `url("https://mayank-dev.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frocket.d7fc238f.png&w=3840&q=75")`,
+                        animationDuration: `1.7s`,
+                    }}
+                        onClick={scrollToTop}
+                    >
                     </div>
 
                 </div>
