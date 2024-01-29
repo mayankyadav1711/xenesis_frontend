@@ -58,7 +58,7 @@ html, body{
 }
 
 body{
-  font:normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // font:normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   color:#fff;
   background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
@@ -67,16 +67,16 @@ body{
 
 h1{
   font-weight:300;
-  font-size:2.5em;
+  // font-size:2.5em;
   text-transform:uppercase;
-  font-family: Lato;
+  // font-family: Lato;
   line-height:1.6em;
   letter-spacing:.1em;
 }
 
 a, a:visited{
   text-decoration:none;
-  color:white;
+  // color:white;
   opacity:.7;
   &:hover{
     opacity:1
@@ -117,11 +117,11 @@ hr{
   opacity:.1;
 }
 
-code{
-  color: #ae94c0;
-  font-family:Menlo, Monaco, Consolas, 'Courier New', monospace;
-  font-size:.9em;
-}
+// code{
+//   color: #ae94c0;
+//   font-family:Menlo, Monaco, Consolas, 'Courier New', monospace;
+//   font-size:.9em;
+// }
 
 .solar-syst{
   &:after{
@@ -143,7 +143,7 @@ code{
     top:50%;
     left:50%;
     position:absolute;
-    z-index:999;
+    z-index:2;
     &:not(.sun){
       border: 1px solid rgba(102, 166, 229, 0.12);
       &:before{
