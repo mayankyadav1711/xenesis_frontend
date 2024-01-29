@@ -45,9 +45,9 @@ function App() {
     return (
         <Router>
             <ThemeProvider>
-                {/* <Navbar /> */}
+                <Navbar />
                 <Routing />
-                {/* <Footer /> */}
+                <Footer />
             </ThemeProvider>
         </Router>
     );

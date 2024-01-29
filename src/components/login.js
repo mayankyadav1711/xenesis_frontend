@@ -23,7 +23,7 @@ const Login = () => {
     };
 
     return (
-        <div className="overflow-hidden">
+        <div className="overflow-hidden ">
             <div className="fixed top-0 left-0 w-full h-full min-h-[100vh] scale-100">
                 <img
                     src={loginbg}
@@ -41,14 +41,14 @@ const Login = () => {
             <div className="relative flex items-center justify-center w-screen h-full min-h-[100vh] py-20 overflow-hidden">
                 <div className="absolute top-0 left-0 w-screen h-full min-h-[100vh] scale-110"></div>
 
-                <a
-                    href="/"
+                <Link 
+                    to="/"
                     className="absolute top-5 left-5 flex flex-col items-center cursor-pointer hover:scale-[1.15] z-30 transition-all duration-300">
                     <i className="bi bi-house-door-fill text-xl text-deepBlue-100 bg-neon-100 px-3 py-2 rounded-full"></i>
                     <p className="mt-1 h-8 text-deepBlue-100 bg-neon-100 font-semibold rounded-md px-2 py-1 hidden md:block">
                         Home
                     </p>
-                </a>
+                </Link>
 
                 <div className="flex items-center lg:justify-end md:pt-0 pt-5 justify-center w-[80%] h-full">
                     <form
@@ -59,10 +59,11 @@ const Login = () => {
                         {/* CSRF Token */}
                         {/* Add your CSRF token logic here */}
 
-                        <h1 className="text-white form-header-text text-center md:text-3xl sm:text-3xl text-2xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-yellow-300 mb-6 flex justify-center items-center gap-4">
+                        <h1 className="text-white form-header-text text-center md:text-3xl sm:text-3xl text-2xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-yellow-300 mb-6 flex justify-center items-center gap-4"  style={{ fontFamily: "Jost" }}>
                             <img
                                 src={logocus}
                                 alt=""
+                                
                                 className="sm:w-[70px] sm:h-[70px] w-[55px] h-[55px] shadow-white"
                             />{" "}
                             Login into Xenesis World

@@ -5,6 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Departments = () => {
   const departments = [
@@ -41,6 +43,12 @@ const Departments = () => {
       "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706252586/SH_jeidwy.png",
     ],
   ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Set the animation duration
+      once: true, // Set to true if you want the animation to happen only once
+    });
+  }, []);
 
   return (
     <div
@@ -50,12 +58,12 @@ const Departments = () => {
       //     backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')",
       // }}
     >
-      <div
-        className="z-[-1] fixed top-0 min-h-screen w-full bg-cover"
+      {/* <div
+        className="z-[-1]   min-h-screen w-full bg-cover"
         style={{
           backgroundImage: `url("/icons/background.svg")`,
         }}
-      ></div>
+      ></div> */}
       {/* <div className="absolute inset-0 bg-[#070d15c7] backdrop-filter backdrop-blur-3xl"></div> */}
 
       {/* Departments */}
