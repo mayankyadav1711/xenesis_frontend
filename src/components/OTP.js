@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ldrp from './images/ldrp.png';
 import loginbg from './images/loginbg.png';
+import homecenter from './images/homecenter.jpg';
+
 const OTP = () => {
   const [mouse, setMouse] = useState([0, 0]);
   const [otpValues, setOtpValues] = useState(['', '', '', '']);
@@ -40,12 +42,19 @@ const OTP = () => {
     <div>
       {/* Main */}
       <section className="relative flex items-center justify-center w-full h-full min-h-[100vh] max-h-[100vh] overflow-y-hidden">
-      <div className="absolute top-0 left-0 w-screen h-full min-h-[100vh] scale-100">
-        <img
-            src={loginbg}
-            alt="Background"
-            className="h-full min-h-[calc((797/1463)*100vw)] w-full object-cover block"
-          />
+      <div className="fixed top-0 left-0 w-full h-full min-h-[100vh] scale-100">
+      <img
+    src={loginbg}
+    alt="Background 1"
+    className="h-full min-h-[calc((797/1463)*100vw)] w-full object-cover block sm:hidden lg:block image1-class"
+  />
+
+  {/* Image for mobile screens (hidden on larger screens) */}
+  <img
+    src={homecenter}
+    alt="Background 2"
+    className="h-full min-h-[calc((797/1463)*100vw)] w-full  object-cover block sm:block lg:hidden image2-class"
+  />
         </div>
 
       <div class="flex items-center justify-center max-w-[430px] w-[90%] h-full">
@@ -72,7 +81,7 @@ const OTP = () => {
 						<div class="w-full flex items-center justify-center mb-3 text-white text-sm">
 							<div class="flex items-center justify-start gap-2 w-fit">
 								<p class="otp-text">Didn't recieved the otp?</p>
-								<button type="button" name="resendotp" class="text-red-400 !outline-none resend-text" onclick="disableResendButton()">Resend Otp</button>
+								<button type="button" name="resendotp" class="text-red-400 text-lg font-semibold !outline-none resend-text" onclick="disableResendButton()">Resend Otp</button>
 							</div>
 							<div class="flex items-center justify-center gap-2">
 								<svg height="25" width="25" class="animate-rotate rotating-icon hidden">

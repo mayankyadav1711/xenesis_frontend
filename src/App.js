@@ -17,6 +17,7 @@ import FAQ from "./components/faqs";
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
 import Aboutus from "./components/Aboutus";
+import Account_setup from "./components/Account_setup";
 // import "./globalcss"
 const Routing = () => {
     return (
@@ -31,6 +32,7 @@ const Routing = () => {
                 <Route path="/otp" element={<OTP />} />
                 <Route path="/events" element={<Events />} />
                 <Route path="/aboutus" element={<Aboutus />} />
+                <Route path="/accountsetup" element={<Account_setup />} />
 
                 <Route path="/verifier" element={<Verifier />} />
                 <Route path="/myTicket" element={<Myticket />} />
