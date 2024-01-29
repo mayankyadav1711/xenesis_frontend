@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from "react";
 
 const Footer = () => {
-
-
-
-
   return (
-    <div class=" overflow-x-hidden" >
+    <div class=" overflow-x-hidden z-50">
       {/* Mavbar  */}
 
-      <footer className="bg-black pt-20">
+      <footer className="bg-[#1A1F2C] pt-20">
         <div className="md:flex sm:grid sm:grid-cols-2 flex flex-col md:flex-row lg:justify-around justify-center md:gap-10 gap-3 xl:px-32 lg:px-20 md:px-12 px-8 mb-8">
           {/* Logo and Description */}
           <div className="flex flex-col md:items-center items-start gap-3">
@@ -122,7 +117,7 @@ const Footer = () => {
         </div>
 
         {/* Copyrights */}
-        <div className="bg-[#211e60] bg-opacity-20 text-center  clip-copyrights text-gray-300 font-semibold py-8 md:text-xl text-md">
+        <div className="bg-[#13103e] bg-opacity-20 text-center  clip-copyrights text-gray-300 font-semibold py-8 md:text-xl text-md">
           &copy; 2023 Xenesis All Rights Registered
         </div>
       </footer>
