@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
 // import ScrollTop from "/icons/scroll-top.svg"
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Use smooth scrolling behavior
-    });
-  };
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth", // Use smooth scrolling behavior
+        });
+    };
 
-  return (
-    <div class="  z-50 relative bg-[#1A1F2C]">
-      {/* Mavbar  */}
-      <img
-        src={"/icons/footermoon.svg"}
-        width={350}
-        height={350}
-        className="z-50 -top-40 -left-44  absolute transition-transform animate-spin md:block hidden"
-        style={{ animationDuration: "30s" }}
-      ></img>
+    return (
+        <div class="  z-50 relative bg-[#1A1F2C]">
+            {/* Mavbar  */}
+            <img
+                src={"/icons/footermoon.svg"}
+                width={350}
+                height={350}
+                className="z-50 -top-40 -left-44  absolute transition-transform animate-spin md:block hidden"
+                style={{ animationDuration: "30s" }}
+            ></img>
 
-     <footer className="bg-[#1A1F2C] pt-20">
+            <footer className="bg-[#1A1F2C] pt-20">
                 <div className="md:flex sm:grid sm:grid-cols-2 flex flex-col md:flex-row lg:justify-around justify-center md:gap-10 gap-3 xl:px-32 lg:px-20 md:px-12 px-8 mb-8">
                     {/* Logo and Description */}
                     <div className="flex flex-col md:items-center items-start gap-3">
@@ -130,20 +130,24 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Copyrights */}<div className=" relative bg-[#13103e] bg-opacity-20 flex w-full">
+                {/* Copyrights */}<div className=" relative bg-[#13103e] bg-opacity-20 flex w-full h-auto">
 
 
-                    <div className=" w-full place-self-center   text-center  clip-copyrights text-gray-300 font-semibold py-8 text-caption2 md:text-body1">
-                        &copy; 2023 Xenesis All Rights Registered
+                    <div className=" w-full place-self-center   text-center  clip-copyrights text-gray-300 font-semibold py-8 text-caption2 md:text-body1 z-0">
+                        &copy; 2024 Xenesis All Rights Registered
                     </div>
 
                     {/* <img src="/icons/scroll-top.svg" alt="" /> */}
-                    <div className="md:h-16 h-12 bottom-2 right-2 md:right-5 absolute bg-cover text-neon-100 md:bottom-0 cursor-pointer filter bg-neon-100 rounded-full animate-bounce bg-no-repeat aspect-square" style={{
-                        backgroundImage: `url("/icons/scroll-top.svg")`,
-                        animationDuration: `1.7s`,
-                    }}
-                        onClick={scrollToTop}
-                    ></div>
+                    <div className="relative bottom-2 right-2 md:right-5 cursor-pointer  z-50">
+                        <div className="h-24 w-24 md:h-32 md:w-32 bg-cover bg-no-repeat aspect-square rounded-full transition-transform transform-gpu hover:scale-110 animate-bounce z-50"
+                            style={{
+                                backgroundImage: `url("https://mayank-dev.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frocket.d7fc238f.png&w=3840&q=75"),
+                                animationDuration: 1.7s,`
+                            }}
+                            onClick={scrollToTop}
+                        ></div>
+                    </div>
+
                 </div>
             </footer>
         </div>

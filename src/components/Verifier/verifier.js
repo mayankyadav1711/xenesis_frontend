@@ -38,7 +38,7 @@ const Verifier = () => {
               Pending Tickets
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3 lg:gap-5 xl:gap-10 justify-items-center xl:grid-cols-3">
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-1 sm:gap-10 lg:grid-cols-3 lg:gap-5 xl:gap-10 justify-items-center xl:grid-cols-3">
             {pendingTicketsData.map((ticketId) => (
               <VerifierTicket key={ticketId}>
                 <div className="bg-[#DE4753] text-black text-center rounded-lg p-0 font-semibold">

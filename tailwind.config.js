@@ -15,7 +15,9 @@ module.exports = {
             // => @media (min-width: 1440px) { ... }
           },
         extend: {
-
+            fontFamily: {
+                jost : ["Jost", "sans-serif"],
+            },
             fontSize: {
                 heading1: [
                     "clamp(2.25rem, 2.5vw + 1.25rem, 3.25rem)",

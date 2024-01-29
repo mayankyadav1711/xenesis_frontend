@@ -16,6 +16,8 @@ import 'swiper/css/scrollbar';
 import SolarSystem from "./SolarSystem";
 
 
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Aboutus = () => {

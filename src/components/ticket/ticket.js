@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import Pfp from "../ticket/avatars/0001.png";
 import Qr from "../ticket/img/qr.png";
 import Price from "./price";

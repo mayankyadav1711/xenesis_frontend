@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import logocus from "./images/logoCus.png";
 import loginbg from "./images/loginbg.png";
 import homecenter from "./images/homecenter.jpg";
@@ -36,14 +37,13 @@ const Account_setup = () => {
                 />
             </div>
             {/* Link to Home Div */}
-            <a
-                href="/"
+            <Link to="/" rel="noopener noreferrer"
                 className="absolute top-5 left-5 flex flex-col items-center cursor-pointer hover:scale-[1.15] z-30 transition-all duration-300">
                 <i className="bi bi-house-door-fill text-xl text-deepBlue-100 bg-neon-100 px-3 py-2 rounded-full"></i>
-                <p className="mt-1 h-8 text-deepBlue-100 bg-neon-100 font-semibold rounded-md px-2 py-1 hidden md:block">
+                <p className="mt-1 h-8 font-jost text-deepBlue-100 bg-neon-100 font-semibold rounded-md px-2 py-1 hidden md:block">
                     Home
                 </p>
-            </a>
+            </Link>
             <div className="flex items-center lg:justify-end md:pt-0 pt-5 justify-center w-[80%] h-full">
                 <form
                     onSubmit={handleSubmit}

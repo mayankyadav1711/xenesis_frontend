@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,73 +17,6 @@ import Earth from "./earth";
 import SolarSystem from "./SolarSystem";
 
 const Home = () => {
-    //     Events: [
-    //         {
-    //             title: "FreeFire",
-    //             image:
-    //                 "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-    //             description: "Event description 1",
-    //             pricePerHead: "100",
-    //             individualAllowed: true,
-    //             eventId: "event1",
-    //             teamAllowed: true,
-    //             teamPrice: 1000,
-    //             likes: 9123,
-    //         },
-    //         {
-    //             title: "X-Error",
-    //             image:
-    //                 "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-    //             description: "Event description 1",
-    //             pricePerHead: "100",
-    //             individualAllowed: true,
-    //             eventId: "event1",
-    //             teamAllowed: true,
-    //             teamPrice: 1000,
-    //             likes: 9123,
-    //         },
-    //         {
-    //             title: "Skribble",
-    //             image:
-    //                 "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-    //             description: "Event description 1",
-    //             pricePerHead: "100",
-    //             individualAllowed: true,
-    //             eventId: "event1",
-    //             teamAllowed: true,
-    //             teamPrice: 1000,
-    //             likes: 9123,
-    //         },
-    //         {
-    //             title: "Human Ludo",
-    //             image:
-    //                 "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-    //             description: "Event description 1",
-    //             pricePerHead: "100",
-    //             individualAllowed: true,
-    //             eventId: "event1",
-    //             teamAllowed: true,
-    //             teamPrice: 1000,
-    //             likes: 9123,
-    //         },
-    //         {
-    //             title: "Pictionary",
-    //             image:
-    //                 "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/1.jpg?alt=media&token=1af0f700-8cd4-42ee-b9e0-15641a362a86",
-    //             description: "Event description 1",
-    //             pricePerHead: "100",
-    //             individualAllowed: true,
-    //             eventId: "event1",
-    //             teamAllowed: true,
-    //             teamPrice: 1000,
-    //             likes: 9123,
-    //         },
-    //         // Add more events as needed
-    //     ],
-
-    //     // Add more events as needed
-    // };
-
     const [departmentEvents, setDepartmentEvents] = useState([]);
 
     useEffect(() => {
@@ -201,11 +135,11 @@ const Home = () => {
                         <i class="bi bi-person mr-2.5"></i>Username
                     </p>
                     <hr class="w-full my-2" />
-                    <a href="/logout" class="">
+                    <Link to="/logout" rel="noopener noreferrer" class="">
                         <p class="w-full px-4 text-white">
                             <i class="bi bi-box-arrow-right mr-2.5"></i>Logout
                         </p>
-                    </a>
+                    </Link>
                 </div>
             </div>
 
@@ -274,6 +208,10 @@ const Home = () => {
                     Departments
                 </h3>
             </div> */}
+            <div
+          className="absolute w-full h-full top-0 bg-gradient-to-b from-transparent via-transparent to-[#151e29] "
+          style={{ backdropFilter: "blur(1px)" }} // Adjust the blur value as needed
+        ></div>
             <Departments />
 
             {/*Hello Events */}
@@ -281,14 +219,14 @@ const Home = () => {
                 {departmentEvents.slice(0, 1).map((department, index) => (
                     <div key={index} className={``}>
                         <div className="w-full z-10 text-center">
-                            <h3 className="uppercase  text-white text-heading2 font-semibold mb-4 pt-20 py-10">
+                            <h3 className="uppercase  font-jost  text-white text-heading2 font-semibold mb-4 pt-20 py-10">
                                 {/* {department.departmentName} */}
                                 Events
                             </h3>
                         </div>
 
                         <EventCard
-                            ard
+                            
                             title={department}
                             events={department.events}
                         />
@@ -306,7 +244,7 @@ const Home = () => {
             >
                 {/* <div className="absolute inset-0 bg-[#070d15b5] backdrop-filter backdrop-blur-3xl"></div> */}
                 <div className="w-full text-center">
-                    <h3 className="uppercase text-white text-heading3 font-semibold  py-10 z-50">
+                    <h3 className="uppercase text-white text-heading3  font-jost font-semibold  py-10 z-50">
                         Gallery
                     </h3>
                 </div>

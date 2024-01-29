@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './SolarSystem.scss'; // Import the corresponding CSS file
 
 const SolarSystem = () => {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import backgroundImage from '../aboutcont/download.jpg'; 
 import img1 from '../aboutcont/game.avif'; 
 import img2 from '../aboutcont/code.avif'; 

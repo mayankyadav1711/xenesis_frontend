@@ -42,10 +42,10 @@ const Login = () => {
                 <div className="absolute top-0 left-0 w-screen h-full min-h-[100vh] scale-110"></div>
 
                 <Link 
-                    to="/"
+                    to="/" rel="noopener noreferrer"
                     className="absolute top-5 left-5 flex flex-col items-center cursor-pointer hover:scale-[1.15] z-30 transition-all duration-300">
                     <i className="bi bi-house-door-fill text-xl text-deepBlue-100 bg-neon-100 px-3 py-2 rounded-full"></i>
-                    <p className="mt-1 h-8 text-deepBlue-100 bg-neon-100 font-semibold rounded-md px-2 py-1 hidden md:block">
+                    <p className="mt-1 h-8 font-jost text-deepBlue-100 bg-neon-100 font-semibold rounded-md px-2 py-1 hidden md:block">
                         Home
                     </p>
                 </Link>
@@ -59,7 +59,7 @@ const Login = () => {
                         {/* CSRF Token */}
                         {/* Add your CSRF token logic here */}
 
-                        <h1 className="text-white form-header-text text-center md:text-3xl sm:text-3xl text-2xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-yellow-300 mb-6 flex justify-center items-center gap-4"  style={{ fontFamily: "Jost" }}>
+                        <h1 className="text-white form-header-text text-center md:text-3xl sm:text-3xl text-2xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-yellow-300 mb-6 flex justify-center items-center gap-4 font-jost"  >
                             <img
                                 src={logocus}
                                 alt=""
@@ -86,7 +86,7 @@ const Login = () => {
                                 />
                                 <label
                                     htmlFor="email"
-                                    className="absolute left-0 -top-4 text-neon-100 text-sm transition-all duration-300
+                                    className="absolute font-jost font-semibold left-0 -top-4 text-neon-100 text-sm transition-all duration-300
                     peer-focus:text-sm peer-focus:-top-4 peer-invalid:text-red-400
                     peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-white">
                                     Email
@@ -133,7 +133,7 @@ const Login = () => {
                                 </svg>
                                 <label
                                     htmlFor="password"
-                                    className="absolute left-0 -top-4 text-neon-100 text-sm transition-all duration-300
+                                    className="absolute left-0 font-jost font-semibold -top-4 text-neon-100 text-sm transition-all duration-300
                     peer-focus:text-sm peer-focus:-top-4 peer-invalid:text-red-400
                     peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-white">
                                     Password
@@ -144,14 +144,14 @@ const Login = () => {
                                 type="submit"
                                 value="Login"
                                 tabIndex="4"
-                                className="w-fit bg-neon-100 text-deepBlue-100 hover:shadow-2xl 3d-button hover:-translate-y-2 hover:border-neon-100  hover:saturate-200 outline-none mt-5 xl:px-16 lg:px-12 sm:px-10 px-9 py-1.5 text-[#f0e2ea] xl:text-lg lg:text-md font-semibold cursor-pointer transition-all duration-200 focus:-translate-y-1 hover:ring hover:ring-yellow-100 rounded-md"
+                                className="w-fit font-jost bg-neon-100 text-deepBlue-100 hover:shadow-2xl 3d-button hover:-translate-y-2 hover:border-neon-100  hover:saturate-200 outline-none mt-5 xl:px-16 lg:px-12 sm:px-10 px-9 py-1.5 text-[#f0e2ea] xl:text-lg lg:text-md font-semibold cursor-pointer transition-all duration-200 focus:-translate-y-1 hover:ring hover:ring-yellow-100 rounded-md"
                             />
                             {/* <a
                                 href="/register"
                                 className="text-white -mt-3 text-xs italic w-full text-right transition-all duration-200 hover:-translate-x-1">
                                 Don't have account ? Register
                             </a> */}
-                            <Link to="/register"  rel="noopener noreferrer"                                 className="text-white -mt-3 text-xs italic w-full text-right transition-all duration-200 hover:-translate-x-1">
+                            <Link to="/register"  rel="noopener noreferrer" className="text-white font-jost -mt-3 text-xs italic w-full text-right transition-all duration-200 hover:-translate-x-1">
      Don't have account ? Register</Link>
                         </div>
                     </form>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import "./navbar.css";
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
     <div className={`bg-[#240a34] overflow-x-hidden`}>
       {/* Navbar */}
       <nav
-        className={`flex items-center justify-between text-white fixed w-full top-0 py-[calc(3vh)] px-[calc(3vh)] z-50 transition-all duration-300 ${
+        className={`flex items-center  font-jost  justify-between text-white fixed w-full top-0 py-[calc(3vh)] px-[calc(3vh)] z-50 transition-all duration-300 ${
           isGlassy ? "backdrop-filter backdrop-blur-md" : ""
         }`}
         id="navbar"
@@ -51,17 +52,17 @@ const Navbar = () => {
             }`}
             id="profile-dropdown-mobile"
           >
-            <a href="#">
-              <p className="w-full px-4">
+            <Link to="#" rel="noopener noreferrer">
+              <p className="w-full font-jost  px-4">
                 <i className="bi bi-gear mr-2.5" /> Profile Settings
               </p>
-            </a>
+            </Link>
             <hr className="my-3 border-b-slate-400" />
-            <a href="#">
-              <p className="w-full px-4">
+            <Link to="#" rel="noopener noreferrer">
+              <p className="w-full font-jost  px-4">
                 <i className="bi bi-box-arrow-right mr-2.5" /> Logout
               </p>
-            </a>
+            </Link>
           </div>
           {/* Menu Toggle Button */}
           <button
@@ -89,84 +90,84 @@ const Navbar = () => {
           >
             <i className="bi bi-x-lg" />
           </button>
-          <a href="/" className="text-2xl">
+          <Link to="/" rel="noopener noreferrer" className="text-2xl font-jost">
             Home
-          </a>
-          <a href="/events" className="text-2xl">
+          </Link>
+          <Link to="/events" rel="noopener noreferrer" className="text-2xl font-jost">
             Events
-          </a>
-          <a href="#" className="text-2xl">
+          </Link>
+          <Link to="#" rel="noopener noreferrer" className="text-2xl font-jost">
             Event Confirm
-          </a>
-          <a href="/aboutus" className="text-2xl">
+          </Link>
+          <Link to="/Linkboutus" rel="noopener noreferrer" className="text-2xl font-jost">
             About Us
-          </a>
-          <a href="/login" className="text-2xl">
+          </Link>
+          <Link to="/login" rel="noopener noreferrer" className="text-2xl font-jost">
             Login
-          </a>
-          <a href="/register" className="text-2xl">
+          </Link>
+          <Link to="/register" rel="noopener noreferrer" className="text-2xl font-jost">
             Register
-          </a>
-          <a href="/login" className="text-2xl"></a>
+          </Link>
+          <Link to="/login" rel="noopener noreferrer" className="text-2xl font-jost"></Link>
         </div>
 
         {/* Desktop Menu - Float Right */}
         <ul className="hidden text-body2 lg:flex items-center justify-end space-x-10 float-right ml-auto mr-20 mt-2">
-          <a
-            href="/"
+          <Link
+            to="/" rel="noopener noreferrer" 
 
-            className={` ${isGlassy ? "font-montserrat" : ""
+            className={` ${isGlassy ? "font-jost" : ""
               } link hover:text-neon-100  transition-all duration-300`}
           >
             Home
-          </a>
-          <a
-            href="/events"
+          </Link>
+          <Link
+            to="/events" rel="noopener noreferrer"
 
-            className={` ${isGlassy ? "font-montserrat" : ""
-              } link hover:text-neon-100  transition-all duration-300`}
+            className={` ${isGlassy ? "font-jost" : ""
+              } link hover:text-neon-100  font-jost transition-all duration-300`}
 
           >
             Events
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="#" rel="noopener noreferrer"
 
-            className={` ${isGlassy ? "font-montserrat" : ""
-              } link hover:text-neon-100  transition-all duration-300`}
+            className={` ${isGlassy ? "font-jost" : ""
+              } link hover:text-neon-100  font-jost transition-all duration-300`}
           >
             Event Confirm
-          </a>
-          <a
-            href="/aboutus"
+          </Link>
+          <Link
+            to="/aboutus" rel="noopener noreferrer"
 
-            className={` ${isGlassy ? "font-montserrat" : ""
-              } link hover:text-neon-100  transition-all duration-300`}
+            className={` ${isGlassy ? "font-jost" : ""
+              } link hover:text-neon-100  font-jost transition-all duration-300`}
           >
             About Us
-          </a>
-          <a
-            href="/login"
+          </Link>
+          <Link
+            to="/login" rel="noopener noreferrer"
 
-            className={` ${isGlassy ? "font-montserrat" : ""
-              } link hover:text-neon-100  transition-all duration-300`}
+            className={` ${isGlassy ? "font-jost" : ""
+              } link hover:text-neon-100  font-jost transition-all duration-300`}
           >
             Login
-          </a>
-          <a
-            href="/register"
+          </Link>
+          <Link
+            to="/register" rel="noopener noreferrer"
 
-            className={` ${isGlassy ? "font-montserrat" : ""
-              } link hover:text-neon-100  transition-all duration-300`}
+            className={` ${isGlassy ? "font-jost" : ""
+              } link hover:text-neon-100 transition-all duration-300`}
           >
             Register
-          </a>
-          <a
-            href="/login"
+          </Link>
+          {/* <Link
+            to="/login" rel="noopener noreferrer"
 
-            className={` ${isGlassy ? "font-montserrat" : ""
+            className={` ${isGlassy ? "font-jost" : ""
               } link hover:text-neon-100  transition-all duration-300`}
-          ></a>
+          ></Link> */}
         </ul>
       </nav>
     </div>

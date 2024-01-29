@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import Pfp from "../Verifier/0001.png";
 import Dots from "./dots";
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from 'react-router-dom';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -68,7 +69,7 @@ const Departments = () => {
 
       {/* Departments */}
       <div className="">
-        <h3 className="uppercase text-white text-center text-heading2  font-semibold py-10 pt-20">
+        <h3 className="uppercase text-white text-center text-heading2  font-jost  font-semibold py-10 pt-20">
           Departments
         </h3>
       </div>
@@ -101,7 +102,7 @@ const Departments = () => {
             },
           }}
         >
-          <div className="grid md:grid-cols-5  sm:grid-cols-3 grid-cols-1 gap-5 sm:px-[calc(3vh)] px-10 mt-5 mb-5">
+          <div className="grid md:grid-cols-5  font-jost  sm:grid-cols-3 grid-cols-1 gap-5 sm:px-[calc(3vh)] px-10 mt-5 mb-5">
             {departments.map((department, index) => (
               <SwiperSlide key={index}>
                 <div
@@ -123,7 +124,7 @@ const Departments = () => {
                       className="h-52 w-full object-cover transform hover:scale-110 transition-all duration-300"
                     />
                   </div>
-                  <h1 className="p-4 text-white font-bold text-center">
+                  <h1 className="p-4  font-jost  text-white font-bold text-center">
                     {department[0]}
                   </h1>
                 </div>

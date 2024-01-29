@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import Ticket from "./ticket/ticket";
 import Newticket from "./newticket";
 import Spacebg from "./ticket/img/space-bg.jpg";
@@ -63,7 +64,7 @@ function Myticket(Props) {
                     transition: "transform 0s ease-in",
                 }}
             ></img>
-            <div className=" px-8 grid gap-6 grid-cols-1 mt-10 md:grid-cols-2 pb-64 lg:grid-cols-3">
+            <div className=" px-8 grid gap-6 grid-cols-1 mt-10 pb-64 md:grid-cols-2  lg:grid-cols-3">
                 {RedTicketsData.map((ticketId) => (
                     <Newticket key={ticketId} bgColor="bg-rose-600" />
                 ))}
