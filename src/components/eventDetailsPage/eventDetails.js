@@ -86,7 +86,7 @@ const EventDetails = () => {
           </div>
           {/* <EventSPL /> */}
           <div>
-            <div class="grid gap-10 xl:grid-cols-3 grid-cols-1 sm:mb-24 mb-12">
+            <div class="lg:flex lg:gap-80 grid gap-10 xl:grid-cols-3 grid-cols-1 sm:mb-24 mb-12">
               <div class="sm:text-center xl:mt-16 mt-10">
                 <p
                   data-aos="fade-right"

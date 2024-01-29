@@ -117,7 +117,7 @@ const Navbar = () => {
             to="/" rel="noopener noreferrer" 
 
             className={` ${isGlassy ? "font-jost" : ""
-              } link hover:text-neon-100  transition-all duration-300`}
+              } link hover:text-neon-100  transition-all duration-300 font-bold text-2xl text-white`}
           >
             Home
           </Link>
@@ -125,7 +125,7 @@ const Navbar = () => {
             to="/events" rel="noopener noreferrer"
 
             className={` ${isGlassy ? "font-jost" : ""
-              } link hover:text-neon-100  font-jost transition-all duration-300`}
+              } link hover:text-neon-100  font-jost transition-all duration-300 font-bold text-2xl text-white`}
 
           >
             Events
@@ -134,7 +134,7 @@ const Navbar = () => {
             to="#" rel="noopener noreferrer"
 
             className={` ${isGlassy ? "font-jost" : ""
-              } link hover:text-neon-100  font-jost transition-all duration-300`}
+              } link hover:text-neon-100  font-jost transition-all duration-300 font-bold text-2xl text-white`}
           >
             Event Confirm
           </Link>
@@ -142,7 +142,7 @@ const Navbar = () => {
             to="/aboutus" rel="noopener noreferrer"
 
             className={` ${isGlassy ? "font-jost" : ""
-              } link hover:text-neon-100  font-jost transition-all duration-300`}
+              } link hover:text-neon-100  font-jost transition-all duration-300 font-bold text-2xl text-white`}
           >
             About Us
           </Link>
@@ -150,15 +150,15 @@ const Navbar = () => {
             to="/login" rel="noopener noreferrer"
 
             className={` ${isGlassy ? "font-jost" : ""
-              } link hover:text-neon-100  font-jost transition-all duration-300`}
+              } link hover:text-neon-100  font-jost transition-all duration-300 font-bold text-2xl text-white`}
           >
             Login
           </Link>
           <Link
             to="/register" rel="noopener noreferrer"
-
+              style={{marginRight:"2rem"}}
             className={` ${isGlassy ? "font-jost" : ""
-              } link hover:text-neon-100 transition-all duration-300`}
+              } link hover:text-neon-100 transition-all duration-300 font-bold text-2xl text-white`}
           >
             Register
           </Link>

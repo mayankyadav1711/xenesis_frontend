@@ -31,7 +31,7 @@ const Events = () => {
     };
     return (
         <>
-            <div class="w-full h-screen overflow-hidden object-center customScrollbar relative" style={{ backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706213665/eventHerolandingPage2_zd9rni.png')" }}>
+            <div class="w-full h-screen overflow-hidden object-center customScrollbar relative bg-no-repeat bg-cover" style={{ backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706547585/Picsart_24-01-29_22-29-09-782_jeafde.png')" }}>
                 <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(to bottom, rgba(7, 13, 21, 0.5) 0%, rgba(7, 13, 21, 0.7) 100%)" }}></div>
                 <div
                     className="absolute w-full h-full top-0 bg-gradient-to-b from-transparent via-transparent to-darkBlue-50 "

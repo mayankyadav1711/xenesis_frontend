@@ -30,12 +30,12 @@ const Home = () => {
 
     const galleryImages = [
         "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-        // Add more gallery images as needed
+    "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706421174/Picsart_24-01-28_11-18-07-328_ull2di.png",
+    "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
+    "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706421174/Picsart_24-01-28_11-18-07-328_ull2di.png",
+    "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
+    "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706421174/Picsart_24-01-28_11-18-07-328_ull2di.png",
+    // Add more gallery images as needed
     ];
 
     function cardOverlayHandle(id) {
@@ -163,10 +163,10 @@ const Home = () => {
 
                 <div className="z-30 absolute top-1/2 -translate-y-1/2 px-[calc(3vh)] w-1/2 left-5" >
                     <h1
-                        className="text-[calc(8vh)] bg-gradient-to-r from-darkYellow-50 via-white to-green-600 uppercase font-bold w-fit bg-clip-text text-transparent"
+                        className="lg:text-[calc(8vh)] text-[calc(4vh)] bg-gradient-to-r from-darkYellow-50 via-white to-green-600 uppercase font-bold w-fit bg-clip-text text-transparent"
                         style={{ fontFamily: "Jost" }}>
                         <span
-                            className="text-9xl "
+                            className="lg:text-9xl text-5xl"
                             style={{ fontFamily: "Jost" }}>
                             X
                         </span>
@@ -174,18 +174,18 @@ const Home = () => {
                     </h1>
 
                     <p
-                        className="text-4xl  uppercase font-bold  text-orange-100 w-fit bg-clip-text text-transparent"
+                        className="lg:text-4xl text-lg uppercase font-bold  text-orange-200 w-fit "
                         data-aos="fade-up"
-                        data-aos-delay="100">
+                        >
                         <q style={{ fontFamily: "Jost" }}>
                             &nbsp;Young&nbsp;India&nbsp;New&nbsp;India&nbsp;
                         </q>
                     </p>
 
                     <p
-                        className=" mx-9 mt-5 font-bold text-orange-100 w-fit  text-4xl"
+                        className=" lg:mx-9 mx-0 mt-5 font-bold text-orange-100 w-fit  lg:text-4xl text-md"
                         data-aos="fade-up"
-                        data-aos-delay="500"
+                    
                         style={{ fontFamily: "Jost" }}>
                         23<sup>rd</sup>-24<sup>th</sup> Feb'24
                     </p>
@@ -254,11 +254,11 @@ const Home = () => {
                     modules={[Navigation, Pagination, A11y]}
                     spaceBetween={50}
                     slidesPerView={3}
-                    pagination={{ clickable: true }}
+                    // pagination={{ clickable: true }}
                     navigation={{
-                        nextEl: ".custom-next-button",
-                        prevEl: ".custom-prev-button",
-                    }}
+          nextEl: '.custom-next-button',
+          prevEl: '.custom-prev-button',
+        }}
                     coverflowEffect={{
                         rotate: 30,
                         stretch: 0,
@@ -280,7 +280,7 @@ const Home = () => {
                             slidesPerView: 3,
                         },
                         1024: {
-                            slidesPerView: 4,
+                            slidesPerView: 3,
                         },
                     }}>
                     {galleryImages.map((image, index) => (
@@ -292,6 +292,8 @@ const Home = () => {
                             />
                         </SwiperSlide>
                     ))}
+                    <div className="swiper-button-next custom-next-button" style={{color:"white"}}></div>
+        <div className="swiper-button-prev custom-prev-button" style={{color:"white"}}></div>
                 </Swiper>
             </div>
         </div>

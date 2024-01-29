@@ -79,7 +79,7 @@ const Departments = () => {
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={50}
           slidesPerView={3}
-          pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           navigation={{
             nextEl: ".custom-next-button",
             prevEl: ".custom-prev-button",
@@ -131,16 +131,8 @@ const Departments = () => {
               </SwiperSlide>
             ))}
           </div>
-          <div className="custom-prev-button absolute top-1/2 left-0 transform -translate-y-1/2 bg-black dark:bg-gray-800 rounded-full p-2 ml-4 cursor-pointer">
-            <i className="text-white">
-              {/* Your custom previous arrow icon goes here */}
-            </i>
-          </div>
-          <div className="custom-next-button absolute top-1/2 right-0 transform -translate-y-1/2 bg-black dark:bg-gray-800 rounded-full p-2 mr-4 cursor-pointer">
-            <i className="text-white">
-              {/* Your custom next arrow icon goes here */}
-            </i>
-          </div>
+          <div className="swiper-button-next custom-next-button" style={{color:"black", marginTop:"-3.5rem"}}></div>
+        <div className="swiper-button-prev custom-prev-button" style={{color:"black", marginTop:"-3.5rem"}}></div>
         </Swiper>
       </section>
     </div>

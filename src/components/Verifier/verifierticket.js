@@ -15,7 +15,7 @@ function VerifierTicket({ children }) {
       </div>
       <div className="  border-2 w-full rounded-tl-none border-l-0 m-5 ml-0 border-black rounded-bl-none grid grid-cols-[25%_1fr]  items-center  rounded-lg">
         <div className=" max-w-[80px]  aspect-square">
-          <img src={Pfp} className="w-full h-full" alt="pfp" />
+          {/* <img src={Pfp} className="w-full h-full" alt="pfp" /> */}
         </div>
         <div className="flex border-l-8 border-dotted border-[#162238] flex-col">
           <div className="grid p-4 gap-2 items-center justify-center">

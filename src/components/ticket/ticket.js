@@ -18,7 +18,7 @@ function Ticket({ bgColor }) {
 
         <div className="grid grid-cols-[20%_1fr_1fr]  items-center">
           <div className="w-full ">
-            <img src={Pfp} className="w-full h-full" alt="pfp" />
+            {/* <img src={Pfp} className="w-full h-full" alt="pfp" /> */}
           </div>
 
           <div className="h-fit gap-0 text-caption1 flex-col line-clamp-3     text-white ">
@@ -27,7 +27,7 @@ function Ticket({ bgColor }) {
             <p className="font-bold  ">Ticket ID:</p>
           </div>
           <div className="p-4 w-full min-w-[80px]">
-            <img src={Qr} className="w-full h-full" alt="qr" />
+            {/* <img src={Qr} className="w-full h-full" alt="qr" /> */}
           </div>
         </div>
         <div className="absolute top-[50%] -translate-y-1/2 -translate-x-1/2 left-0">

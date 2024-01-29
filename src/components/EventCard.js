@@ -3,6 +3,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { FaUsers, FaUser, FaBan } from "react-icons/fa";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -25,7 +26,12 @@ const EventCard = ({ events }) => {
                 <Swiper
                     spaceBetween={50}
                     slidesPerView={1}
-                    pagination={{ clickable: true }}
+                    modules={[Navigation, Pagination, A11y]}
+                    // pagination={{ clickable: true }}
+                    navigation={{
+          nextEl: '.custom-next-button',
+          prevEl: '.custom-prev-button',
+        }}
                     breakpoints={{
                         320: { slidesPerView: 1.15, spaceBetween: 0, centeredSlides: true, initialSlide: 0 },
                         640: { slidesPerView: 2 },
@@ -106,6 +112,8 @@ const EventCard = ({ events }) => {
                             </div>
                         </SwiperSlide>
                     ))}
+                    <div className="swiper-button-next custom-next-button" style={{color:"white"}}></div>
+        <div className="swiper-button-prev custom-prev-button" style={{color:"white"}}></div>
                 </Swiper>
             </div>
         </div>

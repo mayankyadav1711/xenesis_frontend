@@ -7,7 +7,7 @@ const Verifier = () => {
   const verifiedTicketsData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <div>
-      <img className="fixed object-cover h-screen w-screen top-0 z-[-1]" src={Spacebg} alt="" />
+      {/* <img className="fixed object-cover h-screen w-screen top-0 z-[-1]" src={Spacebg} alt="" /> */}
 
       <section class=" tails-selected-element outline-none w-full h-full p-3 overflow-hidden sm:p-7">
         <div class=" mx-auto lg:px-0 w-full">
