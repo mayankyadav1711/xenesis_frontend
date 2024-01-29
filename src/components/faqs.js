@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 import SolarSystem from "./SolarSystem"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FAQ = () => {
+
+  
     const { theme } = useTheme();
 
   const AccordionItem = ({ header, text }) => {
@@ -14,7 +18,12 @@ const FAQ = () => {
       setActive(!active);
     }
   };
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Set the animation duration
+      once: true, // Set to true if you want the animation to happen only once
+    });
+  }, []);
     return (
 <div className=" w-auto m-4 rounded-lg bg-[#2d364d48] backdrop-filter backdrop-blur-lg dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-0 lg:px-0 xl:px-0 lg:min-h-24 min-h-20" style={{ boxShadow: '6px 6px 8px 4px rgba(0, 0, 0, 0.5)' }}>
     <button
@@ -80,70 +89,70 @@ const FAQ = () => {
         </div>
 
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="What is Xenesis?"
               text="Xenesis is a technical event that aims to promote innovation and creativity in the field of technology. It provides a platform for students to showcase their skills and learn from industry experts."
             />
        
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="Who can participate in Xenesis?"
               text="Xenesis is open to all students who are interested in technology and innovation. Students from all disciplines are welcome to participate."
             />
        
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="How can I register for Xenesis?"
               text="To register for Xenesis, please visit our website and click on the registration link. You will be asked to provide some basic information about yourself and your team (if applicable). Once you have completed the registration process, you will receive a confirmation email."
             />
      
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="What is the registration fee for Xenesis?"
               text="The registration fee for Xenesis varies depending on the event and the number of participants. Please refer to the registration page on our website for more information."
             />
 
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="What are the prizes for winning Xenesis?"
               text="The prizes for winning Xenesis vary depending on the event. However, winners can expect to receive cash prizes, certificates, and recognition from industry experts."
             />
         
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="How can I participate in an event?"
               text="You are required to register first. Once you log in to the website, you can participate in any event."
             />
        
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="How can I get the details of the events in which I have participated?"
               text="Once you have made the payment for the events you have registered for, you will see the tickets with QR codes in the MyTickets section."
             />
           
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="How can I access tickets for the events?"
               text="Once you log in to the website, you can see the tickets with QR codes in the MyTickets section. At the time of the event, you are required to show the QR code to the volunteer/organizer."
             />
     
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="Can I register for multiple events?"
               text="Yes, users can register for multiple events. Users are required to make sure that the event times do not overlap."
             />
        
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="Who can I contact for more information about Xenesis? "
               text={"For more information about Xenesis, please contact us at xenesis@ldrp.ac.in or visit our website for more details."}
