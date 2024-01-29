@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ldrp from './images/ldrp.png';
-
+import loginbg from './images/loginbg.png';
 const OTP = () => {
   const [mouse, setMouse] = useState([0, 0]);
   const [otpValues, setOtpValues] = useState(['', '', '', '']);
@@ -42,14 +42,14 @@ const OTP = () => {
       <section className="relative flex items-center justify-center w-full h-full min-h-[100vh] max-h-[100vh] overflow-y-hidden">
       <div className="absolute top-0 left-0 w-screen h-full min-h-[100vh] scale-100">
         <img
-            src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg"  // Replace with your background image path
+            src={loginbg}
             alt="Background"
             className="h-full min-h-[calc((797/1463)*100vw)] w-full object-cover block"
           />
         </div>
 
       <div class="flex items-center justify-center max-w-[430px] w-[90%] h-full">
-				<form action="/otpValidation/" method="post" class="form w-full h-full md:px-16 sm:px-12 px-8 lg:py-12 sm:py-11 py-10 backdrop-blur-md bg-neon-100 bg-opacity-15 shadow-inner border-solid border-x-4  border-neon-100 z-10 rounded-xl">
+				<form action="/otpValidation/" method="post" class="form w-full h-full md:px-16 sm:px-12 px-8 lg:py-12 sm:py-11 py-10 backdrop-blur-md bg-slate-800 bg-opacity-15 shadow-inner border-solid border-x-4  border-neon-100 z-10 rounded-xl">
 					{/* {%csrf_token%} */}
 					<h1 class="text-white form-header-text text-center md:text-3xl sm:text-3xl text-xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-yellow-300 mb-5 flex justify-center items-center gap-4"><img src={ldrp} alt="" class="w-[50px] h-[50px]" />Enter OTP</h1>
 					{/* <div class="text-center">

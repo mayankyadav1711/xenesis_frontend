@@ -1,5 +1,6 @@
 import React from 'react';
 import logocus from './images/logoCus.png';
+import loginbg from './images/loginbg.png';
 
 const Login = () => {
   const toggleEye = () => {
@@ -22,7 +23,7 @@ const Login = () => {
     <div className="overflow-hidden">
       <div className="fixed top-0 left-0 w-full h-full min-h-[100vh] scale-100">
         <img
-            src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg"  // Replace with your background image path
+            src={loginbg}
             alt="Background"
             className="h-full min-h-[calc((797/1463)*100vw)] w-full object-cover block"
             // style={{ backgroundImage: "url('https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg')", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
@@ -37,7 +38,7 @@ const Login = () => {
         </a>
 
         <div className="flex items-center lg:justify-end md:pt-0 pt-5 justify-center w-[80%] h-full">
-          <form action="/login/" method="post" className="form max-w-[500px] w-full lg:w-[90%] h-full md:px-12 sm:px-10 px-8 lg:py-12 sm:py-11 py-10 backdrop-blur-md bg-neon-100 bg-opacity-15 shadow-inner border-solid border-x-4  border-neon-100 z-10 rounded-xl" autoComplete="off">
+          <form action="/login/" method="post" className="form max-w-[500px] w-full lg:w-[90%] h-full md:px-12 sm:px-10 px-8 lg:py-12 sm:py-11 py-10 backdrop-blur-md bg-slate-800 bg-opacity-15 shadow-inner border-solid border-x-4  border-neon-100 z-10 rounded-xl" autoComplete="off">
             {/* CSRF Token */}
             {/* Add your CSRF token logic here */}
 

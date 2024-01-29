@@ -1,5 +1,6 @@
 import React from 'react';
 import ldrp from './images/ldrp.png';
+import loginbg from './images/loginbg.png';
 
 const ForgotPassword = () => {
   return (
@@ -7,7 +8,7 @@ const ForgotPassword = () => {
      
         <div className="absolute top-0 left-0 w-screen h-full min-h-[100vh] scale-100">
         <img
-            src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706210892/view-3d-space-rocket-model_obtkw7.jpg"  // Replace with your background image path
+            src={loginbg}
             alt="Background"
             className="h-full min-h-[calc((797/1463)*100vw)] w-full object-cover block"
           />
@@ -19,7 +20,7 @@ const ForgotPassword = () => {
         <form
           action=""
           method="post"
-          className="form w-full h-full px-8 md:px-12 sm:px-10  lg:py-12 sm:py-11 py-10 backdrop-blur-md bg-neon-100 bg-opacity-15 shadow-inner border-solid border-x-4  border-neon-100 z-10 rounded-xl"
+          className="form w-full h-full px-8 md:px-12 sm:px-10  lg:py-12 sm:py-11 py-10 backdrop-blur-md bg-slate-800 bg-opacity-15 shadow-inner border-solid border-x-4  border-neon-100 z-10 rounded-xl"
         >
           <h1 className="text-white form-header-text text-center md:text-3xl sm:text-3xl text-sm font-bold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-yellow-300 mb-10 flex justify-center items-center gap-4">
             <img src={ldrp} alt="" className="w-[50px] h-[50px]" />
