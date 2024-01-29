@@ -178,7 +178,7 @@ const Navbar = () => {
               } link hover:text-neon-100  transition-all duration-300`}
           ></a>
         </ul>
-        <img
+        {/* <img
           src={"/icons/satellite.svg"}
           width={80}
           height={80}
@@ -187,7 +187,7 @@ const Navbar = () => {
             transform: `translateX(${translationValue}px)`,
             transition: "transform 0s ease-in",
           }}
-        ></img>
+        ></img> */}
       </nav>
     </div>
   );
