@@ -2,3 +2,25 @@
   /* margin-right: 0px; */
   /* display: hidden; */
 }
+
+.custom-prev-button, .custom-next-button {
+  /* Use linear gradient for a neon effect */
+  /* background: linear-gradient(rgb(20,168,151)); */
+  background-color: #0BDBB9;
+  
+  border-radius: 999px; /* Adjust as needed */
+  width: 45px; /* Adjust width as needed */
+  height: 45px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* Optionally, add other styles for text color, font-size, etc. */
+}
+
+
+.swiper-container .swiper-button-prev,
+.swiper-container .swiper-button-next {
+    display: none !important;
+}
+
