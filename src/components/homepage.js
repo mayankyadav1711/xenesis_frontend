@@ -9,6 +9,7 @@ import EventCard from "./EventCard";
 import Departments from "./Departments";
 import Footer from "./Footer";
 // Import Swiper styles
+import divya from './images/divya.png';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -122,7 +123,7 @@ const Home = () => {
             {/* Title  */}
             <div class="fixed right-10 top-6 z-[999] flex items-center justify-center gap-4 px-[calc(2vh)]">
                 <img
-                    src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706211721/profile_ksvngf.jpg"
+                    src={divya}
                     alt=""
                     class="w-[50px] h-[50px] rounded-full object-cover cursor-pointer bg-slate-300"
                     onclick="toggleProfileDropdown()"
