@@ -29,9 +29,9 @@ const EventCard = ({ events }) => {
                     modules={[Navigation, Pagination, A11y]}
                     // pagination={{ clickable: true }}
                     navigation={{
-          nextEl: '.custom-next-button',
-          prevEl: '.custom-prev-button',
-        }}
+                        nextEl: '.custom-next-button',
+                        prevEl: '.custom-prev-button',
+                    }}
                     breakpoints={{
                         320: { slidesPerView: 1.15, spaceBetween: 0, centeredSlides: true, initialSlide: 0 },
                         640: { slidesPerView: 2 },
@@ -43,7 +43,7 @@ const EventCard = ({ events }) => {
                     {events.map((event, index) => (
                         <SwiperSlide className="swiper-slide  px-2 mr-0" key={index}>
                             <div
-                                className="bg-[#2B3247] z-10  hover:bg-opacity-100   border-2  border-deepBlue-100 overflow-hidden bg-opacity-95 rounded-md p-4 pb-0 flex flex-col  justify-between group w-full min-h-[500px] md:min-h-[580px] my-5 mx-2"
+                                className="bg-[#2B3247] z-10  hover:bg-opacity-100 gap-0  border-2  border-deepBlue-100 overflow-hidden bg-opacity-95 rounded-md p-4 pb-0 flex flex-col  justify-between group w-full min-h-[500px] md:min-h-[520px] my-5 mx-2"
                                 style={{
                                     // border: "1px solid rgba(255,255,255,0.2)",
                                     transition: "all 0.3s",
@@ -56,9 +56,9 @@ const EventCard = ({ events }) => {
 
                                     <img src={event.eventPosterImage !== "-" ? event.eventPosterImage : "/static/images/logoCus.png"} alt={index} className="group-hover:scale-105  origin-bottom object-cover  w-[calc(100%)] h-56 transition-all duration-300 " />
                                 </div>
-                                <div className="my-3 px-4 glassy-effect  rounded-lg shadow-outset-black">
+                                <div className="py-0  px-4 glassy-effect  rounded-lg shadow-outset-black">
                                     <h1 className="text-white  font-jost  text-center text-heading6 capitalize eventName  truncate">{event.eventName}</h1>
-                                    <p className="text-[#c0c0c0] text-center  font-jost text-sm line-clamp-1">{event.eventDescription}</p>
+                                    {/* <p className="text-[#c0c0c0] text-center  font-jost text-sm line-clamp-1">{event.eventDescription}</p> */}
                                     <div className="flex flex-col items-center justify-center my-2">
                                         <p className="text-gray-300  font-jost  text-lg  font-semibold rounded-lg capitalize  whitespace-nowrap">
                                             {event.eventPrice !== "-" ? (
@@ -80,7 +80,7 @@ const EventCard = ({ events }) => {
                                     </div>
 
                                 </div>
-                                <Link to={`/eventDetails/${event.eventLink}`} rel="noopener noreferrer" className="block w-full text-center  mb-4 duration-150  bg-neon-100 text-deepBlue-100 font-semibold px-4 py-2 rounded-lg 3d-button hover:shadow-2xl  font-jost  border-2 border-transparent hover:-translate-y-2 hover:border-neon-100  hover:saturate-200">
+                                <Link to={`/eventDetails/${event.eventLink}`} rel="noopener noreferrer" className="block w-full text-center  mb-3 duration-150  bg-neon-100 text-deepBlue-100 font-semibold px-4 py-2 rounded-lg 3d-button hover:shadow-2xl  font-jost  border-2 border-transparent hover:-translate-y-2 hover:border-neon-100  hover:saturate-200">
                                     View More
                                 </Link>
                                 {event.winnerPrice1 !== 0 && event.winnerPrice2 !== 0 && (
@@ -112,8 +112,8 @@ const EventCard = ({ events }) => {
                             </div>
                         </SwiperSlide>
                     ))}
-                    <div className="swiper-button-next custom-next-button" style={{color:"white"}}></div>
-        <div className="swiper-button-prev custom-prev-button" style={{color:"white"}}></div>
+                    <div className="swiper-button-next custom-next-button" style={{ color: "white" }}></div>
+                    <div className="swiper-button-prev custom-prev-button" style={{ color: "white" }}></div>
                 </Swiper>
             </div>
         </div>

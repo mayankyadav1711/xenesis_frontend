@@ -31,12 +31,12 @@ const Home = () => {
 
     const galleryImages = [
         "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-    "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706421174/Picsart_24-01-28_11-18-07-328_ull2di.png",
-    "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-    "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706421174/Picsart_24-01-28_11-18-07-328_ull2di.png",
-    "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
-    "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706421174/Picsart_24-01-28_11-18-07-328_ull2di.png",
-    // Add more gallery images as needed
+        "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706421174/Picsart_24-01-28_11-18-07-328_ull2di.png",
+        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
+        "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706421174/Picsart_24-01-28_11-18-07-328_ull2di.png",
+        "https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/LDRP-12.jpg?alt=media&token=c4c62f01-cbde-4d4b-bda8-27b39fe77f38",
+        "https://res.cloudinary.com/db4e3hqfv/image/upload/v1706421174/Picsart_24-01-28_11-18-07-328_ull2di.png",
+        // Add more gallery images as needed
     ];
 
     function cardOverlayHandle(id) {
@@ -177,7 +177,7 @@ const Home = () => {
                     <p
                         className="lg:text-4xl text-lg uppercase font-bold  text-orange-200 w-fit "
                         data-aos="fade-up"
-                        >
+                    >
                         <q style={{ fontFamily: "Jost" }}>
                             &nbsp;Young&nbsp;India&nbsp;New&nbsp;India&nbsp;
                         </q>
@@ -186,7 +186,7 @@ const Home = () => {
                     <p
                         className=" lg:mx-9 mx-0 mt-5 font-bold text-orange-100 w-fit  lg:text-4xl text-md"
                         data-aos="fade-up"
-                    
+
                         style={{ fontFamily: "Jost" }}>
                         23<sup>rd</sup>-24<sup>th</sup> Feb'24
                     </p>
@@ -209,10 +209,10 @@ const Home = () => {
                     Departments
                 </h3>
             </div> */}
-            <div
+            {/* <div
           className="absolute w-full h-full top-0 bg-gradient-to-b from-transparent via-transparent to-[#151e29] "
           style={{ backdropFilter: "blur(1px)" }} // Adjust the blur value as needed
-        ></div>
+        ></div> */}
             <Departments />
 
             {/*Hello Events */}
@@ -227,7 +227,7 @@ const Home = () => {
                         </div>
 
                         <EventCard
-                            
+
                             title={department}
                             events={department.events}
                         />
@@ -239,9 +239,9 @@ const Home = () => {
             {/* Gallery */}
             <div
                 className="overflow-x-hidden bg-cover bg-no-repeat bg-center py-5 pb-28"
-                // style={{
-                //   backgroundImage: `url("/icons/background.svg")`,
-                // }}
+            // style={{
+            //   backgroundImage: `url("/icons/background.svg")`,
+            // }}
             >
                 {/* <div className="absolute inset-0 bg-[#070d15b5] backdrop-filter backdrop-blur-3xl"></div> */}
                 <div className="w-full text-center">
@@ -257,9 +257,9 @@ const Home = () => {
                     slidesPerView={3}
                     // pagination={{ clickable: true }}
                     navigation={{
-          nextEl: '.custom-next-button',
-          prevEl: '.custom-prev-button',
-        }}
+                        nextEl: '.custom-next-button',
+                        prevEl: '.custom-prev-button',
+                    }}
                     coverflowEffect={{
                         rotate: 30,
                         stretch: 0,
@@ -293,8 +293,8 @@ const Home = () => {
                             />
                         </SwiperSlide>
                     ))}
-                    <div className="swiper-button-next custom-next-button" style={{color:"white"}}></div>
-        <div className="swiper-button-prev custom-prev-button" style={{color:"white"}}></div>
+                    <div className="swiper-button-next custom-next-button" style={{ color: "white" }}></div>
+                    <div className="swiper-button-prev custom-prev-button" style={{ color: "white" }}></div>
                 </Swiper>
             </div>
         </div>
