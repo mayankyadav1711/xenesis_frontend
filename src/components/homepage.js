@@ -8,6 +8,8 @@ import Navbar from "./navbar";
 import EventCard from "./EventCard";
 import Departments from "./Departments";
 import Footer from "./Footer";
+import ClimbingBoxLoader from "react-spinners/ClipLoader";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -17,6 +19,7 @@ import Earth from "./earth";
 import SolarSystem from "./SolarSystem";
 
 const Home = () => {
+    const [post, setPost] = useState(null)
     const [departmentEvents, setDepartmentEvents] = useState([]);
 
     useEffect(() => {
@@ -24,6 +27,7 @@ const Home = () => {
             .then((res) => res.json())
             .then((data) => {
                 setDepartmentEvents(data.departmentArr);
+                // setPost(data.departmentArr)
             })
             .catch((err) => console.log(err));
     }, []);
@@ -160,7 +164,10 @@ const Home = () => {
                 <div className="absolute inset-0 z-0 ">
                     <SolarSystem />
                 </div>
+                {/* <h1>
 
+                    {departmentEvents ? departmentEvents : 'Loading...'}
+                </h1> */}
                 <div className="z-30 absolute top-1/2 -translate-y-1/2 px-[calc(3vh)] w-1/2 left-5" >
                     <h1
                         className="lg:text-[calc(8vh)] text-[calc(4vh)] bg-gradient-to-r from-darkYellow-50 via-white to-green-600 uppercase font-bold w-fit bg-clip-text text-transparent"
@@ -215,24 +222,33 @@ const Home = () => {
             <Departments />
 
             {/*Hello Events */}
-            <div className="bg-darkBlue-50  bg-opacity-0 ">
-                {departmentEvents.slice(0, 1).map((department, index) => (
-                    <div key={index} className={``}>
-                        <div className="w-full z-10 text-center">
-                            <h3 className="uppercase  font-jost  text-white text-heading2 font-semibold mb-4 pt-20 py-10">
-                                {/* {department.departmentName} */}
-                                Events
-                            </h3>
+            {departmentEvents.length > 0 ? (
+                <div className="bg-darkBlue-50  bg-opacity-0 ">
+                    {departmentEvents.slice(0, 1).map((department, index) => (
+                        <div key={index} className={``}>
+                            <div className="w-full z-10 text-center">
+                                <h3 className="uppercase  font-jost  text-white text-heading2 font-semibold mb-4 pt-20 py-10">
+                                    {/* {department.departmentName} */}
+                                    Events
+                                </h3>
+                            </div>
+
+                            <EventCard
+
+                                title={department}
+                                events={department.events}
+                            />
                         </div>
+                    ))}
+                </div>
+            ) : (
+                < div className="flex justify-center items-center h-[700px] text-white w-screen">
+                    <ClimbingBoxLoader className="scale-150" color="#36d7b7" />
 
-                        <EventCard
 
-                            title={department}
-                            events={department.events}
-                        />
-                    </div>
-                ))}
-            </div>
+                </div>
+            )
+            }
 
             <div className="bg-transparents"></div>
             {/* Gallery */}
@@ -296,7 +312,7 @@ const Home = () => {
                     <div className="swiper-button-prev custom-prev-button" style={{ color: "white" }}></div>
                 </Swiper>
             </div>
-        </div>
+        </div >
     );
 };
 
