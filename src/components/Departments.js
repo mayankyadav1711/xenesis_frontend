@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -131,8 +131,17 @@ const Departments = () => {
               </SwiperSlide>
             ))}
           </div>
-          <div className="swiper-button-next custom-next-button" style={{color:"black", marginTop:"-3.5rem"}}></div>
-        <div className="swiper-button-prev custom-prev-button" style={{color:"black", marginTop:"-3.5rem"}}></div>
+          <div className="swiper-button-next custom-next-button">
+            <img src={"/icons/arrow.svg"} className="h-6 w-6" alt="Next" />
+          </div>
+
+          <div className="swiper-button-prev custom-prev-button">
+            <img
+              src={"/icons/arrow.svg"}
+              className="h-6 w-6 transform rotate-180"
+              alt="Previous"
+            />
+          </div>
         </Swiper>
       </section>
     </div>

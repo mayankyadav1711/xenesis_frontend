@@ -131,7 +131,7 @@ const Navbar = () => {
             Events
           </Link>
           <Link
-            to="#" rel="noopener noreferrer"
+            to="/myticket" rel="noopener noreferrer"
 
             className={` ${isGlassy ? "font-jost" : ""
               } link hover:text-neon-100  font-jost transition-all duration-300 font-bold text-2xl text-white`}
