@@ -162,6 +162,14 @@ const Navbar = () => {
           >
             Register
           </Link>
+          <div>
+          <img
+          src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706211721/profile_ksvngf.jpg"
+          alt=""
+          class="w-[50px] h-[50px] rounded-full object-cover cursor-pointer bg-slate-300"
+          onclick="toggleProfileDropdown()"
+        />
+          </div>
           {/* <Link
             to="/login" rel="noopener noreferrer"
 

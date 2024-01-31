@@ -106,12 +106,7 @@ const Home = () => {
 
       {/* Title  */}
       <div class="fixed right-10 top-6 z-[999] flex items-center justify-center gap-4 px-[calc(2vh)]">
-        <img
-          src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706211721/profile_ksvngf.jpg"
-          alt=""
-          class="w-[50px] h-[50px] rounded-full object-cover cursor-pointer bg-slate-300"
-          onclick="toggleProfileDropdown()"
-        />
+      
 
         <div
           class="absolute bg-slate-600 top-16 right-0 w-full min-w-[200px] rounded-md z-[999] h-0 overflow-hidden transition-all duration-300"
@@ -199,7 +194,7 @@ const Home = () => {
             </div> */}
       <div
         className="absolute w-full h-full top-0 bg-gradient-to-b from-transparent via-transparent to-[#151e29] "
-        style={{ backdropFilter: "blur(1px)" }} // Adjust the blur value as needed
+       // Adjust the blur value as needed
       ></div>
       <Departments />
 
