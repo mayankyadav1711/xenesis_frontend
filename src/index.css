@@ -38,6 +38,10 @@ body {
     background-color: #0BDBB9;
     text-decoration-color: #181931;
     -webkit-text-decoration-color: #181931;
+    box-shadow: 0 0 5px rgba(29, 53, 87, 0.7);
+    /* Box shadow for the selected text */
+
+    border-radius: 20%;
 
   }
 

@@ -12,8 +12,23 @@ import "swiper/css/scrollbar";
 import "./swiper.css";
 import First from "./images/1st.svg";
 import Second from "./images/2nd.svg";
+import HashLoader from "react-spinners/HashLoader";
+
 
 const EventCard = ({ events }) => {
+  
+  const [imageLoaded, setImageLoaded] = useState(true);
+
+    useEffect(() => {
+        // Set the initial state to false when the component mounts
+        setImageLoaded(false);
+    }, []);
+
+    const handleImageLoad = () => {
+        // This function will be called when the image is successfully loaded
+        setImageLoaded(true);
+    };
+  
   return (
     <div
       className="overflow-x-hidden bg-cover bg-no-repeat bg-center  "
@@ -57,15 +72,13 @@ const EventCard = ({ events }) => {
                 }}
               >
                 <div className="overflow-hidden h-fit  rounded-md   w-full">
-                  <img
-                    src={
-                      event.eventPosterImage !== "-"
-                        ? event.eventPosterImage
-                        : "/static/images/logoCus.png"
-                    }
-                    alt={index}
-                    className="group-hover:scale-105  origin-bottom object-cover  w-[calc(100%)] h-56 transition-all duration-300 "
-                  />
+                              <img src={event.eventPosterImage !== "-" ? event.eventPosterImage : "/static/images/logoCus.png"} alt={index} onLoad={handleImageLoad} className={`group-hover:scale-105  origin-bottom object-cover  w-[calc(100%)] h-56 transition-all duration-300 ${imageLoaded ? '' : 'hidden'} `} />
+                                    < div className={`flex justify-center ${imageLoaded ? 'hidden' : ''} items-center  h-[150px]  w-full`}>
+                                        {/* <ClimbingBoxLoader className="scale-150" color={loaderColor} /> */}
+                                        <HashLoader className="scale-150" color='#0BDBB9' />
+
+
+                                    </div>
                 </div>
                 <div className="py-0  px-4 glassy-effect  rounded-lg shadow-outset-black">
                   <h1 className="text-white  font-jost  text-center text-heading6 capitalize eventName  truncate">

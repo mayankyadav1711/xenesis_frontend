@@ -51,10 +51,10 @@ function Myticket(Props) {
             <div className="relative z-10">
 
 
-                <h4 className=" text-center text-heading1 pt-[45dvh] pb-20 text-white font-extrabold ">
-                    Ticket
+                <h4 className=" text-center text-heading1 py-96 md:py-[55dvh] md:pt-[45dvh] text-white font-extrabold ">
+                    Tickets
                 </h4>
-                <div class="w-[60vw] h-[65px] p-2 px-2 mx-auto md:px-4 pb-72">
+                {/* <div class="w-[60vw] h-[65px] p-2 px-2 mx-auto md:px-4 pb-72">
                     <div class="w-full">
                         <div class="flex items-center">
                             <div class="relative w-full">
@@ -68,7 +68,7 @@ function Myticket(Props) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* <div className="md:h-16 h-12 bottom-2  right-2 md:right-5 flex items-center justify-center absolute  text-neon-100 md:bottom-20  cursor-pointer filter bg-neon-100 rounded-full animate-bounce  aspect-square"
                     // style={{
                     //     backgroundImage: `url("/icons/scroll-top.svg")`,

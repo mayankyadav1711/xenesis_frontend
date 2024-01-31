@@ -8,6 +8,8 @@ import Navbar from "./navbar";
 import EventCard from "./EventCard";
 import Departments from "./Departments";
 import Footer from "./Footer";
+import ClimbingBoxLoader from "react-spinners/ClipLoader";
+
 // Import Swiper styles
 import "../components/swiper.css";
 import "../components/navigation.css";
@@ -199,20 +201,33 @@ const Home = () => {
       <Departments />
 
       {/*Hello Events */}
-      <div className="bg-darkBlue-50  bg-opacity-0 ">
-        {departmentEvents.slice(0, 1).map((department, index) => (
-          <div key={index} className={``}>
-            <div className="w-full z-10 text-center">
-              <h3 className="uppercase  font-jost  text-white text-heading2 font-semibold mb-4 pt-20 py-10">
-                {/* {department.departmentName} */}
-                Events
-              </h3>
-            </div>
+            {departmentEvents.length > 0 ? (
+                <div className="bg-darkBlue-50  bg-opacity-0 ">
+                    {departmentEvents.slice(0, 1).map((department, index) => (
+                        <div key={index} className={``}>
+                            <div className="w-full z-10 text-center">
+                                <h3 className="uppercase  font-jost  text-white text-heading2 font-semibold mb-4 pt-20 py-10">
+                                    {/* {department.departmentName} */}
+                                    Events
+                                </h3>
+                            </div>
 
-            <EventCard title={department} events={department.events} />
-          </div>
-        ))}
-      </div>
+                            <EventCard
+
+                                title={department}
+                                events={department.events}
+                            />
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                < div className="flex justify-center items-center h-[700px] text-white w-screen">
+                    <ClimbingBoxLoader className="scale-150" color="#36d7b7" />
+
+
+                </div>
+            )
+            }
 
       <div className="bg-transparents"></div>
       {/* Gallery */}
