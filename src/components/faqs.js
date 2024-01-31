@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
+import SolarSystem from "./SolarSystem"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FAQ = () => {
+
+  
     const { theme } = useTheme();
 
   const AccordionItem = ({ header, text }) => {
@@ -13,12 +18,18 @@ const FAQ = () => {
       setActive(!active);
     }
   };
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Set the animation duration
+      once: true, // Set to true if you want the animation to happen only once
+    });
+  }, []);
     return (
-<div className="mb-8 w-full rounded-lg bg-white p-4 backdrop-filter backdrop-blur-md bg-opacity-10 dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-8 lg:px-6 xl:px-8 lg:min-h-32 min-h-24 ">
+<div className=" w-auto m-4 rounded-lg bg-[#2d364d48] backdrop-filter backdrop-blur-lg dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-0 lg:px-0 xl:px-0 lg:min-h-24 min-h-20" style={{ boxShadow: '6px 6px 8px 4px rgba(0, 0, 0, 0.5)' }}>
     <button
-    className={`faq-btn flex w-full text-left`}
+    className={`faq-btn flex w-full text-left pl-6 lg:pt-6 pt-4 mr-2 `}
     onClick={(event) => handleToggle(event)}
+    style={{ outline: 'none' }}
   >
     <div className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg hover:bg-gray-300 text-primary dark:bg-gray-300">
       <svg
@@ -39,17 +50,17 @@ const FAQ = () => {
     </div>
   
     <div className="w-full">
-      <h4 className="mt-1 text-lg font-semibold text-dark dark:text-white line-clamp-">
+      <h4 className="mt-1 lg:text-lg text-md font-semibold text-dark pr-2 pt-1 dark:text-white line-clamp-2">
         {header}
       </h4>
     </div>
   </button>
   
   <div
-    className={`pl-[62px] duration-200 ease-in-out ${
-      active ? "block" : "hidden"
-    }`}
-  >
+  className={`lg:pl-[62px] pl-[32px] duration-200 ease-in-out bg-[#414e6f69] backdrop-filter backdrop-blur-md rounded-sm mt-2 ${
+    active ? "block" : "hidden"
+  }`}
+>
     <p className="py-3 text-base leading-relaxed text-body-color text-white">
       {text}
     </p>
@@ -61,90 +72,90 @@ const FAQ = () => {
   };
 
   return (
-    <section
-      className={`relative z-20 overflow-hidden bg-cover bg-no-repeat bg-fixed nt}  pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]`}
-      style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/studymate-c44e8.appspot.com/o/New%20India%2C%20Young%20India%20(6).png?alt=media&token=f0946d08-f7fd-480e-aca4-531175963a4c')", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
-    >    <div className="container mx-auto">
+    <section className="relative overflow-hidden bg-cover bg-no-repeat bg-fixed pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
+    <div className="absolute inset-0 z-0">
+      <SolarSystem/>
+    </div>    <div className="container mx-auto relative z-10">
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
+          <div className="w-full px-0">
             <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
-              <span className="mb-2 block text-5xl font-semibold text-white ">
+              <span className="mb-2 block lg:text-5xl text-2xl font-semibold text-white" style={{textShadow: "4px 4px 8px rgba(0, 0, 0, 0.9)"}}>
                 Frequently Asked Question
               </span>
-            
+              {/* <div className="absolute inset-0 bg-[#1a1f2c] z-[-1]"></div> */}
              
             </div>
           </div>
         </div>
 
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="What is Xenesis?"
               text="Xenesis is a technical event that aims to promote innovation and creativity in the field of technology. It provides a platform for students to showcase their skills and learn from industry experts."
             />
        
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="Who can participate in Xenesis?"
               text="Xenesis is open to all students who are interested in technology and innovation. Students from all disciplines are welcome to participate."
             />
        
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="How can I register for Xenesis?"
               text="To register for Xenesis, please visit our website and click on the registration link. You will be asked to provide some basic information about yourself and your team (if applicable). Once you have completed the registration process, you will receive a confirmation email."
             />
      
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="What is the registration fee for Xenesis?"
               text="The registration fee for Xenesis varies depending on the event and the number of participants. Please refer to the registration page on our website for more information."
             />
 
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="What are the prizes for winning Xenesis?"
               text="The prizes for winning Xenesis vary depending on the event. However, winners can expect to receive cash prizes, certificates, and recognition from industry experts."
             />
         
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="How can I participate in an event?"
               text="You are required to register first. Once you log in to the website, you can participate in any event."
             />
        
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="How can I get the details of the events in which I have participated?"
               text="Once you have made the payment for the events you have registered for, you will see the tickets with QR codes in the MyTickets section."
             />
           
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="How can I access tickets for the events?"
               text="Once you log in to the website, you can see the tickets with QR codes in the MyTickets section. At the time of the event, you are required to show the QR code to the volunteer/organizer."
             />
     
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="Can I register for multiple events?"
               text="Yes, users can register for multiple events. Users are required to make sure that the event times do not overlap."
             />
        
           </div>
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-right" className="w-full px-4 lg:w-1/2">
             <AccordionItem
               header="Who can I contact for more information about Xenesis? "
-              text={`For more information about Xenesis, please contact us at xenesis@ldrp.ac.in or visit our website for more details.`}
+              text={"For more information about Xenesis, please contact us at xenesis@ldrp.ac.in or visit our website for more details."}
 
             />
  
@@ -154,7 +165,7 @@ const FAQ = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 right-0 z-[-1]">
+      {/* <div className="absolute bottom-0 right-0 z-[-1]">
         <svg
           width="1440"
           height="886"
@@ -182,7 +193,7 @@ const FAQ = () => {
             </linearGradient>
           </defs>
         </svg>
-      </div>
+      </div> */}
     </section>
   );
 };
