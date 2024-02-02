@@ -15,14 +15,14 @@ function Newticket({ bgColor }) {
     return (
         // <div className="flex-col relative justify-center  items-center p-4 bg-black bg-opacity-35   rounded-md">
         <div
-            className={`flex relative justify-between  items-center ${bgColor}   bg-opacity-75  rounded-md z-10`}
+            className={`flex relative justify-between  items-center ${bgColor}  overflow-visible bg-opacity-75  rounded-md z-10`}
         >
             <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-tl-md flex items-center rounded-bl-md h-full w-[40px] left-0">
                 <p className="-translate-x-[30%] -rotate-90 text-center font-extrabold">
                     XENESIS'24
                 </p>
             </div>
-            <div className="  border-2 w-full rounded-tl-none border-l-0 m-4 ml-0 overflow-hidden border-black rounded-bl-none grid grid-cols-[25%_1fr]  items-center  rounded-lg">
+            <div className="  border-2 w-full px-1 rounded-tl-none border-l-0 m-4 ml-0 overflow-hidden border-black rounded-bl-none grid grid-cols-[25%_1fr]  items-center  rounded-lg">
                 <div className="p-2  border-white  ">
                     <img src={Qr} className="w-full h-full" alt="qr" />
                 </div>
@@ -33,7 +33,7 @@ function Newticket({ bgColor }) {
                         </div>
                         <div className="h-fit gap-0 text-caption1 font-semibold flex-col line-clamp-3     text-black ">
                             <p className="  ">User Name</p>
-                            <p className="   "> harshilvaliya@gmail.com </p>
+                            <p className=" text-caption2  "> vishwangsuthar.997@gmail.com </p>
                             <p className="font-extrabold text-caption2 ">
                                 ULTIMATE CLASH - FREE FIRE{" "}
                             </p>
@@ -72,26 +72,26 @@ function Newticket({ bgColor }) {
                 </div>
             </div>
             <div></div>
-            <div className=" absolute top-0   left-0">
+            <div className=" absolute -top-px   -left-px">
                 <Dots />
             </div>
-            <div className=" absolute bottom-0 -rotate-90  left-0">
+            <div className=" absolute -bottom-px -rotate-90  -left-px">
                 <Dots />
             </div>
-            <div className=" absolute top-0 rotate-90  right-0">
+            <div className=" absolute -top-px rotate-90  -right-px">
                 <Dots />
             </div>
-            <div className=" absolute rotate-180 bottom-0  right-0">
+            <div className=" absolute rotate-180 -bottom-px  -right-px">
                 <Dots />
             </div>
             {/* <div className=" absolute rotate-180 bottom-0 left-[25%]  ">
                 <Dots />
             </div> */}
 
-            <div className=" absolute bottom-0 translate-x-1/2   left-[25%]">
+            <div className=" absolute -bottom-px translate-x-1/2   left-[25%]">
                 <div className="h-[15px] w-[30px] bg-[#010A27]  z-10  rounded-tl-full rounded-tr-full "></div>
             </div>
-            <div className=" absolute top-0 translate-x-1/2  left-[25%]">
+            <div className=" absolute -top-px translate-x-1/2  left-[25%]">
                 <div className="h-[15px] w-[30px] bg-[#010A27]  z-10  rounded-bl-full rounded-br-full "></div>
             </div>
             {/* <div>

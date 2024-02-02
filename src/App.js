@@ -19,6 +19,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
 import Aboutus from "./components/Aboutus";
 import Account_setup from "./components/Account_setup";
+import Ourteam from "./components/ourteam/ourteam";
 // import "./globalcss"
 
 const MainLayout = ({ children }) => {
@@ -56,10 +57,11 @@ const Routing = () => {
                 <Route path="/events" element={<MainLayout><Events /></MainLayout>} />
                 <Route path="/aboutus" element={<MainLayout><Aboutus /></MainLayout>} />
                 <Route path="/accountsetup" element={<Account_setup />} />
+                <Route path="/ourTeam" element={<MainLayout><Ourteam /></MainLayout>} />
 
                 <Route path="/verifier" element={<MainLayout><Verifier /></MainLayout>} />
                 <Route path="/myTicket" element={<MainLayout><Myticket /></MainLayout>} />
-                <Route path="/faqs" element={<MainLayout><FAQ /></MainLayout>}/>
+                <Route path="/faqs" element={<MainLayout><FAQ /></MainLayout>} />
             </Routes>
         </>
     );
@@ -68,7 +70,7 @@ function App() {
     return (
         <Router>
             <ThemeProvider>
-   
+
                 <Routing />
 
             </ThemeProvider>

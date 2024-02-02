@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 // import ScrollTop from "/icons/scroll-top.svg"
 const Footer = () => {
     const scrollToTop = () => {
@@ -134,7 +135,9 @@ const Footer = () => {
 
 
                     <div className=" w-full place-self-center   text-center  clip-copyrights text-gray-300 font-semibold py-8 text-caption2 md:text-body1 z-0">
-                        &copy; 2024 Xenesis All Rights Registered
+                        &copy; 2024
+                        <Link href='/ourTeam' className="appearance-none"> Xenesis All </Link>
+                        Rights Registered
                     </div>
 
                     {/* <img src="/icons/scroll-top.svg" alt="" /> */}
