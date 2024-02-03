@@ -32,9 +32,8 @@ const Navbar = () => {
     <div className={`bg-[#240a34] overflow-x-hidden`}>
       {/* Navbar */}
       <nav
-        className={`flex items-center  font-jost  justify-between text-white fixed w-full top-0 py-[calc(3vh)] px-[calc(3vh)] z-50 transition-all duration-300 ${
-          isGlassy ? "backdrop-filter backdrop-blur-md" : ""
-        }`}
+        className={`flex items-center  font-jost  justify-between text-white fixed w-full top-0 py-[calc(3vh)] px-[calc(3vh)] z-50 transition-all duration-300 ${isGlassy ? "backdrop-filter backdrop-blur-md" : ""
+          }`}
         id="navbar"
       >
         <div className="lg:hidden relative flex items-center justify-center gap-4">
@@ -47,9 +46,8 @@ const Navbar = () => {
           />
           {/* Profile Dropdown */}
           <div
-            className={`absolute bg-slate-600 bg-opacity-50 top-12 right-0 w-full min-w-[200px] rounded-md border-slate-400 z-50 h-0 overflow-hidden transition-all duration-300 ${
-              isProfileDropdownOpen ? "h-auto" : ""
-            }`}
+            className={`absolute bg-slate-600 bg-opacity-50 top-12 right-0 w-full min-w-[200px] rounded-md border-slate-400 z-50 h-0 overflow-hidden transition-all duration-300 ${isProfileDropdownOpen ? "h-auto" : ""
+              }`}
             id="profile-dropdown-mobile"
           >
             <Link to="#" rel="noopener noreferrer">
@@ -79,9 +77,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden absolute top-0 right-0 flex flex-col gap-5 items-center justify-center w-screen h-screen z-50 bg-slate-900 bg-opacity-95 ${
-            isMobileMenuOpen ? "flex" : "hidden"
-          }`}
+          className={`lg:hidden absolute top-0 right-0 flex flex-col gap-5 items-center justify-center w-screen h-screen z-50 bg-slate-900 bg-opacity-95 ${isMobileMenuOpen ? "flex" : "hidden"
+            }`}
           id="mobile-menu"
         >
           <button
@@ -108,13 +105,16 @@ const Navbar = () => {
           <Link to="/register" rel="noopener noreferrer" className="text-2xl font-jost">
             Register
           </Link>
+          <Link to="/ourTeam" rel="noopener noreferrer" className="text-2xl font-jost">
+            Our Team
+          </Link>
           <Link to="/login" rel="noopener noreferrer" className="text-2xl font-jost"></Link>
         </div>
 
         {/* Desktop Menu - Float Right */}
         <ul className="hidden text-body2 lg:flex items-center justify-end space-x-10 float-right ml-auto mr-20 mt-2">
           <Link
-            to="/" rel="noopener noreferrer" 
+            to="/" rel="noopener noreferrer"
 
             className={` ${isGlassy ? "font-jost" : ""
               } link hover:text-neon-100  transition-all duration-300 font-bold text-2xl text-white`}
@@ -156,19 +156,27 @@ const Navbar = () => {
           </Link>
           <Link
             to="/register" rel="noopener noreferrer"
-              style={{marginRight:"2rem"}}
+            // style={{ marginRight: "2rem" }}
             className={` ${isGlassy ? "font-jost" : ""
               } link hover:text-neon-100 transition-all duration-300 font-bold text-2xl text-white`}
           >
             Register
           </Link>
+          <Link
+            to="/ourTeam" rel="noopener noreferrer"
+            style={{ marginRight: "2rem" }}
+            className={` ${isGlassy ? "font-jost" : ""
+              } link hover:text-neon-100 transition-all duration-300 font-bold text-2xl text-white`}
+          >
+            Our Team
+          </Link>
           <div>
-          <img
-          src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706211721/profile_ksvngf.jpg"
-          alt=""
-          class="w-[50px] h-[50px] rounded-full object-cover cursor-pointer bg-slate-300"
-          onclick="toggleProfileDropdown()"
-        />
+            <img
+              src="https://res.cloudinary.com/db4e3hqfv/image/upload/v1706211721/profile_ksvngf.jpg"
+              alt=""
+              class="w-[50px] h-[50px] rounded-full object-cover cursor-pointer bg-slate-300"
+              onclick="toggleProfileDropdown()"
+            />
           </div>
           {/* <Link
             to="/login" rel="noopener noreferrer"
