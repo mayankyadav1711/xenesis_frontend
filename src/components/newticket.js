@@ -32,7 +32,7 @@ function Newticket({ bgColor }) {
                             <img src={Pfp} className="w-full h-full" alt="pfp" />
                         </div>
                         <div className="h-fit gap-0 text-caption1 font-semibold flex-col line-clamp-3     text-black ">
-                            <p className="  ">User Name</p>
+                            <p className="  ">Suthar Vishwang</p>
                             <p className=" text-caption2  "> vishwangsuthar.997@gmail.com </p>
                             <p className="font-extrabold text-caption2 ">
                                 ULTIMATE CLASH - FREE FIRE{" "}

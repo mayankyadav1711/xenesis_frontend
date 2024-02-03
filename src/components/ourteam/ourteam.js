@@ -16,7 +16,7 @@ const Ourteam = () => {
 
 
     const members = [
-        { name: 'Jagrat Patel', photo: pfp1, instagram: 'v_a_s_u_2_7', github: 'vasu2709', linkedin: 'vasu-solanki-51a81629a/' },
+        { name: 'Jagrat Patel', photo: "https://i.ibb.co/GsBMty8/vishwang.jpg", instagram: 'v_a_s_u_2_7', github: 'vasu2709', linkedin: 'vasu-solanki-51a81629a/' },
 
         { name: 'Mayank Yadav', photo: "https://i.ibb.co/Npfq8jg/Mayank.jpg", instagram: '___mayank17___', github: 'mayankyadav1711', linkedin: 'mayankyadav17/' },
         { name: 'Divya Kaurani', photo: "https://i.ibb.co/yFtqWb8/Divya.jpg", instagram: 'divya_kaurani20', github: 'KauraniDivya', linkedin: 'divyakaurani/' },
@@ -42,12 +42,12 @@ const Ourteam = () => {
                 <SolarSystem />
             </div>
 
-            <div className=" mt-4 pb-24  p-4 px-28 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 ">
+            <div className=" mt-4 pb-24  p-4 px-10 md:px-28 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 ">
                 {/* First Row (4 boxes) */}
                 {members.map((member, index) => (
                     <div
                         key={index}
-                        className="bg-transparent backdrop-blur-md bg-gray-200 bg-opacity-5 shadow-inner  relative border-[3px] border-transparent hover:border-neon-100 text-white duration-300 p-4 flex overflow-hidden items-center group pt-10 flex-col rounded-lg"
+                        className="bg-transparent  backdrop-blur-md bg-gray-200 bg-opacity-5 shadow-inner  relative border-[3px] border-transparent hover:border-neon-100 text-white duration-300 md:p-4 md:py-4.5 p-8 flex overflow-hidden items-center group pt-10 flex-col rounded-lg"
                     >
 
                         <img
@@ -70,7 +70,7 @@ const Ourteam = () => {
                         </svg> */}
 
                         <img
-                            className="absolute bottom-0 z-10 duration-300 translate-y-10 opacity-0 group-hover:translate-y-6 scale-150 group-hover:opacity-100 rotate-6 group-hover:rotate-0 "
+                            className="absolute bottom-0 z-10  translate-y-20 opacity-0 group-hover:translate-y-8 scale-150 group-hover:opacity-100 transition-transform rotate-6 group-hover:rotate-0 "
                             src={'https://i.ibb.co/nrV7RzM/surface-3.png'} />
                         <h2 className="text-2xl font-bold text-center">
                             {member.name}
